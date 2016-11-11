@@ -1,0 +1,12 @@
+set terminal pstricks
+set output "onda.riflessa.tex"
+unset key
+set tics nomirror
+set xlabel "tempo (ns)"
+set ylabel "potenziale (mV)"
+set label 1 "$A$" at 100,-24 left 
+set label 2 "$B$" at 604,584 left 
+set label 3 "$C$" at 634,48 right 
+set yrange [-200:800]
+plot "onda.riflessa.dat" w l
+set output

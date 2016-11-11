@@ -1,0 +1,91 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url,gensymb}
+\usepackage[text={5.5in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\include{pstricks}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Grafico}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\renewcommand{\leq}{\leqslant}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Grafici sulle misure di resistività}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}}
+\date{\today}
+\maketitle
+\begin{figure}[p]\caption{Corrente in Ampère in ascissa, tensione in Volt in ordinata. Filo di stablohm del diametro di 0.508mm e lunghezza di 1 metro.}
+\centering
+\include{508}
+\end{figure}
+\begin{figure}[p]\caption{Grafico dei residui. Corrente in Ampère in ascissa, tensione in Volt in ordinata. Filo di stablohm del diametro di 0.508mm e lunghezza di 1 metro.}
+\centering
+\include{508res}
+\end{figure}
+\begin{figure}[p]\caption{Corrente in Ampère in ascissa, tensione in Volt in ordinata. Filo di stablohm del diametro di 0.254mm e lunghezza di 1 metro.}
+\centering
+\include{254}
+\end{figure}
+\begin{figure}[p]\caption{Grafico dei residui. Corrente in Ampère in ascissa, tensione in Volt in ordinata. Filo di stablohm del diametro di 0.254mm e lunghezza di 1 metro.}
+\centering
+\include{254res}
+\end{figure}
+\begin{figure}[p]\caption{Corrente in Ampère in ascissa, tensione in Volt in ordinata. Filo di stablohm del diametro di 1.016mm e lunghezza di 1 metro.}
+\centering
+\include{1016}
+\end{figure}
+\begin{figure}[p]\caption{Grafico dei residui. Corrente in Ampère in ascissa, tensione in Volt in ordinata. Filo di stablohm del diametro di 1.016mm e lunghezza di 1 metro.}
+\centering
+\include{1016res}
+\end{figure}
+\begin{figure}[p]\caption{Misura della differenza di potenziale a vari intervalli di lunghezza del filo, con corrente costante. Posizione in ascissa (metri), differenza di potenziale in ordinata (Volt).}
+\centering
+\include{lung}
+\end{figure}
+\begin{figure}[p]\caption{Grafico dei residui della misura della differenza di potenziale a vari intervalli di lunghezza del filo, con corrente costante. Posizione in ascissa (metri), differenza di potenziale in ordinata (Volt).}
+\centering
+\include{lungres}
+\end{figure}
+\begin{figure}[p]\caption{Tensione (Volt) in ordinata rispetto alla corrente (A) in un filo di rame di lunghezza 1 metro e diametro 0.150mm.}
+\centering
+\include{temp}
+\end{figure}
+\begin{figure}[p]\caption{Grafico dei residui relativo al precedente. La forma dei residui indica un andamento tutt'altro che casuale. L'effetto è dovuto al riscaldamento del filo sottoposto ad alte intensità di corrente e al conseguente aumento di resistività.}
+\centering
+\include{tempres}
+\end{figure}
+\end{document}

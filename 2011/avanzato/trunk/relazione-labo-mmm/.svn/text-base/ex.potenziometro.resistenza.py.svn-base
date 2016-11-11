@@ -1,0 +1,18 @@
+import sys
+from math import sqrt
+
+#uso: python ....py file_fit 5.54
+fit_file = sys.argv[1]
+
+a, sigma_a, b, sigma_b = [float(x) for x in open(fit_file).read().split()]
+
+P = float(sys.argv[2])
+R = a * P + b
+
+sigma_P = 0.01
+sigma_R = sqrt(
+       P**2 * sigma_a**2 + 
+       a**2 * sigma_P**2 +
+       sigma_b**2)
+
+print("{0:.2f} \pm {1:.2f}".format(R, sigma_R))

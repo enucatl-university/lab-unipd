@@ -1,0 +1,344 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     11810,        335]
+NotebookOptionsPosition[     10572,        293]
+NotebookOutlinePosition[     10929,        309]
+CellTagsIndexPosition[     10886,        306]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Insiemi frattali: triangolo di Sierpinski", "Title",
+ CellChangeTimes->{{3.467523047462078*^9, 3.467523054829281*^9}, {
+  3.467523089001849*^9, 3.46752309029818*^9}}],
+
+Cell["\<\
+Costruiamo una funzione che disegni il triangolo di Sierpinski, o meglio una \
+sua approssimazione con n iterazioni.
+
+La funzione base costruisce un tre triangoli da un triangolo pi\[UGrave] \
+grande, lasciando lo spazio bianco al centro.\
+\>", "Text",
+ CellChangeTimes->{{3.467526731741304*^9, 3.4675267368936367`*^9}, {
+  3.4675268808500977`*^9, 3.467527003371409*^9}, {3.4675270345439*^9, 
+  3.467527035623796*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sier1", "[", 
+   RowBox[{"{", 
+    RowBox[{"p1_", ",", "p2_", ",", "p3_"}], "}"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"t1", " ", "=", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"2", "p1"}], ",", " ", 
+        RowBox[{"p1", "+", "p2"}], ",", " ", 
+        RowBox[{"p1", "+", "p3"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"t2", " ", "=", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"p1", "+", "p2"}], ",", " ", 
+        RowBox[{"2", "p2"}], ",", " ", 
+        RowBox[{"p2", "+", "p3"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"t3", " ", "=", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"p1", "+", "p3"}], ",", 
+        RowBox[{"p2", "+", "p3"}], ",", 
+        RowBox[{"2", "p3"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      FractionBox["1", "2"], 
+      RowBox[{"{", 
+       RowBox[{"t1", ",", "t2", ",", "t3"}], "}"}]}]}]}], " ", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.465659000987437*^9, 3.465659093766616*^9}, {
+  3.465659127825202*^9, 3.465659306423395*^9}, {3.465659627766466*^9, 
+  3.465659641170397*^9}, {3.465738839564673*^9, 3.46573884344811*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"s1", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       FractionBox["1", "2"], ",", 
+       FractionBox[
+        SqrtBox["3"], "2"]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.465659325023*^9, 3.46565934658875*^9}, {
+  3.46565957558454*^9, 3.465659581767624*^9}}],
+
+Cell["Illustriamo il risultato con un primo disegno :", "Text",
+ CellChangeTimes->{
+  3.467527076179646*^9, {3.467527108572998*^9, 3.467527110650144*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Polygon", "[", 
+   RowBox[{"sier1", "[", "s1", "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4675270167260923`*^9, 3.467527027176752*^9}}],
+
+Cell["\<\
+Ora si tratta solo di applicare ricorsivamente questa funzione ai tre nuovi \
+triangolini pi\[UGrave] piccoli.\
+\>", "Text",
+ CellChangeTimes->{{3.467527125356154*^9, 3.467527142830736*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sier2", "[", "list_", "]"}], " ", ":=", " ", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{
+    RowBox[{"Map", "[", 
+     RowBox[{"sier1", ",", " ", "list"}], "]"}], ",", "1"}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.465657536172067*^9, 3.465657567107261*^9}, {
+  3.465657948191857*^9, 3.465657951674148*^9}, {3.465659382802069*^9, 
+  3.465659386454802*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sier3", "[", 
+   RowBox[{"n_", ",", " ", "list_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Nest", "[", 
+   RowBox[{"sier2", ",", " ", "list", ",", "n"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.465657575133268*^9, 3.465657623841544*^9}, {
+  3.465659391201703*^9, 3.46565939450245*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sier4", "[", 
+   RowBox[{"n_", ",", " ", "list_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Graphics", "[", 
+   RowBox[{
+    RowBox[{"Polygon", "[", 
+     RowBox[{"sier3", "[", 
+      RowBox[{"n", ",", " ", "list"}], "]"}], "]"}], ",", 
+    RowBox[{"ImageSize", "\[Rule]", "900"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.46565766870503*^9, 3.465657756242152*^9}, {
+   3.465658168875271*^9, 3.465658172743447*^9}, 3.465658261334449*^9, {
+   3.46565833952774*^9, 3.465658364434944*^9}, {3.465659396308693*^9, 
+   3.465659447065824*^9}, 3.465738834476083*^9, {3.465745058103925*^9, 
+   3.465745070787207*^9}, {3.465745154465502*^9, 3.465745206735066*^9}, {
+   3.465745409997422*^9, 3.465745424573704*^9}, {3.467522800974925*^9, 
+   3.467522802662765*^9}}],
+
+Cell["\<\
+Il risultato finale disegna il triangolo di Sierpinski con n iterazioni, a \
+partire da s1:\
+\>", "Text",
+ CellChangeTimes->{{3.467527158600609*^9, 3.467527174778829*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{"sier4", "[", 
+  RowBox[{"8", ",", 
+   RowBox[{"{", "s1", "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.46574508175348*^9, 3.465745085308486*^9}, {
+  3.465745144487808*^9, 3.465745148168628*^9}, {3.46574531381461*^9, 
+  3.465745336516312*^9}, {3.465745374700133*^9, 3.465745392482684*^9}, {
+  3.467523018389608*^9, 3.467523022533574*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Il gioco del caos", "Title",
+ CellChangeTimes->{{3.467527229874856*^9, 3.467527233083132*^9}}],
+
+Cell["\<\
+Un sistema dinamico stocastico, l'evoluzione \[EGrave] determinata cos\
+\[IGrave]: dato un triangolo e un punto di partenza,
+a ogni passo temporale c'\[EGrave] la stessa probabilit\[AGrave] di spostarsi \
+in uno dei punti medi dei segmenti
+che congiungono il punto attuale con i vertici del triangolo.\
+\>", "Text",
+ CellChangeTimes->{{3.467527241324547*^9, 3.4675273346724663`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell["\<\
+Il dado \[EGrave] il generatore casuale di 1, 2, 3:\
+\>", "Text",
+ CellChangeTimes->{{3.467527341386117*^9, 3.467527354412129*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{"dado", " ", ":=", " ", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "3"}], "}"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.465743271189865*^9, 3.46574330052673*^9}, {
+   3.465744029014556*^9, 3.465744034283574*^9}, 3.465744102553237*^9, {
+   3.465744141021084*^9, 3.465744142972599*^9}, {3.46574497218589*^9, 
+   3.465744976175152*^9}}],
+
+Cell["q0 \[EGrave] il punto di partenza:", "Text",
+ CellChangeTimes->{{3.467527360421028*^9, 3.4675273634373293`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"q0", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{".6", ",", ".2"}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.465743561471362*^9, 3.465743641676051*^9}, {
+   3.465744473463552*^9, 3.465744475638005*^9}, {3.46574478561506*^9, 
+   3.465744787384295*^9}, 3.467522706690748*^9, 3.46752298431336*^9}],
+
+Cell["\<\
+Il triangolo dato, prendiamo lo stesso da cui siamo partiti prima per \
+disegnare il Sierpinski:\
+\>", "Text",
+ CellChangeTimes->{{3.46752737473491*^9, 3.467527389752843*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"punti", " ", "=", " ", "s1"}], ";"}]], "Input",
+ CellChangeTimes->{{3.465743450406444*^9, 3.465743456073175*^9}, 
+   3.4675227158421993`*^9, {3.467522989112705*^9, 3.4675229891659107`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"mano", "[", "q_", "]"}], ":=", 
+  RowBox[{
+   FractionBox["1", "2"], 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"punti", "[", 
+      RowBox[{"[", "dado", "]"}], "]"}], " ", "+", " ", "q"}], 
+    ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.465743416725874*^9, 3.465743487419793*^9}, 
+   3.4657442206491*^9, {3.465744348326528*^9, 3.465744350387276*^9}, {
+   3.465744560484178*^9, 3.465744608953529*^9}, {3.465744683421783*^9, 
+   3.465744719483087*^9}, 3.465744760537749*^9, {3.46574480575335*^9, 
+   3.465744819303284*^9}, {3.465744960484017*^9, 3.465744961538862*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"gioco", "[", 
+   RowBox[{"q0_", ",", "n_"}], "]"}], ":=", " ", 
+  RowBox[{"NestList", "[", 
+   RowBox[{"mano", ",", "q0", ",", "n"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.465743518151753*^9, 3.46574353895265*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sier5", "[", 
+   RowBox[{"n_", ",", " ", "list_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Graphics", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"FaceForm", "[", "White", "]"}], ",", 
+      RowBox[{"EdgeForm", "[", "Black", "]"}], ",", 
+      RowBox[{"Polygon", "[", 
+       RowBox[{"sier3", "[", 
+        RowBox[{"n", ",", " ", "list"}], "]"}], "]"}]}], "}"}], ",", 
+    RowBox[{"ImageSize", "\[Rule]", "900"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.467522840859104*^9, 3.467522877385062*^9}}],
+
+Cell["\<\
+Iterando l'evoluzione un numero molto grande di volte \[EGrave] evidente \
+l'emergere di un insieme invariante,
+che \[EGrave] proprio il triangolo di Sierpinski (disegnato qui con linee).
+Si vede che esso \[EGrave] anche un attrattore molto \"forte\".\
+\>", "Text",
+ CellChangeTimes->{{3.46752740694726*^9, 3.467527493800489*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"gioco", "[", 
+      RowBox[{"q0", ",", "10000"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", "Red"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"ImageSize", "\[Rule]", "900"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"sier5", "[", 
+    RowBox[{"5", ",", 
+     RowBox[{"{", "punti", "}"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.465743701501082*^9, 3.465743713077814*^9}, 
+   3.465744038401208*^9, 3.46574418698829*^9, {3.465744252490744*^9, 
+   3.465744363042413*^9}, {3.465744870170847*^9, 3.465744876062507*^9}, {
+   3.465745097400223*^9, 3.465745135283666*^9}, {3.465745399010845*^9, 
+   3.46574539977281*^9}, {3.465745443486246*^9, 3.46574544386802*^9}, {
+   3.465745529963669*^9, 3.465745545880622*^9}, {3.4675228857730417`*^9, 
+   3.467522901620905*^9}, 3.467523006760231*^9, 3.4675230991457853`*^9}]
+}, Open  ]]
+},
+WindowSize->{1440, 886},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+ShowSelection->True,
+FrontEndVersion->"7.0 for Linux x86 (64-bit) (November 11, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 172, 2, 84, "Title"],
+Cell[742, 26, 466, 10, 81, "Text"],
+Cell[1211, 38, 1290, 34, 142, "Input"],
+Cell[2504, 74, 466, 15, 62, "Input"],
+Cell[2973, 91, 192, 3, 45, "Text"],
+Cell[3168, 96, 197, 4, 31, "Input"],
+Cell[3368, 102, 238, 5, 45, "Text"],
+Cell[3609, 109, 390, 10, 31, "Input"],
+Cell[4002, 121, 317, 7, 31, "Input"],
+Cell[4322, 130, 786, 16, 31, "Input"],
+Cell[5111, 148, 219, 5, 45, "Text"],
+Cell[5333, 155, 363, 7, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5733, 167, 100, 1, 84, "Title"],
+Cell[5836, 170, 431, 8, 81, "Text"],
+Cell[6270, 180, 179, 4, 45, "Text"],
+Cell[6452, 186, 388, 8, 31, "Input"],
+Cell[6843, 196, 156, 2, 45, "Text"],
+Cell[7002, 200, 337, 7, 31, "Input"],
+Cell[7342, 209, 223, 5, 45, "Text"],
+Cell[7568, 216, 224, 4, 31, "Input"],
+Cell[7795, 222, 604, 14, 55, "Input"],
+Cell[8402, 238, 252, 6, 31, "Input"],
+Cell[8657, 246, 551, 14, 31, "Input"],
+Cell[9211, 262, 378, 7, 81, "Text"],
+Cell[9592, 271, 964, 19, 92, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

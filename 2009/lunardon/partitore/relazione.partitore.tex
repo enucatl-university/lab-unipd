@@ -1,0 +1,190 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url}
+\usepackage[text={5.5in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\include{pstricks}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Figura}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\renewcommand{\leq}{\leqslant}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di laboratorio: partitore di tensione}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}}
+\date{\today}
+\maketitle
+%------------------
+\section{Obiettivo dell'esperienza}
+Obiettivo dell'esperienza è la realizzazione di un partitore di tensione in corrente continua, con particolare attenzione agli effetti dovuti alle resistenze interne degli strumenti impiegati e alla correlazione tra misure effettuate con lo stesso strumento. Con questo circuito è anche possibile verificare le leggi di Kirchhoff.
+
+\section{Descrizione dell'apparato strumentale}
+\begin{figure}[h]\caption{Schema del partitore di tensione.}\label{part}
+\centering
+ \include{partitore}
+\end{figure}
+\noindent Per realizzare questa esperienza abbiamo impiegato il generatore di corrente continua della postazione n.1 con $V_0 \sim \unit[5]{V}$, quattro resistenze $R_1,R_2, R_3, R_4 \sim \unit[100]{\ohm}$ e altre due resistenze $R_5, R_6 \sim \unit[550]{\ohm}$. Le misure sono state effettuate con i multimetri Fluke 111 e T110B.
+
+\section{Descrizione della metodologia di misura}
+Per prima cosa sono stati misurati i valori delle singole resistenze e della differenza di potenziale $V_0$ in modo diretto con il multimetro Fluke 111. Poi, con lo stesso multimetro il valore della resistenza complessiva equivalente del partitore e le differenze di potenziale ai capi di ciascuna resistenza. Infine, con il multimetro T110B, sono state misurate le correnti $I_1, I_2, I_3$ come indicate in figura~\ref{part}.
+
+Per valutare la resistenza interna del generatore abbiamo misurato la caduta di potenziale in un circuito con una corrente di $\unit[100]{mA}$. Le resistenze del voltmetro del Fluke 111 e dell'amperometro del T110B sono state effettuate sia direttamente che con misure voltamperometriche.
+
+\section{Risultati sperimentali ed elaborazione dati}
+\subsection{Misure di resistenze interne degli strumenti}
+\subsubsection{Resistenza interna del generatore}
+\`E stata misurata la differenza di potenziale $V_0 = \unit[5.027\pm0.020]{V}$ ai capi del generatore, a vuoto, con il Fluke 111, fondo scala~\unit[6]{V}. Poi è stato collegato il circuito in figura con una corrente di~\unit[100.5$\pm$0.4]{mA} calibrata con la resistenza variabile e misurata con il T110B (FS~\unit[200]{mA}), ed è stata misurata con il Fluke una differenza di potenziale $V = \unit[5.018\pm0.020]{V}$. Per cui si trova che la resistenza interna del generatore è, come ci si aspettava, dell'ordine di \unit[0.1]{\ohm}:
+\begin{equation*}
+ R_G = \dfrac{V_0-V}{I} = \unit[0.089\pm0.016]{\ohm} \quad (18\%)
+\end{equation*}
+\begin{figure}[h]\caption{Circuito realizzato per la misura della resistenza interna del generatore $R_G$}\label{RG}
+\centering
+ \include{misuraRG}
+\end{figure}
+
+\subsubsection{Resistenza interna del voltmetro del Fluke 111}
+La resistenza del voltmetro è stata misurata in modo diretto con il multimetro T110B, $R_V^{\text{mis}} = \unit[11.15\pm0.10]{M\ohm}$, fondo scala \unit[20]{M\ohm}. Si noti che nel nostro circuito, $R_C = \unit[293.2\pm0.2]{\ohm}$, quindi l'alterazione delle correnti è dello 0.002\% quando si introduce il voltmetro, e quindi del tutto trascurabile. Inoltre, è stata misurata la differenza nella corrente che scorre nel circuito con una resistenza di carico $R_C \sim \unit[1]{M\ohm}$ senza voltmetro e poi con il voltmetro inserito. Tale differenza risulta $\Delta I = \unit[5.4-5.0]{\micro A} = \unit[0.40\pm0.08]{\micro A}$. Da cui:
+\begin{equation*}
+  R_V = \dfrac{V_0}{\Delta I} = \unit[12.6\pm2.6]{M\ohm} \quad (20\%)
+\end{equation*}
+\begin{figure}[h]\caption{Circuito realizzato per la misura della resistenza interna del voltmetro $R_V$}\label{RV}
+\centering
+ \include{misuraRV}
+\end{figure}
+
+\subsubsection{Resistenza interna dell'amperometro del T110B}
+La misura diretta con il Fluke 111 della resistenza interna dell'amperometro del multimetro T110B (FS~\unit[600]{\ohm}) porge $R_A^{\text{mis}} = \unit[10.5\pm0.1]{\ohm}$. Nel circuito in figura l'amperometro misura una corrente $I = \unit[15.99\pm0.07]{mA}$ e il voltmetro (FS~\unit[6]{V}) una differenza di potenziale $V=\unit[0.166\pm0.001]{V}$. Quindi la resistenza interna dell'amperometro deve valere, per la legge di Ohm:
+\begin{equation*}
+ R_A = \dfrac V I =  \unit[10.38\pm0.08]{\ohm} \quad (0.8\%)
+\end{equation*}
+Poiché questi due risultati sono compatibili, nei calcoli che seguono impieghiamo la media pesata $R_A = \unit[10.43\pm0.06]{\ohm}$.
+\begin{figure}[h]\caption{Circuito realizzato per la misura della resistenza interna $R_A$ dell'amperometro del T110B}\label{RA}
+\centering
+ \include{misuraRA}
+\end{figure}
+
+\subsection{Misure sul partitore di tensione}
+Sul partitore di tensione sono state misurate le singole resistenze, la resistenza equivalente tra i punti $A$ e $B$, le differenze di potenziale negli stessi punti.
+Le misure sono state effettuate con il multimetro Fluke 111, fondo scala~\unit[600]{\ohm} per le resistenze, \unit[6]{V} per le differenze di potenziale. La seguente tabella riassume i risultati ottenuti:
+\begin{table}[h]
+\centering
+ \begin{tabular}{c r@{ $\pm$ }l r@{ $\pm$ }l}
+ &\multicolumn{2}{c}{R (\unit{\ohm})} &\multicolumn{2}{c}{$\Delta$V (\unit{V})}\\\hline
+$R_1$ &99.7 &0.5 &1.258 &0.005\\
+$R_2$ &99.7 &0.5 &1.258 &0.005\\
+$R_3$ &99.5 &0.5 &1.254 &0.005\\
+$R_4$ &99.7 &0.5 &1.257 &0.005\\
+$R_5$ &556.2 &2.9 &2.516 &0.010\\
+$R_6$ &555.0 &2.9 &2.509 &0.010\\
+$AB$ &293.2 &1.5 &5.025 &0.020\\
+ \end{tabular}
+\end{table}\\
+Per misurare le correnti è stato inserito in serie l'amperometro T110B (FS~\unit[20]{mA}) tra le resistenze 2 e 3, poi tra la 5 e la 6. Abbiamo ottenuto:
+\begin{table}[h]
+\centering
+ \begin{tabular}{c r@{ $\pm$ }l r@{ $\pm$ }l c}
+ &\multicolumn{2}{c}{$I^{\text{mis}}$ (\unit{mA})} &\multicolumn{2}{c}{$I^{\text{prev}}$ (\unit{mA})} &C\\\hline
+$I_1$ &16.58 &0.07 & 16.55 & 0.11 & 0.23\\
+$I_2$ &4.49 &0.02 & 4.48 & 0.03 & 0.28\\
+$I_3$ &12.31&0.05 & 12.28 & 0.08 & 0.31\\\hline
+$I_2+I_3$ &16.78&0.05 & 16.76 & 0.08& 0.22\\
+ \end{tabular}
+\end{table}\\
+I valori previsti sono ricavati con la legge di Ohm, a partire dai valori misurati delle differenze di potenziale e delle resistenze nei rispettivi rami del circuito.
+\section{Discussione dei risultati}
+La misura della resistenza equivalente è compatibile ($C = 0.71$) con il valore teorico previsto di~\unit[293.4$\pm$0.2]{\ohm}. I valori delle differenze di potenziale previste e misurate, con la rispettiva compatibilità sono riportati nella seguente tabella:
+\begin{table}[h]
+\centering
+ \begin{tabular}{c r@{ $\pm$ }l r@{ $\pm$ }l c}
+ &\multicolumn{2}{c}{$\Delta V^{\text{prev}}$ (\unit{V})} &\multicolumn{2}{c}{$\Delta V^{\text{mis}}$ (\unit{V})}& C\\\hline
+$V_1$ &1.257 &0.015 &1.258 &0.005 & 0.69\\
+$V_2$ &1.257 &0.015 &1.258 &0.005 & 0.69\\
+$V_3$ &1.254 &0.015 &1.254 &0.005 & 0.22\\
+$V_4$ &1.257 &0.015 &1.257 &0.005 & 0.07\\
+$V_5$ &2.515 &0.025 &2.516 &0.010 & 0.48\\
+$V_6$ &2.510 &0.025 &2.509 &0.010 & 0.48\\
+$V_{5+6}$ &5.025 &0.021 &5.025 &0.020 & 0.00\\
+$V_{1+2+3+4}$ &5.027 &0.021 &5.025 &0.020 & 0.77\\
+\end{tabular}
+\end{table}\\
+Come si vede, i dati si accordano molto bene con i valori previsti, che sono stati calcolati come segue. Diciamo $R_s$ la somma delle resistenze in serie con la resistenza considerata:
+\begin{equation*}
+ V_i = \dfrac{R_i}{R_s}V_0
+\end{equation*}
+Dai da presentati nel precedente paragrafo, la legge di Kirchhoff non è sembra perfettamente rispettata per le correnti che entrano nel nodo $A$ della figura~\ref{part}. Ciò è dovuto alla resistenza interna dell'amperometro con cui sono state effettuate le misure. Infatti, correggendo le correnti misurate in modo che:
+\begin{equation*}
+ I_i' =  I_i^{\text{mis}}\left(1+\dfrac{V_0}{R_A+R_s}\right)
+\end{equation*}
+Dove al solito $R_s$ indica la resistenza equivalente nel ramo considerato, si ha:
+\begin{table}[h]
+\centering
+ \begin{tabular}{c r@{ $\pm$ }l}
+ &\multicolumn{2}{c}{I (\unit{mA})}\\\hline
+$I_1'$ &17.17 &0.07\\
+$I_2'$ &4.51 &0.02\\
+$I_3'$ &12.63&0.05\\\hline
+$I_2'+I_3'$ &17.14&0.07 \\
+ \end{tabular}
+\end{table}\\
+Per il calcolo delle correnti è stato usato il valore di $R_A$ misurato con il Fluke 111, per eliminare l'errore di scala, visto che le altre resistenze sono state anch'esse misurate con lo stesso strumento. Con questa correzione, la compatibilità risulta $C = 0.28$.
+\section{Conclusioni}
+Tutte le misure effettuate coincidono con i valori previsti, negli errori sperimentali. Ciò è particolarmente vero quando si tiene conto dell'effetto della resistenza interna degli strumenti, anche se quella del voltmetro e del generatore sono a tutti gli effetti trascurabili, essendo più piccole della sensibilità delle altre misure. Infine le leggi di Kirchhoff sulle differenze di potenziale e sulla somma delle correnti sono qui verificate.
+\section{Appendice}
+\subsection{Calcolo degli errori sperimentali}
+Per il calcolo delle incertezze si è tenuto conto sia degli errori casuali che di quelli sistematici dovuti agli strumenti impiegati.
+
+In particolare, come errore sulle singole misure si è assunta la deviazione standard $\sigma$ calcolata come $$\sigma_x^2=\sigma^2_\%+\sigma^2_r$$
+Il primo termine è legato all'errore di scala dello strumento e vale $\sigma_\%=0.58\Delta_\%$, essendo $\Delta_\%=kx $ l'errore massimo; il secondo termine rappresenta l'errore casuale, che per gli strumenti digitali usati in quest'esperienza è calcolabile come $\sigma_r=0.58\Delta_{\text{digit}}$. I valori del fattore di scala $k$ e di $\Delta_{\text{digit}}$ dipendono dal fondoscala usato e sono forniti direttamente dal costruttore dello strumento.
+Per esempio, per le resistenze nel partitore di tensione, misurate con il multimetro Fluke 111, fondo scala \unit[600]{\ohm}, si ha $k=0.9 \%$ e $\Delta_{\text{digit}}=2$, con ultima cifra significativa sull'ordine di \unit[0.1]{\ohm}; dunque $\sigma^2_R=(0.58\cdot R\cdot k)^2+(0.58\cdot 0.1 \cdot \Delta_{\text{digit}} )^2$.
+
+Per le grandezze derivate l'incertezza è stata calcolata per propagazione e si è tenuto conto degli errori di scala ponendo ogni misura $x=kx^*$, pari al prodotto delle variabili indipendenti $k=1\pm \sigma_\%$, fattore di scala calcolato come sopra, e $x^*=x^*\pm \sigma_r$ affetta dal solo errore casuale.
+Per esempio, per la resistenza interna dell'amperometro $R_A=\nicefrac{V}{I}$, posto $V=k_V V^*$ e $I=k_I I^*$
+si ottiene $\sigma^2_{R_A}=R^2_A\cdot\left(\sigma^2_{V,\%}+\sigma^2_{\%,I}+I^{*-2}\sigma^2_{I^*,r}+V^{*-2}\sigma^2_{V^*1,r}\right)$.
+
+\subsection{Calcolo delle compatibilità}
+Le compatibiltà tra misure affette dal medesimo errore di scala sono state calcolate tenendo conto della correlazione tra di esse:
+$$C=\dfrac{|x-y|}{\sqrt{\sigma^2_{x,r}+\sigma^2_{y,r}+(x-y)^2\sigma^2_\%}}$$
+con $\sigma_{x,r}$, $\sigma_{y,r}$ errori casuali di $x$ e $y$ e $\sigma_\%$ errore di scala.
+Per esempio, per le differenze di potenziale ai capi delle singole resistenze nel partitore, essendo $V^{\text{prev}}_i=\nicefrac{R_i}{R_S}V_0$, con $R_S$ somma delle resistenze in serie con $R_i$, i valori $V^{\text{prev}}_i$ risultano affetti dal medesimo errore di scala di $V_0$ e dunque anche di $V^{\text{mis}}_i$.
+La compatibilità tra i valori è allora  $$C=\dfrac{|V^m-V^p|}{\sqrt{\sigma^2_{V^m,r}+\sigma^2_{V^p,r}+(V^m-V^p)^2\sigma^2_{V,\%}}}$$
+Per le grandezze non correlate, invece, si è usata la formula 
+$$C=\dfrac{|x-y|}{\sqrt{\sigma^2_x+\sigma^2_y}}$$
+con $\sigma_x$ e $\sigma_y$ deviazioni standard associate alle misure.
+\`{E} questo il caso, per esempio, del confronto tra la corrente $I'_1$ e la somma $I'_2+I'_3$, con i valori corretti tenendo conto della resistenza interna dell'amperometro.
+\end{document}

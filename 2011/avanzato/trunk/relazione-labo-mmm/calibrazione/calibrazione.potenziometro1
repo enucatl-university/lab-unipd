@@ -1,0 +1,9 @@
+//R (ohm) R potenziometro (coarse fine)
+//R.interna.tester = 0.19 ohm con 200 di fs (già sottratta)
+1.09 9.85
+2.42 21.85
+3.62 33.01
+4.84 46.43
+5.62 55.43
+6.94 67.28
+8.06 79.53

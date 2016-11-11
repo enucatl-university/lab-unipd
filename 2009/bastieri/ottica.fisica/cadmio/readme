@@ -1,0 +1,13 @@
+eseguite spectrum.py seguito dai nomi dei file che contengono i dati formattati come dice la documentazione della classe
+(viene stampata come prima cosa ad ogni esecuzione).
+
+per esempio:
+./spectrum.py blu1 blu2 verde rosso
+
+
+lui fa tutti i conti, potete impostare che salvi i grafici in .eps o ve li faccia vedere su schermo cambiando i commenti sulle righe
+
+wl.saveToEps()
+wl.showGraph()
+
+ora questi comandi sono commentati, quindi stampa solo le lunghezze d'onda sullo schermo.

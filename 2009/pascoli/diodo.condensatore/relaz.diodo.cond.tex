@@ -1,0 +1,85 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units} %unità di misura
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url}
+\usepackage[text={5.5in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage{pstricks}
+\usepackage[footnotesize,bf]{caption}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\addto\captionsitalian{\renewcommand{\figurename}{Grafico}}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\renewcommand{\leq}{\leqslant}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di laboratorio: diodo con condensatore}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}
+\and %
+\normalsize Lorenzo Rossato (579393)\\ %
+\normalsize \url{supergiovane05@hotmail.com}}
+\date{\today}
+\maketitle
+%------------------
+\noindent
+Connettere un condensatore $C$ di \unit[1]{nF} in parallelo alla resistenza.
+Utilizzando il segnale triangolare del precedente esercizio, verificare se
+l’andamento dell’uscita è consistente con l’andamento previsto.
+
+Riportiamo le caratteristiche di $V_{\text{in}}$:
+\begin{table}[h]
+    \centering
+    \begin{tabular}{rl}
+        forma: & triangolare\\
+        frequenza: & \unit[123.3]{kHz}\\
+        ampiezza pp: & \unit[10]{V}\\
+        valor medio: & \unit[0]{V}
+    \end{tabular}
+\end{table}\\
+Il valore nominale della resistenza $R$ è \unit[$100$]{k\ohm}, quello del condensatore $C$ \unit[1]{nF}. Abbiamo collegato $V_{\text{in}}$ e $V_{\text{out}}$ ai canali 1 e 2 dell'oscilloscopio rispettivamente, mediante le sonde precedentemente compensate.  L'andamento qualitativo dell'ingresso e dell'uscita in funzione del tempo per la durata di un
+periodo è riportato in figura~\ref{fig:vinvout}.
+\begin{figure}[h]\caption{Rappresentazione schematica del circuito
+    realizzato}
+    \centering
+    \include{circuito}
+\end{figure}\\
+\begin{figure}[h]\caption{Andamento qualitativo di $V_{\text{in}}$ e $V_{\text{out}}$ (\unit{V}) in funzione del tempo (\unit{ms}).}
+        \centering                                     
+        \include{andamento}
+    \label{fig:vinvout}
+\end{figure}\\
+La differenza di potenziale tra le due curve, nei rispettivi massimi, è
+$\Delta V = \unit[482]{mV}$. 
+Non si arriva a una differenza di
+\unit[0.7]{V} a causa del dimensionamento del circuito, ma l'andamento
+corrisponde con quanto previsto.
+\end{document}

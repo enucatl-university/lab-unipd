@@ -1,0 +1,143 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url}
+\usepackage[text={6in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[Euler]{upgreek}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\include{pstricks}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Grafico}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%------------- nuovi environment senza spazi
+%\newenvironment{packed_item}{
+%\begin{itemize}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{itemize}}
+%\newenvironment{packed_enum}{
+%\begin{enumerate}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{enumerate}}
+%\newenvironment{packed_description}{
+%\begin{enumerate}
+%   \setlength{\itemsep}{1pt}
+%   \setlength{\parskip}{0pt}
+%   \setlength{\parsep}{0pt}
+% }{\end{enumerate}}
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\newcommand{\e}{\mathrm{e}} %numero di nepero
+\newcommand{\di}{\mathrm{d}} %simbolo di differenziale
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\pi}{\uppi} % costante pi greco
+\renewcommand{\tau}{\uptau} %momento della forza
+\newcommand{\pas}{\ensuremath{Pa\,s}} %pascal per secondo
+\newcommand{\coloneqq}{\mathrel{\mathop:}=} % := ``per definizione''
+\newcommand{\ms}{(\unitfrac{m}{s})}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di laboratorio: il viscosimetro}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}}
+\date{\today}
+\maketitle
+%------------------
+\section{Obiettivo dell'esperienza}
+Obiettivo dell'esperienza è misurare la viscosità di un liquido osservando la caduta libera di un grave attraverso il liquido stesso e verificare la legge di Stokes.
+\section{Descrizione dell'apparato strumentale}
+Lo strumento impiegato è un tubo di raggio interno $\unit[4.5]{cm}$ che contiene un sapone liquido di densità $\rho_0 = \unitfrac[(1.032\pm0.001)\cdot10^{3}]{kg}{m^3}$. All'esterno sono presenti undici tacche, a intervalli di cinque centimetri. Sono state utilizzate sfere di acciaio con densità $\rho=\unitfrac[(7.870\pm0.005)\cdot10^{3}]{kg}{m^3}$ di vari diametri:
+\begin{table}[h]
+\centering
+\begin{tabular}{r@{ $=$ }l r@{ $=$ }l}
+$D_1$ & $\unit[1.5]{mm}$ & $D_6$ & $5/32''$\\
+$D_2$ & $2/32''$ &  $D_7$ & $6/32''$\\
+$D_3$ & $\unit[2]{mm}$ &  $D_8$ & $7/32''$\\
+$D_4$ & $3/32''$ &  $D_9$ & $8/32''$\\
+$D_5$ & $4/32''$& $D_{10}$ & $9/32''$\\
+\end{tabular}
+\end{table}\\
+\`E stato utilizzato il cronometro manuale con sensibilità $\unit[10^4]{s^{-1}}$, mentre come errore sulla posizione è stato assunto un terzo dello spessore della tacca sul bordo esterno del tubo (che misura circa \unit[1]{mm}, e risulta essere quindi $\unit[3\cdot10^{-4}]{m}$.
+\section{Descrizione della metodologia di misura}
+Si vuole stimare il tempo impiegato da sfere di vari raggi a percorrere una certa altezza di liquido, una volta raggiunta la velocità limite.
+Sono stati rilevati i tempi di passaggio di cinque sfere per ogni diametro attraverso i traguardi sull'esterno del viscosimetro ogni cinque centimetri. Tuttavia, le sfere con diametro da $D_7$ a $D_{10}$ sono troppo veloci per poter misurare i tempi di percorrenza di singoli tratti di \unit[5]{cm}. Perciò è stato misurato solo il tempo di percorrenza dell'intero tratto di \unit[50]{cm}. Per lo stesso motivo, per $D_5$ e $D_6$ sono stati rilevati i tempi ogni \unit[10]{cm}.
+\section{Risultati sperimentali ed elaborazione dati}
+Sono state impiegate due procedure diverse per analizzare i dati. Come prima cosa da un grafico con i tempi medi delle misure ripetute in ordinata e lo spazio percorso in ascissa  è stato ricavato, per interpolazione lineare $y=ax+b$ il coefficiente $a=1/v_L$. Da questo si possono ottenere $\eta_i=D_i^2ga_i(\rho-\rho_0)/18$ con errore per propagazione e quindi $\eta_1$ come media pesata.
+Alternativamente si può riportare in grafico $1/v_{L,i}$ in funzione dell'inverso del quadrato dei diametri $D_i^{-2}$, ottenendo una retta con pendenza $A=D^2/v_L$, secondo la legge di Stokes. Da cui $\eta_2 = Ag(\rho-\rho_0)/18$.
+Dalle interpolazioni effettuate per le prime sei misure (grafici~\ref{piccole} e~\ref{medie}) e dal calcolo diretto con propagazione degli errori per le ultime quattro risultano i valori di $a$ riportati in tabella~\ref{a}.
+\begin{table}[t]\caption{Valori di $a=\nicefrac{1}{v_L}$, in \unitfrac{s}{cm}.}\label{a}\centering
+ \begin{tabular}{rr@{$\pm$}l rr@{$\pm$}l}
+ $a_1$ & 4.4010&0.0006 &$a_6$ & 0.5992&0.0010\\
+ $a_2$ & 3.8554&0.0020&$a_7$ & 0.4090&0.0005\\
+ $a_3$ & 2.4136&0.0006&$a_8$ & 0.2956&0.0016\\
+ $a_4$ & 1.6956&0.0005&$a_9$ & 0.2169&0.0010\\
+ $a_5$ & 0.9453&0.0010&$a_{10}$ & 0.1619&0.0010\\
+\end{tabular}
+\end{table}
+Da questi si ottengono degli $\eta_i$, riportati in tabella~\ref{eta}, la cui media pesata risulta:
+\begin{equation*}
+ \eta_1 = \unit[3.418\pm0.007]{\pas}
+\end{equation*}
+\begin{table}[t]\caption{Valori di $\eta$ ($\unit{\pas}$) ricavati direttamente dagli $a_i$ relativi ai vari diametri.}\label{eta}\centering
+ \begin{tabular}{rr@{$\pm$}l rr@{$\pm$}l}
+$\eta_1$ &3.689 &0.049 &$\eta_6$ &3.516 &0.019\\
+$\eta_2$ &3.619 &0.046 &$\eta_7$ &3.456 &0.015\\
+$\eta_3$ &3.596 &0.036 &$\eta_8$ &3.399 &0.022\\
+$\eta_4$ &3.582 &0.030 &$\eta_{9}$ &3.259 &0.019\\
+$\eta_5$ &3.550 &0.023 &$\eta_{10}$ &3.077 &0.022
+\end{tabular}
+\end{table}
+Dall'interpolazione effettuata nel grafico~\ref{alter}, risulta invece $A=\unit[(9.877\pm0.046)\cdot 10^{-4}]{ms}$ e quindi $\eta_2 = \unit[3.679\pm0.017]{\pas}$, che ha compatibilità estremamente scarsa ($\lambda = 13.98$) con il valore $\eta_1$ precedentemente ricavato.
+\section{Discussione dei risultati}
+Si nota che la media $\eta_1$ attribuisce peso maggiore alle ultime misure effettuate. Queste tuttavia sono state valutate con l'elaborazione di meno dati (cinque o un solo tempo) e c'è ragione di ritenere che presentino un valore di viscosità inferiore per l'aumento di temperatura nel laboratorio e per la presenza di bolle nel liquido dopo la discesa di numerose sfere. Al contrario, l'interpolazione di $\eta_2$ interpreta in modo più profondo e diretto la legge di Stokes e per la determinazione dei parametri dà maggiore importanza alle zone con maggiore densità di dati sperimentali, in questo caso, come si vede dal grafico~\ref{alter}, quelle riferite ai diametri più piccoli. 
+Per gli errori sistematici valutiamo innanzitutto il numero di Reynolds. Per la sfera più grande vale $R=2\rho v R / \eta = 0.06 \ll 0.2$, quindi il regime laminare è nettamente prevalente, come si voleva. Stimiamo anche lo spazio (o equivalentemente il tempo) necessario perché il corpo abbia una velocità prossima a $v_L$, detto $\tau$ il tempo caratteristico.
+Se $t$ è dell'ordine di $3\tau$, $v= v_L$ a meno del 5\%. In termini di spazio, basta percorrere uno spazio di $\unit[0.35]{cm}$. Si scende a un errore di meno dell'1\% per un tempo $t=5\tau$. Quindi nel nostro caso, a una decina di centimetri sotto il pelo del liquido l'errore sistematico è certamente trascurabile. Infine, esistono un'effetto parete e un effetto terminale che incidono sulla velocità di discesa. $v_\infty = 1.21 v_L$ per un raggio della sfera di $\unit[0.375]{cm}$ o  $v_\infty = 1.04 v_L$ per un raggio della sfera di $\unit[0.15]{cm}$. Questo errore sistematico non è quindi trascurabile, ma non lo tratteremo comunque in queste pagine.
+\section{Conclusioni}
+Per i motivi discussi nella sezione precedente, si ritiene più affidabile la seconda stima della viscosità del fluido. Tale stima 
+\section{Appendice}
+\begin{figure}[hp]\caption{Medie dei tempi in ordinata (\unit{s}), posizione lungo il viscosimetro in ascissa (\unit{cm}) con rette interpolanti, diametri da $D_1$ a $D_4$. Le rette più pendenti si riferiscono ovviamente alle sfere con diametro minore. Gli errori sono troppo piccoli per poter essere rappresentati in questa scala.}\label{piccole}
+\centering
+\include{piccole}
+\end{figure}
+\begin{figure}[hp]\caption{Medie dei tempi in ordinata (\unit{s}), posizione lungo il viscosimetro in ascissa (\unit{cm}) con rette interpolanti, diametri $D_5$ e $D_6$. Gli errori sono troppo piccoli per poter essere rappresentati in questa scala.}\label{medie}
+\centering
+\include{medie}
+\end{figure}
+\begin{figure}[p]\caption{Inverso dei quadrati dei diametri in ascissa ($\unit{\cdot 10^4 m^{-2}}$), inverso della velocità limite in ordinata (\unitfrac{s}{m}) con retta interpolante.}\label{alter}
+\centering
+\include{alternativo}
+\end{figure}
+\end{document}

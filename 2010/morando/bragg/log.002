@@ -1,0 +1,146 @@
+White(1): random
+White(1): level 40 5 0
+40 moves/300 seconds primary time control
+40 moves/300 seconds secondary time control
+White(1): post
+White(1): hard
+pondering enabled.
+White(1): ping 3
+pong 3
+White(1): force
+White(1): analyze
+              time surplus   0.00  time limit 7:30 (+0.00) (52:30)
+              depth   time  score   variation (1)
+               11     0.15   0.24   1. Nf3 Nf6 2. Nc3 e6 3. e4 Nc6 4. e5
+                                    Ng4 5. d4 Rg8 6. Bd3
+               11->   0.17   0.24   1. Nf3 Nf6 2. Nc3 e6 3. e4 Nc6 4. e5
+                                    Ng4 5. d4 Rg8 6. Bd3
+               12     0.28   0.26   1. Nf3 Nf6 2. Nc3 e6 3. e4 Nc6 4. e5
+                                    Ng4 5. d4 Bb4 6. Bg5 f6
+               12->   0.32   0.26   1. Nf3 Nf6 2. Nc3 e6 3. e4 Nc6 4. e5
+                                    Ng4 5. d4 Bb4 6. Bg5 f6
+               13     0.45   0.22   1. Nf3 Nf6 2. Nc3 e6 3. e4 Nc6 4. e5
+                                    Ng4 5. d4 Bb4 6. Bg5 f6 7. exf6 Nxf6
+               13->   0.63   0.22   1. Nf3 Nf6 2. Nc3 e6 3. e4 Nc6 4. e5
+                                    Ng4 5. d4 Bb4 6. Bg5 f6 7. exf6 Nxf6
+               14     1.19   0.09   1. Nf3 Nf6 2. Nc3 Nc6 3. e4 e5 4. Bb5
+                                    Bb4 5. O-O O-O 6. d3 Bxc3 7. bxc3 d6
+               14->   2.89   0.09   1. Nf3 Nf6 2. Nc3 Nc6 3. e4 e5 4. Bb5
+                                    Bb4 5. O-O O-O 6. d3 Bxc3 7. bxc3 d6
+               15     3.64   0.21   1. Nf3 Nf6 2. Nc3 Nc6 3. e4 e5 4. Bb5
+                                    Bb4 5. O-O O-O 6. d3 d6 7. Bxc6 bxc6
+                                    8. Be3
+               15->   6.37   0.21   1. Nf3 Nf6 2. Nc3 Nc6 3. e4 e5 4. Bb5
+                                    Bb4 5. O-O O-O 6. d3 d6 7. Bxc6 bxc6
+                                    8. Be3
+               16     9.08   0.25   1. Nf3 Nf6 2. Nc3 Nc6 3. e4 e5 4. Bc4
+                                    Bc5 5. O-O O-O 6. d3 d6 7. Bg5 h6 8.
+                                    Be3 Be6 9. Bxe6 Bxe3 10. fxe3 fxe6
+               16->  10.11   0.25   1. Nf3 Nf6 2. Nc3 Nc6 3. e4 e5 4. Bc4
+                                    Bc5 5. O-O O-O 6. d3 d6 7. Bg5 h6 8.
+                                    Be3 Be6 9. Bxe6 Bxe3 10. fxe3 fxe6
+               17    13.89   0.18   1. Nf3 Nf6 2. Nc3 Nc6 3. e4 e5 4. Bc4
+                                    Bb4 5. O-O O-O 6. Nd5 Nxd5 7. exd5
+                                    e4 8. dxc6 exf3 9. cxb7 Bxb7 10. gxf3
+White(1): exit
+White(1): new
+White(1): random
+White(1): level 40 5 0
+40 moves/300 seconds primary time control
+40 moves/300 seconds secondary time control
+White(1): post
+White(1): hard
+pondering enabled.
+White(1): ping 4
+pong 4
+White(1): name matteo
+Crafty 22.10 vs matteo
+White(1): time 30000
+time remaining:   5:00 (Crafty).
+White(1): otim 30000
+time remaining:   5:00 (opponent).
+White(1): e4
+              time used:  32.04
+              time surplus   0.00  time limit 7.50 (+0.00) (52.50)
+              depth   time  score   variation (1)
+               10     0.14   0.02   1. ... e6 2. Nc3 Nc6 3. Nf3 Nf6 4.
+                                    Bc4 d5 5. exd5 exd5 6. Bd3 <HT>
+               10->   0.15   0.02   1. ... e6 2. Nc3 Nc6 3. Nf3 Nf6 4.
+                                    Bc4 d5 5. exd5 exd5 6. Bd3 <HT>
+               11     0.33   0.14   1. ... e6 2. Nf3 Nc6 3. e5 Nh6 4. Nc3
+                                    Bb4 5. a3 Bxc3 6. dxc3 Nf5 <HT>
+               11->   0.42   0.14   1. ... e6 2. Nf3 Nc6 3. e5 Nh6 4. Nc3
+                                    Bb4 5. a3 Bxc3 6. dxc3 Nf5 <HT>
+               12     0.58   0.17   1. ... e6 2. Nf3 Nc6 3. e5 Nh6 4. Nc3
+                                    Nf5 5. d4 <HT>
+               12->   0.76   0.17   1. ... e6 2. Nf3 Nc6 3. e5 Nh6 4. Nc3
+                                    Nf5 5. d4 <HT>
+               13     1.26   0.40   1. ... e6 2. Nf3 Nc6 3. d4 Nf6 4. Bd3
+                                    Be7 5. O-O O-O 6. Nc3 d5 7. Be3 Bd6
+               13     1.78   0.31   1. ... Nc6 2. Nf3 e5 3. Bb5 Nf6 4.
+                                    O-O Bd6 5. Nc3 O-O 6. d3 Nd4 7. Be3
+                                    Nxb5 8. Nxb5
+               13     2.53   0.05   1. ... e5 2. Nc3 Nc6 3. Nf3 Nf6 4.
+                                    Bb5 Bb4 5. Bxc6 <HT>
+               13->   2.56   0.05   1. ... e5 2. Nc3 Nc6 3. Nf3 Nf6 4.
+                                    Bb5 Bb4 5. Bxc6 <HT>
+Black(0): force
+Black(1): e5
+              time used:   3.48
+
+       +---+---+---+---+---+---+---+---+
+    8  |<R>|<N>|<B>|<Q>|<K>|<B>|<N>|<R>|
+       +---+---+---+---+---+---+---+---+
+    7  |<P>|<P>|<P>|<P>| . |<P>|<P>|<P>|
+       +---+---+---+---+---+---+---+---+
+    6  |   | . |   | . |   | . |   | . |
+       +---+---+---+---+---+---+---+---+
+    5  | . |   | . |   |<P>|   | . |   |
+       +---+---+---+---+---+---+---+---+
+    4  |   | . |   | . |-P-| . |   | . |
+       +---+---+---+---+---+---+---+---+
+    3  | . |   | . |   | . |   | . |   |
+       +---+---+---+---+---+---+---+---+
+    2  |-P-|-P-|-P-|-P-|   |-P-|-P-|-P-|
+       +---+---+---+---+---+---+---+---+
+    1  |-R-|-N-|-B-|-Q-|-K-|-B-|-N-|-R-|
+       +---+---+---+---+---+---+---+---+
+         a   b   c   d   e   f   g   h
+
+White(2): analyze
+              time surplus   0.00  time limit 7.60 (+0.00) (53.20)
+              depth   time  score   variation (1)
+               11     0.13   0.23   2. Nf3 Nf6 3. d4 exd4 4. e5 Nd5 5.
+                                    Qxd4 Nb4 6. Na3 N8c6 7. Qe4
+               11->   0.15   0.23   2. Nf3 Nf6 3. d4 exd4 4. e5 Nd5 5.
+                                    Qxd4 Nb4 6. Na3 N8c6 7. Qe4
+               12     0.72   0.30   2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5.
+                                    Bb5+ c6 6. Bd3 Nc5 7. O-O Nxd3 8. cxd3
+               12->   0.72   0.30   2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5.
+                                    Bb5+ c6 6. Bd3 Nc5 7. O-O Nxd3 8. cxd3
+White(2): undo
+              time surplus   0.00  time limit 7.41 (+0.00) (51.87)
+              depth   time  score   variation (1)
+               12     0.15   0.20   1. ... Nc6 2. Nf3 e6 3. Nc3 Bb4 <HT>
+               12->   0.20   0.20   1. ... Nc6 2. Nf3 e6 3. Nc3 Bb4 <HT>
+               13     0.52   0.21   1. ... Nc6 2. Nf3 Nf6 3. Nc3 e5 4.
+                                    Bb5 Bb4 5. O-O <HT>
+               13->   0.70   0.21   1. ... Nc6 2. Nf3 Nf6 3. Nc3 e5 4.
+                                    Bb5 Bb4 5. O-O <HT>
+               14     1.25   0.21   1. ... Nc6 2. Nf3 Nf6 3. Nc3 e5 4.
+                                    Bb5 Bb4 5. O-O <HT>
+               14->   1.56   0.21   1. ... Nc6 2. Nf3 Nf6 3. Nc3 e5 4.
+                                    Bb5 Bb4 5. O-O <HT>
+Black(0): exit
+Black(1): force
+Black(1): e7xe6
+Illegal move: e7xe6
+Black(1): d2xd4
+Illegal move: d2xd4
+Black(1): d7xd5
+Illegal move: d7xd5
+Black(1): d5xe4
+Illegal move: d5xe4
+Black(1): e4xd5
+Illegal move: e4xd5
+Black(1): new

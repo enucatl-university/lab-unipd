@@ -1,0 +1,163 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units} %unità di misura
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url}
+\usepackage[text={5.5in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{pstricks}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\addto\captionsitalian{%
+\renewcommand{\figurename}%
+{Grafico}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\renewcommand{\leq}{\leqslant}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di laboratorio: cavo coassiale}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}
+\and %
+\normalsize Lorenzo Rossato (579393)\\ %
+\normalsize \url{supergiovane05@hotmail.com}}
+\date{\today}
+\maketitle
+%------------------
+\noindent
+Abbiamo utilizzato un cavo coassiale di lunghezza $\ell=\unit[49.95 \pm 0.02]{m}$.
+%
+%Misura della resistenza
+Dopo aver cortocircuitato un estremo del cavo ne abbiamo misurato la
+resistenza complessiva connettendo all'altro capo il multimetro T110B. La
+misura, realizzata con fondoscala \unit[200]{\ohm}, è di \unit[3.2]{\ohm},
+mentre la resistenza del cortocircuito, misurata con la stessa scala, è di
+\unit[0.2]{\ohm}. Quest'ultima è stata sottratta, e la resistenza per metro
+risulta
+\begin{align*}
+R &= \dfrac{3.0}{\ell}=\unit[60 \pm 8]{\ohm/km} \\
+\dfrac{\Delta R}{R} &= \dfrac{\Delta R_{\text{tot}}}{R_{\text{tot}}} +
+\dfrac{\Delta \ell}{\ell} = 14\% \end{align*}
+L'errore sulla misura della resistenza è infatti lo 0.5\% + 4 digit.
+%
+%{Misura dell'impedenza caratteristica
+Successivamente abbiamo connesso un potenziometro a fine linea, mentre all'altra estremità abbiamo collegato, con uno sdoppiatore a T, il generatore di funzioni e l'oscilloscopio in accoppiamento DC.
+Con il generatore abbiamo immesso nella linea un'onda con le seguenti
+caratteristiche:
+\begin{table}[h]
+    \centering
+    \begin{tabular}{rl}
+        forma: & onda quadra\\
+        frequenza: & \unit[18.51]{kHz}\\
+        ampiezza pp: & \unit[1.2]{V}\\
+        valor medio: & \unit[0]{V}
+    \end{tabular}
+\end{table}\\
+La connessione all'oscilloscopio è stata realizzata applicando a un capo della T la terminazione che separa i conduttori del cavo e collegando a questa una sonda precedentemente compensata.
+
+Quando la resistenza del potenziometro vale circa \unit[30]{\ohm} il segnale sull'oscilloscopio ha l'andamento riportato in figura~\ref{30ohm}. A partire da questo valore abbiamo aumentato gradualmente la resistenza fino a osservare la scomparsa dell'onda riflessa: in queste condizioni il segnale ha assunto l'andamento in figura~\ref{50ohm}. Abbiamo quindi misurato il valore del potenziometro, pari all'impedenza caratteristica del cavo, con il multimetro T110B, fondoscala \unit[200]{\ohm}:
+\begin{equation*}
+Z_0=\unit[50.0 \pm 0.6]{\ohm}
+\end{equation*}
+%Misura dell'attenuazione e della velocità di percorrenza
+Infine abbiamo sostituito il potenziometro a fine linea con un cortocircuito, mantenendo inalterata la configurazione a inizio linea, con lo stesso segnale in ingresso. L'andamento del segnale sull'oscilloscopio è riportato in figura~\ref{corto}.
+Il tempo $t$ impiegato dal segnale per percorrere due volte la lunghezza
+$\ell$ del cavo è dato dall'intervallo tra gli istanti $A$ e $B$. In quanto
+segue chiameremo dunque:
+\begin{align*}
+    t &= t_B - t_A = \unit[504.0]{ns}\\
+    V_0 &= V_B - V_A = \unit[608]{mV}\\
+    V_r &= V_B - V_C = \unit[536]{mV}
+\end{align*}
+  \begin{figure}[h]
+     \caption{Andamento qualitativo del segnale visto dall'oscilloscopio quando il segnale in ingresso è un gradino di tensione (onda quadra) e l'estremità del cavo è cortocircuitata. il risultato è dato dalla sovrapposizione dell'onda in ingresso e di quella riflessa. $t = t_B - t_A = \unit[504.0]{ns}$, $V_0 = V_B - V_A =
+\unit[608]{mV}$, $V_r = V_B - V_C = \unit[536]{mV}$.}
+     \begin{center}
+         \include{onda.riflessa}
+     \end{center}
+     \label{corto}
+ \end{figure}
+La misura è effettuata con una scala di \unit[100]{ns}/div e
+\unit[100]{mV/div}. Dunque la velocità del segnale lungo la linea, con
+tolleranza  propagata linearmente da quella sul cavo e quella sulle
+misure di tempo dell'oscilloscopio (dal manuale) è:
+\begin{align*}
+    v &=\dfrac{2\ell}{t}=\unit[(1.982 \pm 0.005) \cdot 10^8]{m/s} \approx
+    \dfrac{2}{3} \text{c}    \\
+    \dfrac{\Delta v}{v} &= \dfrac{\Delta \ell}{\ell} +
+    \dfrac{\Delta t}{t} = 0.04\% + 0.2\%\\
+    \Delta t &= 100\text{ppm} + \dfrac{\text{div}}{100} +
+    \unit[0.6]{ns}
+\end{align*}
+Inoltre, si può ricavare l'attenuazione $\alpha$ dalla relazione:
+\begin{equation*}
+V_r=V_0 e^{-2\alpha \ell}
+\end{equation*}
+Gli errori di scala sulle
+differenze di potenziale si eliminano perch\'e sono state misurate con
+la stessa divisione:
+\begin{align*}
+\alpha &= \dfrac{1}{2l}\log{\dfrac{V_0}{V_r}} =
+\unit[(1261.7 \pm 0.5) \cdot 10^{-6}]{m^{-1}}\\
+\dfrac{\Delta \alpha}{\alpha} &= \dfrac{\Delta \ell}{\ell} = 0.04 \%
+\end{align*}
+Dalle misure effettuate abbiamo ricavato i valori di conduttanza $G$, induttanza $L$ e capacità $C$ del cavo per metro:
+\begin{align*}
+G &= \dfrac{R}{Z_0^2} = \unit[24 \pm 4]{\micro S/m}\\
+L &= \dfrac{Z_0}{v} = \unit[0.252 \pm 0.004]{\micro H/m}\\
+C &= \dfrac{1}{Z_0v} = \unit[100.9 \pm 1.4]{pF/m}\\
+\end{align*}
+ Le tolleranze sono associate allo stesso modo delle misure precedenti,
+ ovvero con propagazione lineare:
+\begin{align*}
+    \dfrac{\Delta G}{G} &= 2\dfrac{\Delta Z_0}{Z_0} + \dfrac{\Delta R}{R} =
+    16.4\%\\
+    \dfrac{\Delta L}{L} &= \dfrac{\Delta C}{C} = \dfrac{\Delta Z_0}{Z_0} +
+    \dfrac{\Delta v}{v} = 1.4\%\\
+\end{align*}
+ \begin{figure}[h]
+     \caption{Andamento qualitativo del segnale visto dall'oscilloscopio quando la resistenza del potenziometro connesso a fine linea vale circa \unit[30]{\ohm}}
+     \begin{center}
+         \include{segnale.30}
+     \end{center}
+     \label{30ohm}
+ \end{figure}
+ 
+\begin{figure}[h]
+     \caption{Andamento qualitativo del segnale visto dall'oscilloscopio quando si osserva l'assenza di distorsioni dell'onda quadra in ingresso. In queste condizioni il cavo coassiale è terminato sulla propria impedenza caratteristica, che vale \unit[50.0]{\ohm}}
+     \begin{center}
+         \include{segnale.50}
+     \end{center}
+     \label{50ohm}
+ \end{figure}
+\end{document}

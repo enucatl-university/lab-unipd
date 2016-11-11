@@ -1,0 +1,847 @@
+
+*******************************************************************************
+Thu Feb  7 18:15:01 2008
+
+
+FIT:    data read from "scarico-0"
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 63124.3           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.20673e-05
+rel. change during last iteration : -1.33799e-09
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00141817
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.01121e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000164405      +/- 2.188e-05    (13.31%)
+b               = 0.162338         +/- 0.001926     (1.187%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+*******************************************************************************
+Thu Feb  7 18:21:04 2008
+
+
+FIT:    data read from "scarico-s"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.140000 : 0.150000]
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.00307728        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 48.8672
+
+initial set of free parameter values
+
+a               = 0.000164405
+b               = 0.162338
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 5.52971e-06
+rel. change during last iteration : -2.06155e-11
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00166279
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.76486e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000146571      +/- 5.621e-05    (38.35%)
+b               = 0.135831         +/- 0.003884     (2.86%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.977  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 18:23:57 2008
+
+
+FIT:    data read from "scarico-g"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.120000 : 0.150000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.00221295        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 0.000146571
+b               = 0.135831
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 8.11869e-06
+rel. change during last iteration : -2.11688e-12
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00116323
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.35312e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000271548      +/- 1.795e-05    (6.61%)
+b               = 0.108856         +/- 0.00158      (1.452%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 18:25:33 2008
+
+
+FIT:    data read from "scarico-gg"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.110000 : 0.140000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000492718       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 0.000271548
+b               = 0.108856
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 4.4989e-05
+rel. change during last iteration : -9.10266e-06
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00273828
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.49817e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000294524      +/- 4.225e-05    (14.35%)
+b               = 0.0994405        +/- 0.00372      (3.741%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+
+
+
+*******************************************************************************
+Thu Feb  7 18:28:56 2008
+
+
+FIT:    data read from "carico-gg"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.0700000 : 0.110000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.0117931         delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 0.000294524
+b               = 0.0994405
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.48654e-05
+rel. change during last iteration : -2.69825e-12
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00157403
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.47756e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000328214      +/- 2.429e-05    (7.4%)
+b               = 0.0582143        +/- 0.002138     (3.673%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 18:31:30 2008
+
+
+FIT:    data read from "carico-g"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.0800000 : 0.110000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000281293       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 0.000328214
+b               = 0.0582143
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 6.75393e-06
+rel. change during last iteration : -2.35401e-13
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00106097
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.12565e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000301071      +/- 1.637e-05    (5.438%)
+b               = 0.0663464        +/- 0.001441     (2.172%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 18:32:04 2008
+
+
+FIT:    data read from "carico-s"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.0800000 : 0.110000]
+        #datapoints = 6
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.00120086        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 54.3952
+
+initial set of free parameter values
+
+a               = 0.000301071
+b               = 0.0663464
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 8.21619e-06
+rel. change during last iteration : -3.35589e-12
+
+degrees of freedom    (FIT_NDF)                        : 4
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00143319
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.05405e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000225714      +/- 3.426e-05    (15.18%)
+b               = 0.0860381        +/- 0.002635     (3.063%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.975  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 18:33:18 2008
+
+
+FIT:    data read from "carico-0"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.0920000 : 0.122000]
+        #datapoints = 2
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000897462       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 39.0576
+
+initial set of free parameter values
+
+a               = 0.000225714
+b               = 0.0860381
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 1.92593e-34
+abs. change during last iteration : -8.7056e-24
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a               = -2e-05         
+b               = 0.1207         
+
+
+*******************************************************************************
+Thu Feb  7 18:33:57 2008
+
+
+FIT:    data read from "carico-0"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.100000 : 0.130000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.0004234         delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = -2e-05
+b               = 0.1207
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 7.18571e-06
+rel. change during last iteration : -3.33947e-13
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00109436
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.19762e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000167143      +/- 1.689e-05    (10.1%)
+b               = 0.110593         +/- 0.001487     (1.344%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 18:47:53 2008
+
+
+FIT:    data read from "carico-g"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.0800000 : 0.110000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 6.75393e-06       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 0.000301071
+b               = 0.0663464
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 6.75393e-06
+rel. change during last iteration : -1.37955e-15
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00106097
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.12565e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000301071      +/- 1.637e-05    (5.438%)
+b               = 0.0663464        +/- 0.001441     (2.172%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 22:37:02 2008
+
+
+FIT:    data read from "scarico-0"
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 63124.3           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.20673e-05
+rel. change during last iteration : -1.33799e-09
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00141817
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.01121e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000164405      +/- 2.188e-05    (13.31%)
+b               = 0.162338         +/- 0.001926     (1.187%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+
+
+
+
+*******************************************************************************
+Thu Feb  7 23:06:18 2008
+
+
+FIT:    data read from "scarico-s"
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 63159.6           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.09954e-05
+rel. change during last iteration : -5.61464e-10
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00227286
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.16589e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000228214      +/- 3.507e-05    (15.37%)
+b               = 0.130764         +/- 0.003087     (2.361%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 23:09:44 2008
+
+
+FIT:    data read from "scarico-g"
+	x range restricted to [45.0000 : 125.000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.00267321        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 0.000228214
+b               = 0.130764
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 8.11869e-06
+rel. change during last iteration : -1.3874e-12
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00116323
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.35312e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000271548      +/- 1.795e-05    (6.61%)
+b               = 0.108856         +/- 0.00158      (1.452%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 23:11:44 2008
+
+
+FIT:    data read from "scarico-gg"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.120000 : 0.150000]
+        #datapoints = 6
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.0003386         delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 68.2556
+
+initial set of free parameter values
+
+a               = 0.000271548
+b               = 0.108856
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 4.1539e-05
+rel. change during last iteration : -4.21234e-12
+
+degrees of freedom    (FIT_NDF)                        : 4
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00322254
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.03848e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000272857      +/- 7.703e-05    (28.23%)
+b               = 0.101695         +/- 0.007435     (7.312%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.984  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 23:13:04 2008
+
+
+FIT:    data read from "carico-0"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.110000 : 0.140000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 5.41849e-05       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 0.000272857
+b               = 0.101695
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 7.18571e-06
+rel. change during last iteration : -2.48368e-13
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00109436
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.19762e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000167143      +/- 1.689e-05    (10.1%)
+b               = 0.110593         +/- 0.001487     (1.344%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+
+
+
+
+
+*******************************************************************************
+Thu Feb  7 23:17:17 2008
+
+
+FIT:    data read from "carico-s"
+	x range restricted to [45.0000 : 125.000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 63220.9           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 9.7425e-06
+rel. change during last iteration : -1.98239e-09
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00127426
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.62375e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.0002425        +/- 1.966e-05    (8.108%)
+b               = 0.084875         +/- 0.001731     (2.039%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 23:18:39 2008
+
+
+FIT:    data read from "carico-g"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.0900000 : 0.120000]
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+
+
+*******************************************************************************
+Thu Feb  7 23:18:44 2008
+
+
+FIT:    data read from "carico-g"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.0900000 : 0.120000]
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000809324       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 71.4178
+
+initial set of free parameter values
+
+a               = 0.0002425
+b               = 0.084875
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 2.891e-06
+rel. change during last iteration : -5.86433e-09
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000981665
+variance of residuals (reduced chisquare) = WSSR/ndf   : 9.63667e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000309         +/- 3.104e-05    (10.05%)
+b               = 0.06556          +/- 0.003135     (4.782%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.990  1.000 
+
+
+*******************************************************************************
+Thu Feb  7 23:20:22 2008
+
+
+FIT:    data read from "carico-gg"
+	x range restricted to [45.0000 : 125.000]
+	y range restricted to [0.0750000 : 0.115000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000277477       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 62.2535
+
+initial set of free parameter values
+
+a               = 0.000309
+b               = 0.06556
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.48654e-05
+rel. change during last iteration : -8.51286e-14
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00157403
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.47756e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000328214      +/- 2.429e-05    (7.4%)
+b               = 0.0582143        +/- 0.002138     (3.673%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.966  1.000 

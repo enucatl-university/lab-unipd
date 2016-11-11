@@ -1,0 +1,192 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url,gensymb}
+\usepackage[text={5.5in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\include{pstricks}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Grafico}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\newcommand{\mol}{mol}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\renewcommand{\leq}{\leqslant}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di laboratorio: la legge dei gas perfetti}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}}
+\date{\today}
+\maketitle
+%------------------
+\section{Obiettivo dell'esperienza}
+Obiettivo dell'esperienza è la verifica dell'equazione di stato dei gas perfetti e i casi particolari della legge di Boyle per le trasformazioni isoterme e di Gay-Lussac per le isocore.
+\section{Descrizione dell'apparato strumentale}
+Il sistema utilizzato è costituito da un Dewar cilindrico isolato termicamente dall'ambiente esterno, contenente acqua e ghiaccio in equilibrio termico. Attraverso il coperchio è introdotto un agitatore per rendere più possibile omogenea la temperatura dell'acqua. All'interno del cilindro è fissato un recipiente a forma di siringa monouso di volume massimo $V_{\text{max}}$ pari a circa $\unit[25]{cm^3}$, il cui pistone è collegato a un sistema a manovella che permette di variarne gradualmente la compressione. L'aria viene introdotta nella siringa attraverso due tubicini sottili collegati a una valvola a tre vie. Tale valvola viene aperta una sola volta nella fase iniziale dell'esperienza e con il pistone sollevato il più possibile. Il volume $V_0$ dei tubicini è molto piccolo ma non trascurabile ed è quindi causa di un errore sistematico nella stima del volume di gas contenuto all'interno della siringa. Volume, pressione e temperatura del gas sono misurati rispettivamente con un reostato di sensibilità $\unit[10]{cm^{-3}}$ collegato al pistone, un sensore di pressione di sensibilità $\unitfrac[10^2]{dm^3}{Kg}$ collegato alla valvola e una termocoppia di sensibilità $\unit[10]{\celsius^{-1}}$ posta vicino alla siringa. All'interno del Dewar è presente inoltre un riscaldatore costituito da una resistenza elettrica alimentata con un potenziale di \unit[30]{V} e una potenza di \unit[90]{W}.
+Tutti gli strumenti sono controllati dal programma PiPerVi, attraverso il quale è possibile impostare la temperatura del sistema a meno di \unit[1]{\celsius}. 
+\section{Descrizione della metodologia di misura}
+Il gas è stato sottoposto a una compressione isoterma fino al raggiungimento del volume minimo $V_{\text{min}}$, ruotando lentamente la manovella collegata al pistone della siringa, ed è stato successivamente riportato allo stesso modo al volume iniziale. Il procedimento è stato ripetuto a diversi valori di temperatura impostata: $T_{\text{imp}} =$ 0, 15, 25, 35, 45, 55 \unit{\celsius}. Durante la trasformazione il programma PiPerVi ha registrato a intervalli di tempo regolari i valori di $V$, $\nicefrac{1}{P}$ e $T$ rilevati dai vari strumenti. Per ragioni tecniche il reostato non misura correttamente il volume a fine e inzio corsa, pertanto sono stati scartati i dati esterni all'intervallo da 5.91 a  $\unit[21.50]{cm^3}$.
+Infine sono stati convertiti i dati in unità SI, secondo i fattori di conversione: $\unit[1]{cm^3}=\unit[10^{-6}]{m^3}$ e $\unitfrac[1]{Kg}{dm^3}=\unit[98060]{Pa}$.
+\section{Risultati sperimentali ed elaborazione dati}
+Per ogni temperatura $T_{\text{imp}}$ sono stati analizzati separatamente i due campioni di dati relativi alla compressione e all'espansione del gas.
+Sono stati inizialmente interpolati con delle rette del tipo $y=ax+b$ e $y=cx+d$ i punti della curva $(\nicefrac{1}{P},V)$ (grafici in appendice) rispettivamente in compressione e in espansione. La proporzionalità diretta di $V$ da $\nicefrac{1}{P}$ verifica la legge dei gas $PV=nRT$, dove $n$ è il numero di moli di gas presenti nel contenitore, $R=\unitfrac[8.3136]{J}{K\mol}$ la costante di stato dei gas e $T$ la temperatura in Kelvin. In particolare, il coefficiente angolare della retta ($a$ e $c$) corrisponde al prodotto $nRT$, mentre l'ordinata all'origine rappresenta il volume di gas $V_0$ contenuto nei tubicini che collegano la siringa alla valvola e al sensore di pressione. I risultati ottenuti sono riportati nella tabella seguente (\emph{c} indica la fase di compressione, \emph{e} quella di espansione):
+\begin{table}[h]
+\centering
+ \begin{tabular}{c r@{$\pm$}l r@{$\pm$}l}
+ T (\unit{\celsius}) &  \multicolumn{2}{c}{$-V_0\ (\unit{cm^3}$)}  & \multicolumn{2}{c}{$nRT$ (\unit{J})}\\\hline
+   0c & -0.9996 &  0.0016 &  2.31210 &  0.00027\\
+   0e & -1.0976 &  0.0020 &  2.31991 &  0.00027\\
+  15c & -1.0879 &  0.0018 &  2.45135 &  0.00027\\
+  15e & -1.2297 &  0.0030 &  2.46484 &  0.00045\\
+  25c & -1.1352 &  0.0022 &  2.52983 &  0.00036\\
+  25e & -1.2594 &  0.0022 &  2.54258 &  0.00034\\
+  35c & -1.1677 &  0.0018 &  2.60281 &  0.00030\\
+  35e & -1.2966 &  0.0024 &  2.61611 &  0.00040\\
+  45c & -1.2738 &  0.0021 &  2.68964 &  0.00038\\
+  45e & -1.3551 &  0.0016 &  2.69543 &  0.00028\\
+  55c & -1.4656 &  0.0027 &  2.78554 &  0.00049\\
+  55e & -1.3749 &  0.0035 &  2.77694 &  0.00063\\
+ \end{tabular}
+\end{table}\\
+Dei valori corrispondenti alle stesse temperature sono state calcolate le medie pesate. Il valore di temperatura riportato è anch'esso la media aritmetica delle temperature osservate:
+\begin{table}[h]
+\centering
+ \begin{tabular}{c r@{$\pm$}l r@{$\pm$}l}
+ T (\unit{\celsius}) &  \multicolumn{2}{c}{$V_0\ (\unit{cm^3}$)}  & \multicolumn{2}{c}{$nRT$ (\unit{J})}\\\hline
+   0.363 & -1.0390 &  0.0013 &  2.31593 &  0.00019\\
+  15.964 & -1.1257 &  0.0016 &  2.45490 &  0.00023\\
+  25.508 & -1.1983 &  0.0015 &  2.53654 &  0.00025\\
+  35.421 & -1.2153 &  0.0014 &  2.60769 &  0.00024\\
+  45.309 & -1.3257 &  0.0013 &  2.69341 &  0.00022\\
+  55.232 & -1.4307 &  0.0022 &  2.78235 &  0.00038\\
+ \end{tabular}
+\end{table}\\
+Interpolando con una retta $T_0 + 1/nR \cdot nRT$, si possono ricavare la temperatura dello zero assoluto $T_0$ e il numero di moli di gas presenti nella siringa, con errore per propagazione. In ordinata si pone la temperatura media perché affetta da un errore relativo maggiore:
+\begin{table}[h]
+\centering
+ \begin{tabular}{r@{$\pm$}l r@{$\pm$}l}
+\multicolumn{2}{c}{$T_0\ (\celsius)$}  & \multicolumn{2}{c}{$1/nR$ (\unitfrac{K}{J})}\\\hline
+-275.9 &  4.5 &  119.1 & 1.7\\
+ \end{tabular}
+\end{table}\\
+Da questi si ricava subito $n = 0.001010\pm0.000015\unit{\mol}$. La compatibilità del valore $T_0$ con $\unit[-273.15\pm0.01]{\celsius}$ risulta 0.61, quindi buona. Infine, si è stimato il volume massimo della siringa riportando in grafico i valori minimi della pressione in funzione della temperatura media (grafici~\ref{t-pmincomp} e~\ref{t-pminesp}) e interpolando con una retta del tipo $P_{\text{min}} + nR/V_{\text{max}} T$. Le interpolazioni sono state eseguite separatamente per le fasi di espansione e compressione in quanto condizioni sperimentali diverse, ed è stata calcolata poi la media pesata dei volumi massimi ricavati, con errore per propagazione (vedi tabella~\ref{vmax}).
+\begin{table}[ht]\caption{Interpolazione lineare per la determinazione del volume massimo.}\label{vmax}
+\centering
+ \begin{tabular}{r r@{$\pm$}l}
+&\multicolumn{2}{c}{$nR/V_{\text{max}}\ (\unitfrac{J}{K m^3})$}\\\hline
+compressione & $336.0$ & $6.9$\\
+espansione  & $337.2$ & $7.4$\\
+\\
+&\multicolumn{2}{c}{$V_{\text{max}}\ (\unit{cm^3})$}\\\hline
+compressione& 24.99&0.63\\
+espansione&   24.90&0.66\\
+media pesata& 24.95&0.46
+ \end{tabular}
+\end{table}\\
+\section{Discussione dei risultati}
+I risultati ottenuti si possono ritenere soddisfacenti, nonostante l'esperienza sia influenzata da alcuni errori sistematici. Il più importante è la presenza di gas nei tubi che collegano la siringa alla valvola di apertura e al sensore di pressione. Il volume di questi tubi non è del tutto trascurabile, ed è stato misurato come $V_0$ nella prima interpolazione. Inoltre, i tubi non sono alla stessa temperatura della siringa. Un altro tipo di errore deriva dal fatto che la trasformazione non è perfettamente isoterma, ma ci sono variazioni di temperatura anche di un grado. La siringa, così come i tubi (grafico~\ref{t-v0}), poi è soggetta a variazioni di volume dovute all'aumento di temperatura e pressione. Infine, la legge dei gas perfetti introduce un'approssimazione che però nel nostro caso si può ritenere molto buona, e quindi sostanzialmente ininfluente.
+\section{Conclusioni}
+La legge dei gas perfetti per trasformazioni isoterme e isocore è verificata. Inoltre la stima della temperatura di zero assoluto è molto vicina al valore atteso, soprattutto considerando le numerose approssimazioni effettuate nell'esperimento.
+\newpage
+\section{Appendice}
+Nei grafici è disegnato un punto ogni dieci punti osservati. Il grande numero di punti infatti supera le capacità di memoria del \LaTeX. Tale quantità di dati è eccessiva per poter essere riportata sotto forma di tabella, ma si è ritenuto di doverli comunque rendere disponibili su internet all'indirizzo \url{http://www.latinblog.org/latex/misure.tar.gz}.
+Gli errori nei grafici sono ovunque troppo piccoli per essere rappresentati.
+\subsection*{Formule}
+\begin{description}
+ \item[Propagazione dell'errore, due variabili]
+\begin{equation*}
+ \sigma_f^2 = \left(\dfrac{\partial f}{\partial x}\sigma_x\right)^2 + \left(\dfrac{\partial f}{\partial y}\sigma_y\right)^2
+\end{equation*}
+ \item[Media pesata]
+\begin{equation*}
+ \bar{x}=\left(\sum_i \dfrac{x_i}{\sigma_{x_i}^2} \right)\left(\sum_i \dfrac{1}{\sigma_{x_i}^2} \right)^{-1} \qquad \sigma_{\bar{x}} = \left(\sum_i \dfrac{1}{\sigma_{x_i}^2} \right)^{-\nicefrac 1 2}
+\end{equation*}
+\item[Interpolazione lineare $y=kx+y_0$]
+\begin{align*}
+y_0 &= \dfrac{1}{\Delta}\left[ \left(\sum_{i=1}^Nx_i^2\right) \left(\sum_{i=1}^Ny_i\right)-\left(\sum_{i=1}^Nx_i\right)\left(\sum_{i=1}^Nx_iy_i\right)\right]\\[3pt]
+k &= \dfrac{1}{\Delta}\left[N \left(\sum_{i=1}^Nx_iy_i\right)-\left(\sum_{i=1}^Nx_i\right)\left(\sum_{i=1}^Ny_i\right)\right]\\[3pt]
+\Delta &= N\sum_{i=1}^Nx_i^2 - \left(\sum_{i=1}^Nx_i\right)^2\\[6pt]
+\sigma_{y_0}^2 &= \dfrac{\sigma_y^2}{\Delta}\sum_{i=1}^Nx_i^2\\[3pt]
+\sigma_k^2 &= \dfrac{N\sigma_y^2}{\Delta}
+\end{align*}
+\end{description}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 0 \celsius, fase di compressione.}\label{0c}
+\include{0c}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 0 \celsius, fase di espansione.}\label{0e}
+\include{0e}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 15 \celsius, fase di compressione.}\label{15c}
+\include{15c}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 15 \celsius, fase di espansione.}\label{15e}
+\include{15e}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 25 \celsius, fase di compressione.}\label{25c}
+\include{25c}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 25 \celsius, fase di espansione.}\label{25e}
+\include{25e}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 35 \celsius, fase di compressione.}\label{35c}
+\include{35c}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 35 \celsius, fase di espansione.}\label{35e}
+\include{35e}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 45 \celsius, fase di compressione.}\label{45c}
+\include{45c}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 45 \celsius, fase di espansione.}\label{45e}
+\include{45e}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 55 \celsius, fase di compressione.}\label{55c}
+\include{55c}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con inverso della pressione in ascissa e volume in ordinata. Temperatura di 55 \celsius, fase di espansione.}\label{55e}
+\include{55e}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con temperatura media in ascissa e pressione minima in ordinata. Fase di compressione.}\label{t-pmincomp}
+\include{t-pmincomp}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con temperatura media in ascissa e pressione minima in ordinata. Fase di espansione.}\label{t-pminesp}
+\include{t-pminesp}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione dei dati con $nRT$ in ascissa e temperatura media in ordinata.}\label{t-pv}
+\include{t-pv}
+\end{figure}
+\begin{figure}[p]\caption{Valori di $V_0$ (medie pesate in espansione e compressione) rispetto alla temperatura media. Si vede che il volume dei tubicini aumenta sensibilmente con la temperatura.}\label{t-v0}
+\include{t-v0}
+\end{figure}
+\end{document}

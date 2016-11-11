@@ -1,0 +1,585 @@
+%!PS-Adobe-3.0
+%%Title: 3.diodo.py
+%%For: matteo
+%%Creator: VIM - Vi IMproved 7.2 (2008 Aug 9)
+%%CreationDate: Tue May  5 23:34:56 2009
+%%DocumentData: Clean8Bit
+%%Orientation: Portrait
+%%Pages: (atend)
+%%PageOrder: Ascend
+%%BoundingBox: 59 49 564 800
+%%DocumentMedia: A4 595 842 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%DocumentSuppliedResources: procset VIM-Prolog 1.4 1
+%%+ encoding VIM-latin1 1.0 0
+%%Requirements: duplex collate color
+%%EndComments
+%%BeginDefaults
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%PageMedia: A4
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset VIM-Prolog
+%%BeginDocument: /usr/share/vim/vim72/print/prolog.ps
+%!PS-Adobe-3.0 Resource-ProcSet
+%%Title: VIM-Prolog
+%%Version: 1.4 1
+%%EndComments
+% Editing of this file is NOT RECOMMENDED.  You run a very good risk of causing
+% all PostScript printing from VIM failing if you do.  PostScript is not called
+% a write-only language for nothing!
+/packedarray where not{userdict begin/setpacking/pop load def/currentpacking
+false def end}{pop}ifelse/CP currentpacking def true setpacking
+/bd{bind def}bind def/ld{load def}bd/ed{exch def}bd/d/def ld
+/db{dict begin}bd/cde{currentdict end}bd
+/T true d/F false d
+/SO null d/sv{/SO save d}bd/re{SO restore}bd
+/L2 systemdict/languagelevel 2 copy known{get exec}{pop pop 1}ifelse 2 ge d
+/m/moveto ld/s/show ld /ms{m s}bd /g/setgray ld/r/setrgbcolor ld/sp{showpage}bd
+/gs/gsave ld/gr/grestore ld/cp/currentpoint ld
+/ul{gs UW setlinewidth cp UO add 2 copy newpath m 3 1 roll add exch lineto
+stroke gr}bd
+/bg{gs r cp BO add 4 -2 roll rectfill gr}bd
+/sl{90 rotate 0 exch translate}bd
+L2{
+/sspd{mark exch{setpagedevice}stopped cleartomark}bd
+/nc{1 db/NumCopies ed cde sspd}bd
+/sps{3 db/Orientation ed[3 1 roll]/PageSize ed/ImagingBBox null d cde sspd}bd
+/dt{2 db/Tumble ed/Duplex ed cde sspd}bd
+/c{1 db/Collate ed cde sspd}bd
+}{
+/nc{/#copies ed}bd
+/sps{statusdict/setpage get exec}bd
+/dt{statusdict/settumble 2 copy known{get exec}{pop pop pop}ifelse
+statusdict/setduplexmode 2 copy known{get exec}{pop pop pop}ifelse}bd
+/c{pop}bd
+}ifelse
+/ffs{findfont exch scalefont d}bd/sf{setfont}bd
+/ref{1 db findfont dup maxlength dict/NFD ed{exch dup/FID ne{exch NFD 3 1 roll
+put}{pop pop}ifelse}forall/Encoding findresource dup length 256 eq{NFD/Encoding
+3 -1 roll put}{pop}ifelse NFD dup/FontType get 3 ne{/CharStrings}{/CharProcs}
+ifelse 2 copy known{2 copy get dup maxlength dict copy[/questiondown/space]{2
+copy known{2 copy get 2 index/.notdef 3 -1 roll put pop exit}if pop}forall put
+}{pop pop}ifelse dup NFD/FontName 3 -1 roll put NFD definefont pop end}bd
+CP setpacking
+(\004)cvn{}bd
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%BeginResource: encoding VIM-latin1
+%%BeginDocument: /usr/share/vim/vim72/print/latin1.ps
+%!PS-Adobe-3.0 Resource-Encoding
+%%Title: VIM-latin1
+%%Version: 1.0 0
+%%EndComments
+/VIM-latin1[
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/grave /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis]
+/Encoding defineresource pop
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%EndProlog
+%%BeginSetup
+595 842 0 sps
+1 nc
+T F dt
+T c
+%%IncludeResource: font Courier
+/_F0 /VIM-latin1 /Courier ref
+/F0 10 /_F0 ffs
+%%IncludeResource: font Courier-Bold
+/_F1 /VIM-latin1 /Courier-Bold ref
+/F1 10 /_F1 ffs
+%%IncludeResource: font Courier-Oblique
+/_F2 /VIM-latin1 /Courier-Oblique ref
+/F2 10 /_F2 ffs
+%%IncludeResource: font Courier-BoldOblique
+/_F3 /VIM-latin1 /Courier-BoldOblique ref
+/F3 10 /_F3 ffs
+/UO -1 d
+/UW 0.5 d
+/BO -2.5 d
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(3.diodo.py                                                                  Pagina 1)59.5 792.4 ms
+F0 sf
+1 0 1 r
+(#!/usr/bin/env python)59.5 772.4 ms
+(#coding=utf-8)59.5 762.4 ms
+1 0 0 r
+("""3.diodo requires t, v_in, v_out in a three column, white space separated)59.5 742.4 ms
+(file""")59.5 732.4 ms
+1 1 0 r
+(from)59.5 712.4 ms
+0 g
+( __future__ )s
+1 1 0 r
+(import)s
+0 g
+( division)s
+1 1 0 r
+(import)59.5 702.4 ms
+0 g
+( math)s
+1 1 0 r
+(import)59.5 692.4 ms
+0 g
+( sys)s
+1 1 0 r
+(from)59.5 682.4 ms
+0 g
+( array )s
+1 1 0 r
+(import)s
+0 g
+( array)s
+1 1 0 r
+(from)59.5 672.4 ms
+0 g
+( ROOT )s
+1 1 0 r
+(import)s
+0 g
+( TCanvas, TGraphErrors, TF1, TMath, TAxis)s
+(file_name = )59.5 652.4 ms
+1 0 0 r
+('diodo2')s
+0 g
+(name = file_name + )59.5 642.4 ms
+1 0 0 r
+('.dat')s
+0 g
+(output = file_name + )59.5 632.4 ms
+1 0 0 r
+('.out')s
+0 g
+(TIME_DIV = )59.5 622.4 ms
+1 0 0 r
+(250)s
+0 g
+( )s
+0 0 1 r
+(#division on time axis)s
+0 g
+(POT_DIV = )59.5 612.4 ms
+1 0 0 r
+(1)s
+0 g
+( )s
+0 0 1 r
+(#division on voltage axis)s
+0 g
+(R = \()59.5 602.4 ms
+1 0 0 r
+(1)s
+0 g
+(, )s
+1 0 0 r
+(0.006)s
+0 g
+(\))s
+0 0 1 r
+(#resistance should be set so that current is 5mA)s
+(#UNITS:)59.5 592.4 ms
+(#voltage: V)59.5 582.4 ms
+(#resisance: kOhm)59.5 572.4 ms
+(#time: ns)59.5 562.4 ms
+1 1 0 r
+(def)59.5 542.4 ms
+0 g
+( )s
+0 1 1 r
+(osc_error_v)s
+0 g
+(\(measure, division\):)s
+(    )59.5 532.4 ms
+1 1 0 r
+(if)s
+0 g
+( measure:)s
+(        err = )59.5 522.4 ms
+1 0 0 r
+(3)s
+0 g
+(*measure/)s
+1 0 0 r
+(100)s
+0 g
+(    )59.5 512.4 ms
+1 1 0 r
+(else)s
+0 g
+(:)s
+(        err = division/)59.5 502.4 ms
+1 0 0 r
+(10)s
+0 g
+(    )59.5 492.4 ms
+1 1 0 r
+(return)s
+0 g
+( err)s
+1 1 0 r
+(def)59.5 472.4 ms
+0 g
+( )s
+0 1 1 r
+(osc_error_t)s
+0 g
+(\(measure, division\):)s
+(    err = )59.5 462.4 ms
+1 0 0 r
+(100)s
+0 g
+(*measure/)s
+1 0 0 r
+(1e6)s
+0 g
+(+)s
+1 0 0 r
+(0.6e-9)s
+0 g
+(+division/)s
+1 0 0 r
+(250)s
+0 g
+(    )59.5 452.4 ms
+1 1 0 r
+(return)s
+0 g
+( err)s
+( )59.5 442.4 ms
+1 1 0 r
+(class)59.5 432.4 ms
+0 g
+( )s
+0 1 1 r
+(DiodeCurrent)s
+0 g
+(\(object\): )s
+(    )59.5 422.4 ms
+1 1 0 r
+(def)s
+0 g
+( )s
+0 1 1 r
+(__init__)s
+0 g
+(\(self, file_name\):)s
+(        file = open\(file_name\))59.5 412.4 ms
+(        out = open\(output, )59.5 402.4 ms
+1 0 0 r
+('w')s
+0 g
+(\))s
+(        )59.5 392.4 ms
+1 1 0 r
+(for)s
+0 g
+( line )s
+1 1 0 r
+(in)s
+0 g
+( file:)s
+(            )59.5 382.4 ms
+0 0 1 r
+(#calculate errors and dump the content to output file)s
+0 g
+(            )59.5 372.4 ms
+1 1 0 r
+(if)s
+0 g
+( )s
+1 0 0 r
+('#')s
+0 g
+( )s
+1 1 0 r
+(in)s
+0 g
+( line:)s
+(                )59.5 362.4 ms
+1 1 0 r
+(continue)s
+0 g
+(            t, vin, vout = [float\(x\) )59.5 352.4 ms
+1 1 0 r
+(for)s
+0 g
+( x )s
+1 1 0 r
+(in)s
+0 g
+( line.split\(\)])s
+(            te = osc_error_t\(t, TIME_DIV\))59.5 342.4 ms
+(            vd = vin - vout)59.5 332.4 ms
+(            voute = osc_error_v\(vout, POT_DIV\))59.5 322.4 ms
+(            vde = osc_error_v\(vd, POT_DIV\))59.5 312.4 ms
+(            id = vout/R[)59.5 302.4 ms
+1 0 0 r
+(0)s
+0 g
+(])s
+(            )59.5 292.4 ms
+1 1 0 r
+(if)s
+0 g
+( vout:)s
+(                ide = id*\(\(voute/vout\)+\(R[)59.5 282.4 ms
+1 0 0 r
+(1)s
+0 g
+(]/R[)s
+1 0 0 r
+(0)s
+0 g
+(]\)\))s
+(            )59.5 272.4 ms
+1 1 0 r
+(else)s
+0 g
+(:)s
+(                ide = id*\(R[)59.5 262.4 ms
+1 0 0 r
+(1)s
+0 g
+(]/R[)s
+1 0 0 r
+(0)s
+0 g
+(]\))s
+(            new_line = [vd, id, vde, ide])59.5 252.4 ms
+(            new_line = )59.5 242.4 ms
+1 0 0 r
+(' ')s
+0 g
+(.join\([str\(x\) )s
+1 1 0 r
+(for)s
+0 g
+( x )s
+1 1 0 r
+(in)s
+0 g
+( new_line]\) + )s
+1 0 0 r
+(')s
+1 0 1 r
+(\\n)s
+1 0 0 r
+(')s
+0 g
+(            out.write\(new_line\))59.5 232.4 ms
+(        file.close\(\))59.5 222.4 ms
+(        out.close\(\))59.5 212.4 ms
+(        )59.5 202.4 ms
+0 0 1 r
+(#create Graph. ROOT automatically reads columns)s
+0 g
+(        self.graph = TGraphErrors\(output\))59.5 192.4 ms
+(        self.graph.SetMarkerStyle\()59.5 182.4 ms
+1 0 0 r
+(7)s
+0 g
+(\))s
+(        self.func = TF1\()59.5 172.4 ms
+1 0 0 r
+("shockley")s
+0 g
+(, )s
+1 0 0 r
+("[0]*\(exp\(x/[1]\)-1\)")s
+0 g
+(, )s
+1 0 0 r
+(0.1)s
+0 g
+(, )s
+1 0 0 r
+(1)s
+0 g
+(\))s
+(        self.func.SetParameters\()59.5 162.4 ms
+1 0 0 r
+(5)s
+0 g
+(, )s
+1 0 0 r
+(0.026)s
+0 g
+(\))s
+(    )59.5 142.4 ms
+1 1 0 r
+(def)s
+0 g
+( )s
+0 1 1 r
+(fit_graph)s
+0 g
+(\(self\):)s
+(        self.graph.Fit\()59.5 132.4 ms
+1 0 0 r
+("shockley")s
+0 g
+(, )s
+1 0 0 r
+("QRW")s
+0 g
+(\))s
+(        self.v0 = self.func.GetParameter\()59.5 122.4 ms
+1 0 0 r
+(0)s
+0 g
+(\), self.func.GetParError\()s
+1 0 0 r
+(0)s
+0 g
+(\))s
+(        self.tau = self.func.GetParameter\()59.5 112.4 ms
+1 0 0 r
+(1)s
+0 g
+(\), self.func.GetParError\()s
+1 0 0 r
+(1)s
+0 g
+(\))s
+(        )59.5 102.4 ms
+1 1 0 r
+(print)s
+0 g
+( )s
+1 0 0 r
+("Is = %.3g \\pm %.3g")s
+0 g
+( %self.v0)s
+(        )59.5 92.4 ms
+1 1 0 r
+(print)s
+0 g
+( )s
+1 0 0 r
+("n*Vt = %.3f \\pm %.3f")s
+0 g
+( %self.tau)s
+(a = DiodeCurrent\(name\))59.5 72.4 ms
+(canv = TCanvas\()59.5 62.4 ms
+1 0 0 r
+('car')s
+0 g
+(,)s
+1 0 0 r
+('car')s
+0 g
+(\))s
+(canv.SetFillColor\()59.5 52.4 ms
+1 0 0 r
+(10)s
+0 g
+(\))s
+re sp
+%%PageTrailer
+%%Page: 2 2
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(3.diodo.py                                                                  Pagina 2)59.5 792.4 ms
+F0 sf
+(a.graph.SetTitle\()59.5 772.4 ms
+1 0 0 r
+('Shockley Equation')s
+0 g
+(\))s
+(a.graph.Draw\()59.5 762.4 ms
+1 0 0 r
+('AEP')s
+0 g
+(\))s
+(a.fit_graph\(\))59.5 752.4 ms
+(I0 = a.v0[)59.5 742.4 ms
+1 0 0 r
+(0)s
+0 g
+(])s
+(const =a.tau[)59.5 732.4 ms
+1 0 0 r
+(0)s
+0 g
+(])s
+(f2 = TF1\()59.5 722.4 ms
+1 0 0 r
+('inverse')s
+0 g
+(,)s
+1 0 0 r
+('[0]*\(TMath::Log\(x/[1]\)+1\)')s
+0 g
+(\))s
+(f2.SetParameters\(const, I0\))59.5 712.4 ms
+1 1 0 r
+(print)59.5 702.4 ms
+0 g
+( f2.Eval\()s
+1 0 0 r
+(0.5)s
+0 g
+(\))s
+(raw_input\()59.5 692.4 ms
+1 0 0 r
+('Press ENTER to continue...')s
+0 g
+(\))s
+re sp
+%%PageTrailer
+%%Trailer
+%%Pages: 2
+%%EOF
+

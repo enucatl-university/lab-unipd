@@ -1,0 +1,111 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url}
+\usepackage[text={5.5in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\include{pstricks}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Figura}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\renewcommand{\leq}{\leqslant}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di laboratorio: misura della capacità di un condensatore attraverso la misura del tempo caratteristico di un circuito RC con onde quadre di alta frequenza}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}}
+\date{\today}
+\maketitle
+%------------------
+\section{Obiettivo dell'esperienza}
+
+\section{Descrizione dell'apparato strumentale}
+
+\section{Descrizione della metodologia di misura}
+
+\section{Risultati sperimentali ed elaborazione dati}
+\subsection{Misura della resistenza interna dell'oscilloscopio}
+La resistenza interna dell'oscilloscopio è stata misurata attraverso il circuito rappresentato in figura~\ref{RO}. La resistenza di carico $R$ vale \unit[0.999$\pm$0.003]{M\ohm}, secondo il multimetro T110B con fondo scala \unit[2]{M\ohm}. La resistenza interna $R_o$ risulta quindi:
+\begin{equation*}
+ R_o = R\dfrac{V_\text{out}}{V_\text{in}-V_\text{out}}=\unit[1.05\pm0.08]{M\ohm} \quad (7.7\%)
+\end{equation*}
+Dove $V_\text{in}=\unit[16.8\pm0.3]{V}$ e $V_\text{out}=\unit[8.6\pm0.3]{V}$ sono stati misurati con l'oscilloscopio (V/div = \unit[5]{V}) e sono qui riportati con i soli errori casuali, essendo eventuali errori di scala irrilevanti per questo calcolo di $R_o$.
+\begin{figure}[h]\caption{Circuito realizzato per la misura di $R_O$.}\label{RO}
+\centering
+\include{misuraRO}
+\end{figure}
+\subsection{Misura della capacità parassita dei cavi}
+Espandendo molto il fronte di discesa dell'onda quadra nel circuito, è possibile determinare la capacità parassita dei cavi. Abbiamo preso sei punti sulla curva della scarica. L'interpolazione lineare di $\log(V)$ in funzione di $t$ ha un coefficiente angolare $m = -\tau^{-1}$.
+\begin{table}[h]
+\centering
+ \begin{tabular}{*5c}
+ t ($\unit{\micro s}$) &$\log(V) $&V (\unit{V}) & residui \\\hline
+24 &1.870 &6.5 &-0.003\\
+54 &1.500 &4.5 &0.003\\
+78 &1.190 &3.3 &-0.008\\
+102 &0.916 &2.5 &0.012\\
+128 &0.577 &1.8 &-0.003\\
+230 &-0.693 &0.5 &-0.002\\
+ \end{tabular}
+\end{table}\\
+Da cui si ha (vedi anche grafico~\ref{cp.graf}):
+\begin{equation*}
+m =  \unit[-12457 ± 50]{s^{-1}} (0.4\%) \qquad \tau = \unit[80.27\pm0.33]{\micro s}
+\end{equation*}
+La correlazione è $\rho = -0.841$. Sappiamo che $\tau = R_{eq}C_p = R_oRC_p/(R_o+R)$ e, sostituendo l'espressione trovata sopra per la resistenza dell'oscilloscopio si ricava con semplici passaggi algebrici un'espressione che rende più agevole e più corretto il calcolo dell'errore:
+\begin{equation*}
+ C_p = -\dfrac{V_\text{in}}{V_\text{out}}\dfrac{1}{mR} = \unit[157\pm6]{pF} \quad (4\%)
+\end{equation*}
+\subsection{Calcolo della costante di tempo del circuito}
+Abbiamo collegato poi il generatore di onde quadre al circuito rappresentato in figura per calcolarne la costante di tempo RC. Dalla misura diretta con il multimetro T110B (FS \unit[200]{k\ohm}) si ottiene $R = \unit[55.6\pm0.2]{k\ohm}$. Il segnale in ingresso, senza circuito, risulta $V_{0,\text{in}} = \unit[17.0\pm0.3]{V}$, mentre $V_0$, misurata con il circuito inserito e a una frequenza bassa (\unit[13.32]{Hz}), risulta $\unit[16.4\pm0.3]{V}$. Queste differenze di potenziale sono misurate con l'oscilloscopio ancora con la scala a \unit[5]{V} per divisione.
+\begin{figure}[h]\caption{Circuito RC.}
+\centering
+\include{circuito}
+\end{figure}\\
+\section{Discussione dei risultati}
+
+\section{Conclusioni}
+
+\section{Appendice}
+
+\begin{figure}[p]\caption{Interpolazione lineare per la determinazione della capacità parassita dei cavi.}\label{cp.graf}
+\centering
+\include{cp}
+\end{figure}
+
+
+\end{document}

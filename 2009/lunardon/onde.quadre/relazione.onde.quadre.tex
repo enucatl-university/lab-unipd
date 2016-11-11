@@ -1,0 +1,201 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url}
+\usepackage[text={5.5in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\include{pstricks}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Figura}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\renewcommand{\leq}{\leqslant}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di laboratorio: misura della capacità di un condensatore attraverso la misura del tempo caratteristico di un circuito RC con onde quadre di alta frequenza}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}}
+\date{\today}
+\maketitle
+%------------------
+\section{Obiettivo dell'esperienza}
+Obiettivo dell'esperienza è lo studio della risposta ad onde quadre di alta frequenza di un circuito RC, valutando in particolare gli effetti della resistenza interna dell'oscilloscopio e delle capacità parassite dei cavetti che collegano i vari elementi del circuito.
+\section{Descrizione dell'apparato strumentale}
+Per la realizzazione del circuito RC sono state impiegate una resistenza $R=\unit[55.6]{k\ohm}$ e un condensatore di capacità $C=\unit[10]{nF}$, collegati a un generatore di corrente PeakTech 1006 a onde quadre. 
+Tempi e differenze di potenziale ai capi del condensatore sono stati misurati con un oscilloscopio digitale Tektronix TDS 210. \`{E} stata inoltre impiegata una resistenza di carico $R_c\sim\unit[1]{M\ohm}$ per la stima della resistenza interna dell'oscilloscopio e delle capacità parassite.
+\section{Descrizione della metodologia di misura}
+Per la stima della resistenza interna dell'oscilloscopio $R_o$ sono state misurate l'ampiezza $V_{\text{in}}$ del segnale prodotto dal generatore, collegandolo direttamente all'oscilloscopio, e l'ampiezza $V_{\text{out}}$ del segnale in uscita dalla resistenza di carico $R$. Le misure sono state effettuate dal segnale sull'oscilloscopio, visualizzato con divisioni sulla scala delle ampiezze di \unit[5]{V}.
+La resistenza di carico $R$ è stata misurata con il multimetro T110B con fondo scala $\unit[2]{M\ohm}$.
+
+Per la stima delle capacità parassite dei cavetti sono state effettuate 6 misure delle differenze di potenziale ai capi del condensatore durante la fase di scarica, prendendo i punti sul segnale dell'oscilloscopio, con suddivisioni di \unit[2]{V} sulla scala delle ampiezze e di $\unit[50]{\micro s}$ su quella dei tempi.
+
+Per la misura del $\tau$ relativo al circuito RC è stata iniettata in ingresso un'onda quadra di ampiezza $V_{\text{in}}=\unit[17.0]{V}$ e frequenza \unit[13.32]{Hz} (periodo $T=\unit[75.07]{s}$) e sono state prese 15 misure delle differenze di potenziale ai capi del condensatore a intervalli di tempo regolari sul segnale dell'oscilloscopio, con divisione sulle ampiezze variabile tra 100 e \unit[500]{mV} come indicato in tabella. Il valore di $V_{\text{in}}$ è stato misurato collegando direttamente il generatore all'oscilloscopio, con divisione di $\unit[5]{V}$. Con la stessa scala è stata misurata l'ampiezza $V_{\text{out}}$ del segnale in uscita dal circuito, a bassa frequenza.
+
+Nell'ultima parte dell'esperienza è stata iniettata nel circuito un'onda composta, ottenuta collegando due generatori di onde quadre, il primo ad alta frequenza ($T=\unit[266.0]{\micro s}$) e il secondo a frequenza sufficientemente bassa dal permettere la completa carica/scarica del condensatore ($T=\unit[106.0]{ms}$). Si sono quindi prese le misure dell'altezza del segnale in corrispondenza dei primi 12 semiperiodi, con $\text{div}_V=\unit[2]{V}$ e $\text{div}_t=\unit[50]{\micro s}$.
+
+\section{Risultati sperimentali ed elaborazione dati}
+\subsection{Misura della resistenza interna dell'oscilloscopio}
+La resistenza interna dell'oscilloscopio è stata misurata attraverso il circuito rappresentato in figura~\ref{RO}. La resistenza di carico $R$ vale \unit[0.999$\pm$0.003]{M\ohm}, secondo il multimetro T110B con fondo scala \unit[2]{M\ohm}. La resistenza interna $R_o$ risulta quindi:
+\begin{equation*}
+ R_o = R\dfrac{V_\text{out}}{V_\text{in}-V_\text{out}}=\unit[1.05\pm0.08]{M\ohm} \quad (7.7\%)
+\end{equation*}
+Dove $V_\text{in}=\unit[16.8\pm0.3]{V}$ e $V_\text{out}=\unit[8.6\pm0.3]{V}$ sono stati misurati con l'oscilloscopio (V/div = \unit[5]{V}) e sono qui riportati con i soli errori casuali, essendo eventuali errori di scala irrilevanti per questo calcolo di $R_o$.
+\begin{figure}[h]\caption{Circuito realizzato per la misura di $R_O$.}\label{RO}
+\centering
+\include{misuraRO}
+\end{figure}
+\subsection{Misura della capacità parassita dei cavi}
+Espandendo molto il fronte di discesa dell'onda quadra nel circuito, è possibile determinare la capacità parassita dei cavi. Abbiamo preso sei punti sulla curva della scarica. L'interpolazione lineare di $\log(V)$ in funzione di $t$ ha un coefficiente angolare $m = -\tau^{-1}$.
+\begin{table}[h]
+\centering
+ \begin{tabular}{*5c}
+ t ($\unit{\micro s}$) &$\log(V) $&V (\unit{V}) & residui \\\hline
+24 &1.870 &6.5 &-0.003\\
+54 &1.500 &4.5 &0.003\\
+78 &1.190 &3.3 &-0.008\\
+102 &0.916 &2.5 &0.012\\
+128 &0.577 &1.8 &-0.003\\
+230 &-0.693 &0.5 &-0.002\\
+ \end{tabular}
+\end{table}\\
+Da cui si ha (vedi anche grafico~\ref{cp.graf}):
+\begin{equation*}
+m =  \unit[-12457 ± 50]{s^{-1}} (0.4\%) \qquad \tau = \unit[80.27\pm0.33]{\micro s}
+\end{equation*}
+La correlazione è $\rho = -0.841$. Sappiamo che $\tau = R_{eq}C_p = R_oRC_p/(R_o+R)$ e, sostituendo l'espressione trovata sopra per la resistenza dell'oscilloscopio si ricava con semplici passaggi algebrici un'espressione che rende più agevole e più corretto il calcolo dell'errore:
+\begin{equation*}
+ C_p = -\dfrac{V_\text{in}}{V_\text{out}}\dfrac{1}{mR} = \unit[157\pm6]{pF} \quad (4\%)
+\end{equation*}
+\subsection{Calcolo della costante di tempo del circuito}
+Abbiamo collegato poi il generatore di onde quadre al circuito rappresentato in figura per calcolarne la costante di tempo RC. Dalla misura diretta con il multimetro T110B (FS \unit[200]{k\ohm}) si ottiene $R = \unit[55.6\pm0.2]{k\ohm}$. Il segnale in ingresso, senza circuito, risulta $V_{0,\text{in}} = \unit[17.0\pm0.3]{V}$, mentre $V_0$, misurata con il circuito inserito e a una frequenza bassa (\unit[13.32]{Hz}), risulta $\unit[16.4\pm0.3]{V}$. Queste differenze di potenziale sono misurate con l'oscilloscopio ancora con la scala a \unit[5]{V} per divisione.
+\begin{figure}[h]\caption{Circuito RC.}
+\centering
+\include{circuito}
+\end{figure}\\
+Il tempo caratteristico atteso dalle caratteristiche nominali dei componenti era $\tau = \unit[556]{\micro s}$. Facendo variare il periodo dell'onda in ingresso tra $0.1\tau$ e $0.9\tau$ e misurando le differenze di potenziale sull'oscilloscopio possiamo interpolare e ricavare il tempo caratteristico attraverso la relazione $\tau = V_0/4m$.
+\begin{table}[h]
+\centering
+ \begin{tabular}{*3c}
+ t ($\unit{\micro s}$) &$\Delta V$ (\unit{V}) & V/div (\unit{V})  \\\hline
+56.7 &0.4 &0.1\\
+86.96 &0.624 &0.1\\
+115.5 &0.824 &0.2\\
+147.9 &1.04 &0.2\\
+177.9 &1.30 &0.2\\
+207.6 &1.51 &0.5\\
+238.9 &1.8 &0.5\\
+269.2 &1.98 &0.5\\
+301.6 &2.22 &0.5\\
+334.1 &2.44 &0.5\\
+364.0 &2.62 &0.5\\
+399.0 &2.92 &0.5\\
+429.7 &3.10 &0.5\\
+452.8 &3.30 &0.5\\
+485.8 &3.5 &0.5
+ \end{tabular}
+\end{table}\\
+L'interpolazione porge:
+\begin{equation*}
+m =  \unit[7272 ± 53]{V/s} (0.7\%) \qquad \tau = \unit[563\pm14]{\micro s}
+\end{equation*}
+Si noti che l'ordinata all'origine è $c =  \unit[-0.0002 \pm 0.0161]{V}$ e quindi fortemente compatibile con un valore nullo. La correlazione tra i due valori risulta $-0.897$.
+\subsection{Calcolo della capacità del condensatore}
+Ora che abbiamo la costante di tempo del circuito possiamo ricavare la capacità del condensatore. Teniamo conto del fatto che c'è una capacità parassita dovuta ai cavi e all'oscilloscopio, e un effetto della resistenza interna dell'oscilloscopio stesso in parallelo. Considerando solo quest'ultimo effetto abbiamo:
+\begin{equation*}
+ C_1 = \left(\dfrac 1 R + \dfrac 1 R_o \right) \tau = \unit[10.7\pm0.3]{nF}
+\end{equation*}
+\`E possibile migliorare ancora la stima tenendo conto degli effetti di capacità prima stimati:
+\begin{equation*}
+ C = C_1 - C_p = \unit[10.5\pm0.3]{nF}
+\end{equation*}
+Da una precedente relazione risultava $\tau = \unit[534.1\pm0.7]{\micro s}$ da cui avevamo ricavato una capacità $C = \unit[9.61\pm0.01]{nF}$. Possiamo ora migliorare questa stima considerando gli effetti degli strumenti impiegati, ottenendo $C = \unit[9.96\pm0.05]{nF}$, più vicino al valore trovato qui e al valore nominale di $\unit[10]{nF}$.
+\subsection{Fase transitoria}
+Con due generatori di onde è possibile visualizzare la fase transitoria di carica e verificare che i dati ricavati coincidano con quelli previsti dalla formula ricorsiva:
+\begin{equation*}
+ V(n) = \begin{cases}
+         V_0 + [V(n-1)-V_0]\exp\left\{-\dfrac{T}{2\tau}\right\} & n\text{ dispari}\\
+         V(n-1)\exp\left\{-\dfrac{T}{2\tau}\right\} & n\text{ pari}
+        \end{cases}
+\end{equation*}
+Con, ovviamente, $V(0) = 0$. $T$ è stato misurato con l'oscilloscopio e vale $\unit[266.0]{\micro s}$, gli altri valori sono quelli misurati sopra. La tabella~\ref{transitoria} riporta i risultati delle osservazioni, da cui si nota il buon accordo con i valori previsti, praticamente sempre entro gli errori sperimentali, soprattutto per gli ultimi punti.
+\begin{table}[p]\caption{Fase transitoria, potenziale misurato e previsto ogni semiperiodo.}\label{transitoria}
+\centering
+ \begin{tabular}{c r@{$\pm$}l c c}
+n &\multicolumn{2}{c}{$V^\text{mis}$ (\unit{V})} & $V^\text{prev}$ (\unit{V}) & $\Delta V$\\\hline
+0 &0.00 &0.115 &0.00 &0.000\\
+1 &3.60 &0.131 &3.45 &-0.154\\
+2 &2.88 &0.126 &2.72 &-0.158\\
+3 &5.84 &0.154 &5.60 &-0.244\\
+4 &4.56 &0.140 &4.42 &-0.140\\
+5 &7.04 &0.168 &6.94 &-0.102\\
+6 &5.60 &0.151 &5.48 &-0.120\\
+7 &7.92 &0.179 &7.77 &-0.145\\
+8 &6.32 &0.159 &6.14 &-0.179\\
+9 &8.40 &0.186 &8.30 &-0.103\\
+10 &6.64 &0.163 &6.55 &-0.087\\
+11 &8.64 &0.189 &8.62 &-0.017\\
+12 &6.88 &0.166 &6.81 &-0.069\\
+ \end{tabular}
+\end{table}\\
+\section{Conclusioni}
+La correzione con gli effetti della capacità parassita e delle resistenze degli strumenti permette di migliorare sensibilmente i risultati sperimentali. Non è detto che la correzione applicata ai dati della vecchia esperienza sia del tutto corretta in quanto la configurazione del circuito poteva essere leggermente diversa. Si può però ragionevolmente supporre che la correzione sia quantomeno corretta nell'ordine di grandezza.
+\section{Appendice}
+\begin{figure}[p]\caption{Grafico con $\Delta V$ e $t$, per ricavare la costante di tempo del circuito RC.}
+\centering
+\include{graf.tau}
+\end{figure}
+\begin{figure}[p]\caption{Grafico con $\Delta V$ e $t$, per ricavare la costante di tempo del circuito RC. Grafico dei residui.}
+\centering
+\include{graf.tau.res}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione lineare per la determinazione della capacità parassita dei cavi.}\label{cp.graf}
+\centering
+\include{cp}
+\end{figure}
+\begin{figure}[p]\caption{Interpolazione lineare per la determinazione della capacità parassita dei cavi. Grafico dei residui.}
+\centering
+\include{graf.cp.res}
+\end{figure}
+\subsection{Calcolo degli errori sulle misure}
+Come errore sperimentale sulle misure si è assunta la deviazione standard $\sigma$, calcolata tenendo conto degli errori casuali e di quelli sistematici legati allo strumento.
+
+In particolare, per le misure effettuate con l'oscilloscopio si è assunta per le tensioni
+$$\sigma^2=\sigma^2_s+\sigma^2_r$$
+dove  $\sigma_s=0.58\Delta_s$, essendo $\Delta_s$ l' errore massimo di scala pari al 3\% della misura, mentre $\sigma_r~=~0.58\cdot\nicefrac{1}{10}\text{[divisione]}$ rappresenta l'errore casuale di lettura dallo strumento.
+Per le misure sui tempi si è trascurato il fattore di scala (essendo $\sim 0.01 \%$) e si è considerato come errore solo $\sigma_s~=~0.58\cdot\nicefrac{1}{10}\text{[divisione]}$.
+
+Per le grandezze derivate l'incertezza è stata calcolata per propagazione e si è tenuto conto degli errori di scala ponendo ogni misura $x=kx^*$, pari al prodotto delle variabili indipendenti $k=1\pm \sigma_s$, fattore di scala calcolato come sopra, e $x^*=x^*\pm \sigma_r$ affetta dal solo errore casuale.
+\end{document}

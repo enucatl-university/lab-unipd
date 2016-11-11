@@ -1,0 +1,736 @@
+
+Crafty v22.10 (1 cpus)
+
+White(1): xboard
+White(1): protover 2
+feature ping=1 setboard=1 san=1 time=1 draw=1
+feature sigint=0 sigterm=0 reuse=1 analyze=1
+feature myname="Crafty-22.10" name=1
+feature playother=1 colors=0
+feature variants="normal,nocastle"
+feature done=1
+White(1): accepted ping
+White(1): accepted setboard
+White(1): accepted san
+White(1): accepted time
+White(1): accepted draw
+White(1): accepted sigint
+White(1): accepted sigterm
+White(1): accepted reuse
+White(1): accepted analyze
+White(1): accepted myname
+White(1): accepted name
+White(1): accepted playother
+White(1): accepted colors
+White(1): accepted variants
+White(1): accepted done
+White(1): new
+White(1): random
+White(1): level 40 5 0
+40 moves/300 seconds primary time control
+40 moves/300 seconds secondary time control
+White(1): post
+White(1): hard
+pondering enabled.
+White(1): ping 1
+pong 1
+White(1): new
+White(1): random
+White(1): level 40 5 0
+40 moves/300 seconds primary time control
+40 moves/300 seconds secondary time control
+White(1): post
+White(1): hard
+pondering enabled.
+White(1): ping 2
+pong 2
+White(1): force
+White(1): e4
+Black(1): e6
+White(2): d4
+Black(2): d5
+White(3): exd5
+Black(3): exd5
+White(4): Bd3
+Black(4): c5
+White(5): Nf3
+Black(5): Nc6
+White(6): Qe2+
+Black(6): Be7
+White(7): dxc5
+Black(7): Nf6
+White(8): h3
+Black(8): O-O
+White(9): O-O
+Black(9): Bxc5
+White(10): c3
+Black(10): Re8
+White(11): Qc2
+Black(11): Qd6
+White(12): Nbd2
+Black(12): Qg3
+White(13): Bf5
+Black(13): Re2
+White(14): Nd4
+Black(14): Nxd4
+White(15): undo
+Black(14): undo
+White(14): undo
+Black(13): undo
+White(13): undo
+Black(12): undo
+White(12): undo
+Black(11): Qd6
+White(12): Nbd2
+Black(12): Qg3
+White(13): Bf5
+Black(13): Re2
+White(14): Nd4
+Black(14): Nxd4
+White(15): undo
+Black(14): undo
+White(14): undo
+Black(13): undo
+White(13): undo
+Black(12): undo
+White(12): undo
+Black(11): undo
+White(11): undo
+Black(10): undo
+White(10): undo
+Black(9): undo
+White(9): undo
+Black(8): undo
+White(8): undo
+Black(7): undo
+White(7): undo
+Black(6): undo
+White(6): undo
+Black(5): undo
+White(5): undo
+Black(4): undo
+White(4): undo
+Black(3): undo
+White(3): undo
+Black(2): undo
+White(2): undo
+Black(1): undo
+White(1): e4
+Black(1): undo
+White(1): e4
+Black(1): undo
+White(1): e4
+Black(1): e6
+White(2): d4
+Black(2): d5
+White(3): exd5
+Black(3): exd5
+White(4): Bd3
+Black(4): c5
+White(5): Nf3
+Black(5): Nc6
+White(6): Qe2+
+Black(6): Be7
+White(7): dxc5
+Black(7): Nf6
+White(8): h3
+Black(8): O-O
+White(9): O-O
+Black(9): Bxc5
+White(10): c3
+Black(10): analyze
+              time surplus   0.00  time limit 7:30 (+0.00) (52:30)
+              depth   time  score   variation (1)
+                9->   0.08  -0.83   10. ... Re8 11. Be3 Bxe3 12. fxe3 Bd7
+                                    13. Na3 Qe7 14. Nc2 Ne4
+               10     0.14  -0.90   10. ... Re8 11. Be3 Bd7 12. Na3 Qb6
+                                    13. Bxc5 Qxc5 14. Qd2 Ne4 15. Qe2
+               10->   0.16  -0.90   10. ... Re8 11. Be3 Bd7 12. Na3 Qb6
+                                    13. Bxc5 Qxc5 14. Qd2 Ne4 15. Qe2
+               11     0.25  -0.87   10. ... Re8 11. Be3 Bxe3 12. fxe3 Qb6
+                                    13. Nd4 Bd7 14. Na3 Nxd4 15. cxd4 Rac8
+               11->   0.34  -0.87   10. ... Re8 11. Be3 Bxe3 12. fxe3 Qb6
+                                    13. Nd4 Bd7 14. Na3 Nxd4 15. cxd4 Rac8
+               12     0.56  -0.73   10. ... Re8 11. Be3 Bxe3 12. fxe3 Bd7
+                                    13. Na3 Qe7 14. Nc2 Rac8 15. Ng5 Ne5
+                                    16. Rad1 Nxd3 17. Rxd3
+               12->   0.74  -0.73   10. ... Re8 11. Be3 Bxe3 12. fxe3 Bd7
+                                    13. Na3 Qe7 14. Nc2 Rac8 15. Ng5 Ne5
+                                    16. Rad1 Nxd3 17. Rxd3
+               13     1.06  -0.80   10. ... Re8 11. Be3 Bxe3 12. fxe3 Qe7
+                                    13. Re1 Ne4 14. Nbd2 Bf5 15. Bxe4 dxe4
+                                    16. Nd4 Qc5 17. Nxf5 Qxf5
+               13->   1.38  -0.80   10. ... Re8 11. Be3 Bxe3 12. fxe3 Qe7
+                                    13. Re1 Ne4 14. Nbd2 Bf5 15. Bxe4 dxe4
+                                    16. Nd4 Qc5 17. Nxf5 Qxf5
+               14     2.53  -0.72   10. ... Re8 11. Be3 Bxe3 12. fxe3 Qe7
+                                    13. Re1 Ne4 14. Nbd2 Bf5 15. Bxe4 dxe4
+                                    16. Nd4 Nxd4 17. cxd4
+               14->   3.63  -0.72   10. ... Re8 11. Be3 Bxe3 12. fxe3 Qe7
+                                    13. Re1 Ne4 14. Nbd2 Bf5 15. Bxe4 dxe4
+                                    16. Nd4 Nxd4 17. cxd4
+               15     4.75  -0.79   10. ... Re8 11. Be3 Bxe3 12. fxe3 Qe7
+                                    13. Re1 Ne4 14. Nbd2 Bf5 15. Bb5 Nc5
+                                    16. Nd4 Qd7 17. Qf1 Bg6
+               15->   5.97  -0.79   10. ... Re8 11. Be3 Bxe3 12. fxe3 Qe7
+                                    13. Re1 Ne4 14. Nbd2 Bf5 15. Bb5 Nc5
+                                    16. Nd4 Qd7 17. Qf1 Bg6
+               16    11.55  -0.71   10. ... Re8 11. Be3 Bxe3 12. fxe3 Qe7
+                                    13. Re1 Ne4 14. Nbd2 Bf5 15. Bxe4 dxe4
+                                    16. Nd4 Nxd4 17. cxd4 Rac8 18. Rac1
+               16->  17.03  -0.71   10. ... Re8 11. Be3 Bxe3 12. fxe3 Qe7
+                                    13. Re1 Ne4 14. Nbd2 Bf5 15. Bxe4 dxe4
+                                    16. Nd4 Nxd4 17. cxd4 Rac8 18. Rac1
+Black(9): Re8
+Black(10): Re8
+
+       +---+---+---+---+---+---+---+---+
+    8  |<R>| . |<B>|<Q>|<R>| . |<K>| . |
+       +---+---+---+---+---+---+---+---+
+    7  |<P>|<P>| . |   | . |<P>|<P>|<P>|
+       +---+---+---+---+---+---+---+---+
+    6  |   | . |<N>| . |   |<N>|   | . |
+       +---+---+---+---+---+---+---+---+
+    5  | . |   |<B>|<P>| . |   | . |   |
+       +---+---+---+---+---+---+---+---+
+    4  |   | . |   | . |   | . |   | . |
+       +---+---+---+---+---+---+---+---+
+    3  | . |   |-P-|-B-| . |-N-| . |-P-|
+       +---+---+---+---+---+---+---+---+
+    2  |-P-|-P-|   | . |-Q-|-P-|-P-| . |
+       +---+---+---+---+---+---+---+---+
+    1  |-R-|-N-|-B-|   | . |-R-|-K-|   |
+       +---+---+---+---+---+---+---+---+
+         a   b   c   d   e   f   g   h
+
+              time surplus   0.00  time limit 7:30 (+0.00) (52:30)
+              depth   time  score   variation (1)
+White(11): Qc2
+White(11): Qc2
+
+       +---+---+---+---+---+---+---+---+
+    8  |<R>| . |<B>|<Q>|<R>| . |<K>| . |
+       +---+---+---+---+---+---+---+---+
+    7  |<P>|<P>| . |   | . |<P>|<P>|<P>|
+       +---+---+---+---+---+---+---+---+
+    6  |   | . |<N>| . |   |<N>|   | . |
+       +---+---+---+---+---+---+---+---+
+    5  | . |   |<B>|<P>| . |   | . |   |
+       +---+---+---+---+---+---+---+---+
+    4  |   | . |   | . |   | . |   | . |
+       +---+---+---+---+---+---+---+---+
+    3  | . |   |-P-|-B-| . |-N-| . |-P-|
+       +---+---+---+---+---+---+---+---+
+    2  |-P-|-P-|-Q-| . |   |-P-|-P-| . |
+       +---+---+---+---+---+---+---+---+
+    1  |-R-|-N-|-B-|   | . |-R-|-K-|   |
+       +---+---+---+---+---+---+---+---+
+         a   b   c   d   e   f   g   h
+
+              time surplus   0.00  time limit 7:30 (+0.00) (52:30)
+              depth   time  score   variation (1)
+                7     0.07  -1.32   11. ... Qd6 12. Qd1 Bd7 13. Re1 Rxe1+
+                                    14. Qxe1 Re8
+                7->   0.07  -1.32   11. ... Qd6 12. Qd1 Bd7 13. Re1 Rxe1+
+                                    14. Qxe1 Re8
+                8     0.12  -1.02   11. ... Qd6 12. Kh1 Bd7 13. Na3 Ne4
+                                    14. Nb5 Qf6 15. Be3 Bxe3 16. fxe3
+                8->   0.13  -1.02   11. ... Qd6 12. Kh1 Bd7 13. Na3 Ne4
+                                    14. Nb5 Qf6 15. Be3 Bxe3 16. fxe3
+                9     0.20  -0.89   11. ... Qd6 12. Kh1 Bd7 13. Na3 Bxa3
+                                    14. bxa3 Ne4 15. Re1 Ne5 16. Nxe5 Qxe5
+                9     0.29  -0.94   11. ... Ne4 12. b4 Bb6 13. b5 Na5 14.
+                                    Nbd2 Bf5 15. Nd4 Bxd4 16. cxd4
+                9->   0.34  -0.94   11. ... Ne4 12. b4 Bb6 13. b5 Na5 14.
+                                    Nbd2 Bf5 15. Nd4 Bxd4 16. cxd4
+               10     0.42  -0.89   11. ... Ne4 12. Be3 Bxe3 13. fxe3 Qb6
+                                    14. Nd4 Nxd4 15. cxd4 Qh6 16. Qe2
+               10     0.63  -1.11   11. ... Qd6 12. Ng5 h6 13. Nxf7 Kxf7
+                                    14. Bg6+ Kg8 15. Bxe8 Nxe8 16. Re1
+                                    Nf6
+               10->   0.71  -1.11   11. ... Qd6 12. Ng5 h6 13. Nxf7 Kxf7
+                                    14. Bg6+ Kg8 15. Bxe8 Nxe8 16. Re1
+                                    Nf6
+               11     1.24  -1.23   11. ... Qd6 12. Ng5 h6 13. Nxf7 Kxf7
+                                    14. Bg6+ Ke7 15. Bxe8 Kxe8 16. Re1+
+                                    Kf7 17. Be3 Ne4
+               11->   1.33  -1.23   11. ... Qd6 12. Ng5 h6 13. Nxf7 Kxf7
+                                    14. Bg6+ Ke7 15. Bxe8 Kxe8 16. Re1+
+                                    Kf7 17. Be3 Ne4
+               12     1.76  -1.12   11. ... Qd6 12. Ng5 h6 13. Nxf7 Kxf7
+                                    14. Bg6+ Ke7 15. Bxe8 Kxe8 16. Re1+
+                                    Kf7 17. Be3 Be6 18. Bxc5 Qxc5
+               12->   2.30  -1.12   11. ... Qd6 12. Ng5 h6 13. Nxf7 Kxf7
+                                    14. Bg6+ Ke7 15. Bxe8 Kxe8 16. Re1+
+                                    Kf7 17. Be3 Be6 18. Bxc5 Qxc5
+Black(10): Qd6
+Black(11): Qd6
+
+       +---+---+---+---+---+---+---+---+
+    8  |<R>| . |<B>| . |<R>| . |<K>| . |
+       +---+---+---+---+---+---+---+---+
+    7  |<P>|<P>| . |   | . |<P>|<P>|<P>|
+       +---+---+---+---+---+---+---+---+
+    6  |   | . |<N>|<Q>|   |<N>|   | . |
+       +---+---+---+---+---+---+---+---+
+    5  | . |   |<B>|<P>| . |   | . |   |
+       +---+---+---+---+---+---+---+---+
+    4  |   | . |   | . |   | . |   | . |
+       +---+---+---+---+---+---+---+---+
+    3  | . |   |-P-|-B-| . |-N-| . |-P-|
+       +---+---+---+---+---+---+---+---+
+    2  |-P-|-P-|-Q-| . |   |-P-|-P-| . |
+       +---+---+---+---+---+---+---+---+
+    1  |-R-|-N-|-B-|   | . |-R-|-K-|   |
+       +---+---+---+---+---+---+---+---+
+         a   b   c   d   e   f   g   h
+
+              time surplus   0.00  time limit 7:30 (+0.00) (52:30)
+              depth   time  score   variation (1)
+               11->   0.09  -1.12   12. Ng5 h6 13. Nxf7 Kxf7 14. Bg6+ Kf8
+                                    15. Bxe8 Kxe8 16. Re1+ Kf7 17. Be3
+                                    Bxe3 18. Rxe3 Be6 <HT>
+               12     0.23  -1.22   12. Ng5 h6 13. Nxf7 Kxf7 14. Bg6+ Kf8
+                                    15. Bxe8 Kxe8 16. Re1+ Kf7 17. Be3
+                                    Bxe3 18. Rxe3 <HT>
+               12     0.96  -1.04   12. Kh1 Ne4 13. Bxe4 dxe4 14. Rd1 Qg6
+                                    15. Nd4 Rd8 16. Nxc6 Rxd1+ 17. Qxd1
+                                    Qxc6 18. Qd8+ Bf8
+               12->   1.61  -1.04   12. Kh1 Ne4 13. Bxe4 dxe4 14. Rd1 Qg6
+                                    15. Nd4 Rd8 16. Nxc6 Rxd1+ 17. Qxd1
+                                    Qxc6 18. Qd8+ Bf8
+               13     6.05  -0.85   12. Kh1 Bd7 13. Na3 a6 14. Bg5 h6 15.
+                                    Bh4 Ne4 16. b4 Ba7 17. Rfe1 Qf4 18.
+                                    Nc4
+               13->   7.19  -0.85   12. Kh1 Bd7 13. Na3 a6 14. Bg5 h6 15.
+                                    Bh4 Ne4 16. b4 Ba7 17. Rfe1 Qf4 18.
+                                    Nc4
+               14     9.56  -0.87   12. Kh1 Bd7 13. Na3 a6 14. Bg5 h6 15.
+                                    Bh4 Ne4 16. b4 Ba7 17. Rfe1 Qf4 18.
+                                    Bxe4 Rxe4 19. Rxe4 dxe4
+               14->  11.88  -0.87   12. Kh1 Bd7 13. Na3 a6 14. Bg5 h6 15.
+                                    Bh4 Ne4 16. b4 Ba7 17. Rfe1 Qf4 18.
+                                    Bxe4 Rxe4 19. Rxe4 dxe4
+White(12): Nbd2
+White(12): Nbd2
+
+       +---+---+---+---+---+---+---+---+
+    8  |<R>| . |<B>| . |<R>| . |<K>| . |
+       +---+---+---+---+---+---+---+---+
+    7  |<P>|<P>| . |   | . |<P>|<P>|<P>|
+       +---+---+---+---+---+---+---+---+
+    6  |   | . |<N>|<Q>|   |<N>|   | . |
+       +---+---+---+---+---+---+---+---+
+    5  | . |   |<B>|<P>| . |   | . |   |
+       +---+---+---+---+---+---+---+---+
+    4  |   | . |   | . |   | . |   | . |
+       +---+---+---+---+---+---+---+---+
+    3  | . |   |-P-|-B-| . |-N-| . |-P-|
+       +---+---+---+---+---+---+---+---+
+    2  |-P-|-P-|-Q-|-N-|   |-P-|-P-| . |
+       +---+---+---+---+---+---+---+---+
+    1  |-R-|   |-B-|   | . |-R-|-K-|   |
+       +---+---+---+---+---+---+---+---+
+         a   b   c   d   e   f   g   h
+
+              time surplus   0.00  time limit 7:30 (+0.00) (52:30)
+              depth   time  score   variation (1)
+                8->   0.07  -1.47   12. ... Qg3 13. Ng5 h6 14. Bh7+ Nxh7
+                                    15. Qxh7+ Kf8 16. Nb3 Bxf2+ 17. Rxf2
+                                    Re1+ 18. Rf1 Rxf1+ 19. Kxf1 hxg5
+                9     0.16     -1   12. ... Qg3!!
+                9     0.21  -1.88   12. ... Qg3 13. Bf5 Bxf5 14. Qxf5 Re2
+                                    15. Nd4 Bxd4 16. cxd4 Qh4
+                9->   0.21  -1.88   12. ... Qg3 13. Bf5 Bxf5 14. Qxf5 Re2
+                                    15. Nd4 Bxd4 16. cxd4 Qh4
+               10     0.43  -2.27   12. ... Qg3 13. Kh1 Bxf2 14. Ng5 h6
+                                    15. Nb3 hxg5 16. Rxf2 Ne4 17. Rf1
+               10->   0.45  -2.27   12. ... Qg3 13. Kh1 Bxf2 14. Ng5 h6
+                                    15. Nb3 hxg5 16. Rxf2 Ne4 17. Rf1
+               11     0.60     +1   12. ... Qg3
+               11     0.93  -1.81   12. ... Qg3 13. Ng5 Ne5 14. Bxh7+ Kh8
+                                    15. h4 Nfg4 16. Ndf3 Nxf2 17. Nd4 Bxd4
+                                    18. cxd4
+               11->   1.05  -1.81   12. ... Qg3 13. Ng5 Ne5 14. Bxh7+ Kh8
+                                    15. h4 Nfg4 16. Ndf3 Nxf2 17. Nd4 Bxd4
+                                    18. cxd4
+               12     1.60  -2.01   12. ... Qg3 13. Ng5 Ne5 14. Bxh7+ Kh8
+                                    15. h4 Nfg4 16. Ndf3 Nxf3+ 17. Nxf3
+                                    Bxf2+ 18. Kh1 Bc5 19. Qa4 Nf6
+               12->   1.72  -2.01   12. ... Qg3 13. Ng5 Ne5 14. Bxh7+ Kh8
+                                    15. h4 Nfg4 16. Ndf3 Nxf3+ 17. Nxf3
+                                    Bxf2+ 18. Kh1 Bc5 19. Qa4 Nf6
+               13     3.02  -2.13   12. ... Qg3 13. Ng5 Ne5 14. Bxh7+ Kh8
+                                    15. h4 Nfg4 16. Ndf3 Nxf3+ 17. Nxf3
+                                    Bxf2+ 18. Rxf2 Nxf2 19. Qxf2 Qxf2+
+                                    20. Kxf2 Kxh7
+               13->   3.33  -2.13   12. ... Qg3 13. Ng5 Ne5 14. Bxh7+ Kh8
+                                    15. h4 Nfg4 16. Ndf3 Nxf3+ 17. Nxf3
+                                    Bxf2+ 18. Rxf2 Nxf2 19. Qxf2 Qxf2+
+                                    20. Kxf2 Kxh7
+               14     5.62  -1.86   12. ... Qg3 13. Nd4 Nxd4 14. cxd4 Bxd4
+                                    15. Qb3 Nh5 16. Bb5 Re5 17. Qxg3 Nxg3
+                                    18. Nf3 Re4 19. Re1
+               14->   6.69  -1.86   12. ... Qg3 13. Nd4 Nxd4 14. cxd4 Bxd4
+                                    15. Qb3 Nh5 16. Bb5 Re5 17. Qxg3 Nxg3
+                                    18. Nf3 Re4 19. Re1
+               15     9.19  -1.75   12. ... Qg3 13. Nd4 Nxd4 14. cxd4 Bxd4
+                                    15. Qb3 Qd6 16. Nf3 Bb6 17. Bg5 Bxh3
+                                    18. Bxf6 gxf6 19. Bxh7+ Kxh7 20. Qd3+
+                                    Re4 21. gxh3
+               15->  15.07  -1.75   12. ... Qg3 13. Nd4 Nxd4 14. cxd4 Bxd4
+                                    15. Qb3 Qd6 16. Nf3 Bb6 17. Bg5 Bxh3
+                                    18. Bxf6 gxf6 19. Bxh7+ Kxh7 20. Qd3+
+                                    Re4 21. gxh3
+Black(11): Qg3
+Black(12): Qg3
+
+       +---+---+---+---+---+---+---+---+
+    8  |<R>| . |<B>| . |<R>| . |<K>| . |
+       +---+---+---+---+---+---+---+---+
+    7  |<P>|<P>| . |   | . |<P>|<P>|<P>|
+       +---+---+---+---+---+---+---+---+
+    6  |   | . |<N>| . |   |<N>|   | . |
+       +---+---+---+---+---+---+---+---+
+    5  | . |   |<B>|<P>| . |   | . |   |
+       +---+---+---+---+---+---+---+---+
+    4  |   | . |   | . |   | . |   | . |
+       +---+---+---+---+---+---+---+---+
+    3  | . |   |-P-|-B-| . |-N-|<Q>|-P-|
+       +---+---+---+---+---+---+---+---+
+    2  |-P-|-P-|-Q-|-N-|   |-P-|-P-| . |
+       +---+---+---+---+---+---+---+---+
+    1  |-R-|   |-B-|   | . |-R-|-K-|   |
+       +---+---+---+---+---+---+---+---+
+         a   b   c   d   e   f   g   h
+
+              time surplus   0.00  time limit 7:30 (+0.00) (52:30)
+              depth   time  score   variation (1)
+               10     0.11  -1.91   13. Kh1 Bxf2 14. Nb3 Bb6 15. Ng5 Qh4
+                                    16. Bf4 Bd7 17. Rad1
+               10->   0.12  -1.91   13. Kh1 Bxf2 14. Nb3 Bb6 15. Ng5 Qh4
+                                    16. Bf4 Bd7 17. Rad1
+               11     0.25     -1   13. Kh1
+               11     0.46  -2.36   13. Kh1 Bxf2 14. Rd1 Bb6 15. Nf1 Qc7
+                                    16. N1d2 Bd7 17. Ng5 h6 18. Ngf3
+               11     0.63  -1.98   13. Nd4 Nxd4 <HT>
+               11->   0.63  -1.98   13. Nd4 Nxd4 <HT>
+               12     0.63  -1.98   13. Nd4 Nxd4 <HT>
+               12->   0.92  -1.98   13. Nd4 Nxd4 <HT>
+               13     0.92  -1.98   13. Nd4 Nxd4 <HT>
+               13->   1.69  -1.98   13. Nd4 Nxd4 <HT>
+               14     1.69  -1.98   13. Nd4 Nxd4 <HT>
+White(13): Bf5
+White(13): Bf5
+
+       +---+---+---+---+---+---+---+---+
+    8  |<R>| . |<B>| . |<R>| . |<K>| . |
+       +---+---+---+---+---+---+---+---+
+    7  |<P>|<P>| . |   | . |<P>|<P>|<P>|
+       +---+---+---+---+---+---+---+---+
+    6  |   | . |<N>| . |   |<N>|   | . |
+       +---+---+---+---+---+---+---+---+
+    5  | . |   |<B>|<P>| . |-B-| . |   |
+       +---+---+---+---+---+---+---+---+
+    4  |   | . |   | . |   | . |   | . |
+       +---+---+---+---+---+---+---+---+
+    3  | . |   |-P-|   | . |-N-|<Q>|-P-|
+       +---+---+---+---+---+---+---+---+
+    2  |-P-|-P-|-Q-|-N-|   |-P-|-P-| . |
+       +---+---+---+---+---+---+---+---+
+    1  |-R-|   |-B-|   | . |-R-|-K-|   |
+       +---+---+---+---+---+---+---+---+
+         a   b   c   d   e   f   g   h
+
+              time surplus   0.00  time limit 7:30 (+0.00) (52:30)
+              depth   time  score   variation (1)
+                9     0.06     +1   13. ... Re2
+                9     0.06  -1.85   13. ... Re2 14. Nd4 Nxd4 15. cxd4 Bxf5
+                                    16. Qxc5 Qd3 17. Rd1 Bc8
+                9->   0.09  -1.85   13. ... Re2 14. Nd4 Nxd4 15. cxd4 Bxf5
+                                    16. Qxc5 Qd3 17. Rd1 Bc8
+               10     0.13  -1.91   13. ... Re2 14. Nd4 Nxd4 15. cxd4 Bxf5
+                                    16. Qxc5 Qd3 17. Nb3 Be4 18. Kh1
+               10->   0.18  -1.91   13. ... Re2 14. Nd4 Nxd4 15. cxd4 Bxf5
+                                    16. Qxc5 Qd3 17. Nb3 Be4 18. Kh1
+               11     0.24     -1   13. ... Re2!!
+               11     0.48  -2.83   13. ... Re2 14. Qd3 Bxf2+ 15. Kh1 Re3
+                                    16. Qc2 Bxf5 17. Qxf5 Rb8 18. Nd4 Nxd4
+                                    19. Qxf2
+               11->   0.61  -2.83   13. ... Re2 14. Qd3 Bxf2+ 15. Kh1 Re3
+                                    16. Qc2 Bxf5 17. Qxf5 Rb8 18. Nd4 Nxd4
+                                    19. Qxf2
+               12     1.03  -2.89   13. ... Re2 14. Kh1 Bxf5 15. Qxf5 Bxf2
+                                    16. Nh2 Ne5 17. Rd1 Qh4 18. Ndf3 Nxf3
+                                    19. Qxf3
+               12->   1.23  -2.89   13. ... Re2 14. Kh1 Bxf5 15. Qxf5 Bxf2
+                                    16. Nh2 Ne5 17. Rd1 Qh4 18. Ndf3 Nxf3
+                                    19. Qxf3
+               13     1.65  -2.81   13. ... Re2 14. Kh1 Bxf5 15. Qxf5 Bxf2
+                                    16. Ng5 Be1 17. Qf3 Qe5 18. Qd3 Qe7
+                                    19. Rf4 h5
+               13->   2.09  -2.81   13. ... Re2 14. Kh1 Bxf5 15. Qxf5 Bxf2
+                                    16. Ng5 Be1 17. Qf3 Qe5 18. Qd3 Qe7
+                                    19. Rf4 h5
+               14     3.02  -2.82   13. ... Re2 14. Kh1 Bxf5 15. Qxf5 Bxf2
+                                    16. Qg5 Qxg5 17. Nxg5 Nh5 18. Rd1 Ng3+
+                                    19. Kh2 d4 20. Nc4 dxc3 21. bxc3
+               14->   3.89  -2.82   13. ... Re2 14. Kh1 Bxf5 15. Qxf5 Bxf2
+                                    16. Qg5 Qxg5 17. Nxg5 Nh5 18. Rd1 Ng3+
+                                    19. Kh2 d4 20. Nc4 dxc3 21. bxc3
+               15     5.73  -2.82   13. ... Re2 14. Kh1 Bxf5 15. Qxf5 Bxf2
+                                    16. Qg5 Qxg5 17. Nxg5 Nh5 18. Rd1 Ng3+
+                                    19. Kh2 d4 20. Nc4 dxc3 21. bxc3
+               15->   7.99  -2.82   13. ... Re2 14. Kh1 Bxf5 15. Qxf5 Bxf2
+                                    16. Qg5 Qxg5 17. Nxg5 Nh5 18. Rd1 Ng3+
+                                    19. Kh2 d4 20. Nc4 dxc3 21. bxc3
+               16    12.49  -2.85   13. ... Re2 14. Kh1 Bxf5 15. Qxf5 Bxf2
+                                    16. Ng5 Bb6 17. Qf3 Qe5 18. Qd3 Re8
+                                    19. Nb1 Qe7 20. Na3 Re1 21. Bf4
+Black(12): Re2
+Black(13): Re2
+
+       +---+---+---+---+---+---+---+---+
+    8  |<R>| . |<B>| . |   | . |<K>| . |
+       +---+---+---+---+---+---+---+---+
+    7  |<P>|<P>| . |   | . |<P>|<P>|<P>|
+       +---+---+---+---+---+---+---+---+
+    6  |   | . |<N>| . |   |<N>|   | . |
+       +---+---+---+---+---+---+---+---+
+    5  | . |   |<B>|<P>| . |-B-| . |   |
+       +---+---+---+---+---+---+---+---+
+    4  |   | . |   | . |   | . |   | . |
+       +---+---+---+---+---+---+---+---+
+    3  | . |   |-P-|   | . |-N-|<Q>|-P-|
+       +---+---+---+---+---+---+---+---+
+    2  |-P-|-P-|-Q-|-N-|<R>|-P-|-P-| . |
+       +---+---+---+---+---+---+---+---+
+    1  |-R-|   |-B-|   | . |-R-|-K-|   |
+       +---+---+---+---+---+---+---+---+
+         a   b   c   d   e   f   g   h
+
+              time surplus   0.00  time limit 7:30 (+0.00) (52:30)
+              depth   time  score   variation (1)
+               15->   0.39  -2.85   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Ng5
+                                    Bb6 17. Qf3 Qe5 <HT>
+White(14): Nd4
+White(14): Nd4
+
+       +---+---+---+---+---+---+---+---+
+    8  |<R>| . |<B>| . |   | . |<K>| . |
+       +---+---+---+---+---+---+---+---+
+    7  |<P>|<P>| . |   | . |<P>|<P>|<P>|
+       +---+---+---+---+---+---+---+---+
+    6  |   | . |<N>| . |   |<N>|   | . |
+       +---+---+---+---+---+---+---+---+
+    5  | . |   |<B>|<P>| . |-B-| . |   |
+       +---+---+---+---+---+---+---+---+
+    4  |   | . |   |-N-|   | . |   | . |
+       +---+---+---+---+---+---+---+---+
+    3  | . |   |-P-|   | . |   |<Q>|-P-|
+       +---+---+---+---+---+---+---+---+
+    2  |-P-|-P-|-Q-|-N-|<R>|-P-|-P-| . |
+       +---+---+---+---+---+---+---+---+
+    1  |-R-|   |-B-|   | . |-R-|-K-|   |
+       +---+---+---+---+---+---+---+---+
+         a   b   c   d   e   f   g   h
+
+              time surplus   0.00  time limit 7:30 (+0.00) (52:30)
+              depth   time  score   variation (1)
+                9->   0.07  -3.93   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Qe5 19.
+                                    Bxd4 Qxd4
+               10     0.10  -3.93   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Qe5 19.
+                                    Bxd4 Qxd4
+               10->   0.14  -3.93   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Qe5 19.
+                                    Bxd4 Qxd4
+               11     0.19  -3.93   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Qe5 19.
+                                    Bxd4 Qxd4
+               11->   0.26  -3.93   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Qe5 19.
+                                    Bxd4 Qxd4
+               12     0.36  -3.91   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qe5 20. g4
+               12->   0.51  -3.91   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qe5 20. g4
+               13     0.80  -3.95   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qe5 20. Qb3 Rb8
+               13->   1.11  -3.95   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qe5 20. Qb3 Rb8
+               14     1.56  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qe5 20. Qb3 Qd5 21. Rfd1 Qxb3
+                                    22. axb3
+               14->   2.21  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qe5 20. Qb3 Qd5 21. Rfd1 Qxb3
+                                    22. axb3
+               15     3.20  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qe5 20. Qb3 Qd5 21. Rfd1 Qxb3
+                                    22. axb3
+Black(13): undo
+              time surplus  97:30  time limit 11:06 (+0.00) (77:46)
+              depth   time  score   variation (1)
+                8     0.06  -2.98   14. Bxc8 Bxf2+ 15. Kh1 Rxc8 16. Qd1
+                                    Re3 17. Ng1 Bxg1 18. Kxg1
+                8->   0.07  -2.98   14. Bxc8 Bxf2+ 15. Kh1 Rxc8 16. Qd1
+                                    Re3 17. Ng1 Bxg1 18. Kxg1
+                9     0.09     -1   14. Bxc8
+                9     0.09     -3   14. Bxc8
+                9     0.10     -M   14. Bxc8
+                9     0.12  -6.58   14. Bxc8 Bxf2+ 15. Kh1 Bd4 16. Nh4
+                                    Be5 17. Ndf3 Rxc2 18. Bxb7 Rxc1 19.
+                                    Raxc1
+                9     0.16  -3.06   14. Qd3 Bxf2+ 15. Kh1 Re3 16. Qc2 Bxf5
+                                    17. Qxf5 Re2 18. Ng5 Na5 19. Qf3 <HT>
+                9     0.20  -2.84   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Qd3
+                                    Re3 17. Qc2 Nd8 18. Nc4
+                9->   0.22  -2.84   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Qd3
+                                    Re3 17. Qc2 Nd8 18. Nc4
+               10     0.25  -2.85   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Qd3
+                                    Re3 17. Qb5 Nd8 18. Ng5 Be1
+               10->   0.31  -2.85   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Qd3
+                                    Re3 17. Qb5 Nd8 18. Ng5 Be1
+               11     0.41  -2.96   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Qg5
+                                    Qc7 17. Rd1 Be3 18. Qh4 h5 19. Re1
+               11->   0.56  -2.96   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Qg5
+                                    Qc7 17. Rd1 Be3 18. Qh4 h5 19. Re1
+               12     0.67  -2.81   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Qg5
+                                    Qc7 17. Qf5 Bg3 18. Ng1 Re5 19. Qf3
+                                    Be1
+               12->   0.89  -2.81   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Qg5
+                                    Qc7 17. Qf5 Bg3 18. Ng1 Re5 19. Qf3
+                                    Be1
+               13     1.28  -2.84   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Ng1
+                                    Bxg1 17. Rxg1 d4 18. Nf1 Qd6 19. Bf4
+                                    Qe7 20. Nd2 dxc3 21. bxc3
+               13->   1.80  -2.84   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Ng1
+                                    Bxg1 17. Rxg1 d4 18. Nf1 Qd6 19. Bf4
+                                    Qe7 20. Nd2 dxc3 21. bxc3
+               14     2.23  -2.84   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Ng1
+                                    Bxg1 17. Rxg1 d4 18. Nf1 Qd6 19. Bf4
+                                    Qe7 20. Nd2 dxc3 21. bxc3
+               14->   3.49  -2.84   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Ng1
+                                    Bxg1 17. Rxg1 d4 18. Nf1 Qd6 19. Bf4
+                                    Qe7 20. Nd2 dxc3 21. bxc3
+               15     5.35  -2.89   14. Kh1 Bxf5 15. Qxf5 Bxf2 16. Ng5
+                                    Bb6 17. Qf3 Qe5 18. Qf5 Qe7 19. a3
+                                    Re8 20. Rb1 d4 21. Nc4
+White(14): Nd4
+White(14): Nd4
+
+       +---+---+---+---+---+---+---+---+
+    8  |<R>| . |<B>| . |   | . |<K>| . |
+       +---+---+---+---+---+---+---+---+
+    7  |<P>|<P>| . |   | . |<P>|<P>|<P>|
+       +---+---+---+---+---+---+---+---+
+    6  |   | . |<N>| . |   |<N>|   | . |
+       +---+---+---+---+---+---+---+---+
+    5  | . |   |<B>|<P>| . |-B-| . |   |
+       +---+---+---+---+---+---+---+---+
+    4  |   | . |   |-N-|   | . |   | . |
+       +---+---+---+---+---+---+---+---+
+    3  | . |   |-P-|   | . |   |<Q>|-P-|
+       +---+---+---+---+---+---+---+---+
+    2  |-P-|-P-|-Q-|-N-|<R>|-P-|-P-| . |
+       +---+---+---+---+---+---+---+---+
+    1  |-R-|   |-B-|   | . |-R-|-K-|   |
+       +---+---+---+---+---+---+---+---+
+         a   b   c   d   e   f   g   h
+
+              time surplus  97:30  time limit 11:06 (+0.00) (77:46)
+              depth   time  score   variation (1)
+               10->   0.06  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 <HT>
+               11     0.06  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 <HT>
+               11->   0.16  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 <HT>
+               12     0.16  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 <HT>
+               12->   0.29  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 <HT>
+               13     0.29  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 <HT>
+               13->   0.61  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 <HT>
+               14     0.61  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 <HT>
+               14->   1.15  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 <HT>
+               15     1.15  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 <HT>
+               15->   2.76  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 <HT>
+               16     5.87  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qe5 20. Rfc1 Rd8 21. Rc2 Qa5 22.
+                                    Qg5
+               16->  10.19  -3.88   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qe5 20. Rfc1 Rd8 21. Rc2 Qa5 22.
+                                    Qg5
+               17    14.24  -3.91   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qxe3 20. fxe3 Be6 21. Rfd1 Rc8
+                                    22. g4 h5
+               17->  21.80  -3.91   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qxe3 20. fxe3 Be6 21. Rfd1 Rc8
+                                    22. g4 h5
+               18    30.63  -3.66   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qxe3 20. fxe3 Be6 21. Rfc1 Kf8
+                                    22. Rc7 Nd5 23. Rc4
+               18->  48.15  -3.66   14. ... Nxd4 15. cxd4 Bxd4 16. Ne4
+                                    dxe4 17. Qxe2 Bxf5 18. Be3 Bxe3 19.
+                                    Qxe3 Qxe3 20. fxe3 Be6 21. Rfc1 Kf8
+                                    22. Rc7 Nd5 23. Rc4
+Black(13): Nxd4
+Black(14): Nxd4
+
+       +---+---+---+---+---+---+---+---+
+    8  |<R>| . |<B>| . |   | . |<K>| . |
+       +---+---+---+---+---+---+---+---+
+    7  |<P>|<P>| . |   | . |<P>|<P>|<P>|
+       +---+---+---+---+---+---+---+---+
+    6  |   | . |   | . |   |<N>|   | . |
+       +---+---+---+---+---+---+---+---+
+    5  | . |   |<B>|<P>| . |-B-| . |   |
+       +---+---+---+---+---+---+---+---+
+    4  |   | . |   |<N>|   | . |   | . |
+       +---+---+---+---+---+---+---+---+
+    3  | . |   |-P-|   | . |   |<Q>|-P-|
+       +---+---+---+---+---+---+---+---+
+    2  |-P-|-P-|-Q-|-N-|<R>|-P-|-P-| . |
+       +---+---+---+---+---+---+---+---+
+    1  |-R-|   |-B-|   | . |-R-|-K-|   |
+       +---+---+---+---+---+---+---+---+
+         a   b   c   d   e   f   g   h
+
+              time surplus  97:30  time limit 11:06 (+0.00) (77:46) [easy move]
+              depth   time  score   variation (1)
+               15->   0.10  -3.67   15. cxd4 Bxd4 16. Ne4 dxe4 17. Qxe2
+                                    Bxf5 18. Be3 <HT>
+               16     0.10  -3.67   15. cxd4 Bxd4 16. Ne4 dxe4 17. Qxe2
+                                    Bxf5 18. Be3 <HT>
+               16->   0.20  -3.67   15. cxd4 Bxd4 16. Ne4 dxe4 17. Qxe2
+                                    Bxf5 18. Be3 <HT>
+               17     0.20  -3.67   15. cxd4 Bxd4 16. Ne4 dxe4 17. Qxe2
+                                    Bxf5 18. Be3 <HT>
+               17->   0.42  -3.67   15. cxd4 Bxd4 16. Ne4 dxe4 17. Qxe2
+                                    Bxf5 18. Be3 <HT>
+               18     0.42  -3.67   15. cxd4 Bxd4 16. Ne4 dxe4 17. Qxe2
+                                    Bxf5 18. Be3 <HT>
+               18->   1.60  -3.67   15. cxd4 Bxd4 16. Ne4 dxe4 17. Qxe2
+                                    Bxf5 18. Be3 <HT>
+White(15): exit
+White(15): quit

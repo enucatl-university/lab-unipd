@@ -1,0 +1,67 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      1629,         57]
+NotebookOptionsPosition[      1014,         40]
+NotebookOutlinePosition[      1296,         53]
+CellTagsIndexPosition[      1253,         50]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[StyleData[StyleDefinitions -> "Default.nb"]],
+
+Cell[StyleData["Title"],
+ Background->RGBColor[1, 1, 0.85]],
+
+Cell[StyleData["Subtitle"]],
+
+Cell[StyleData["Section"],
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[StyleData["Subsubsection"],
+ CellDingbat->None,
+ Background->RGBColor[0.8235294117647058, 1., 0.7254901960784313]],
+
+Cell[StyleData["Subsection"],
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[StyleData["Code"],
+ Background->RGBColor[0.94, 0.91, 0.88]]
+},
+FrontEndVersion->"7.0 for Linux x86 (32-bit) (November 10, 2008)",
+StyleDefinitions->"PrivateStylesheetFormatting.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 49, 0, 43, 49, 0, "StyleData", "StyleDefinitions", ""],
+Cell[597, 22, 59, 1, 119, 24, 0, "StyleData", "Title", "All"],
+Cell[659, 25, 27, 0, 71, 27, 0, "StyleData", "Subtitle", "All"],
+Cell[689, 27, 62, 1, 94, 26, 0, "StyleData", "Section", "All"],
+Cell[754, 30, 119, 2, 57, 32, 0, "StyleData", "Subsubsection", "All"],
+Cell[876, 34, 67, 1, 64, 29, 0, "StyleData", "Subsection", "All"],
+Cell[946, 37, 64, 1, 60, 23, 0, "StyleData", "Code", "All"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

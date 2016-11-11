@@ -1,0 +1,67 @@
+\relax 
+\catcode`"\active
+\select@language{italian}
+\@writefile{toc}{\select@language{italian}}
+\@writefile{lof}{\select@language{italian}}
+\@writefile{lot}{\select@language{italian}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Obiettivi}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Apparato sperimentale}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Ponte di Wheatstone per il termometro}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Termoregolatore}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Ponte di Wheatstone per il campione}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Amplificatore selettivo}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Calibrazione dell'apparato}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Potenziometri}{4}}
+\newlabel{sec:calibrazione.potenziometri}{{3.1}{4}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Misure per la calibrazione dei potenziometri. Le resistenze sono state misurate con multimetro GDM mentre il valore ``potenziometro'' \IeC {\`e} riferito alla manopola di regolazione dello stesso.\relax }}{4}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:potenziometri}{{1}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Punti di calibrazione e rette interpolanti per i due potenziometri. Le barre di errore sono pi\IeC {\`u} piccole delle dimensioni dei punti.\relax }}{4}}
+\newlabel{fig:potenziometri}{{1}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Amplificatore selettivo}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Curva di risonanza per l'amplificatore selettivo, interpolante le misure di ampiezza del segnale amplificato in funzione della frequenza del generatore. La barre di errore sono presenti ma poco visibili.\relax }}{5}}
+\newlabel{fig:risonanza}{{2}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Termometro di controllo}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Pressione in funzione del tempo nella camera a vuoto.\relax }}{6}}
+\newlabel{fig:tempo_pressione}{{3}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Temperatura del campione in funzione del tempo.\relax }}{6}}
+\newlabel{fig:tempo_T}{{4}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Temperatura del termometro di controllo in funzione del tempo.\relax }}{6}}
+\newlabel{fig:tempo_Tc}{{5}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Inserimento del campione}{6}}
+\newlabel{resistenza-resistivit\IeC {\`a}}{{1}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Misura della temperatura di Debye}{8}}
+\newlabel{bloch-gruneisen}{{2}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Resistenza del filo di rame in funzione della temperatura.\relax }}{8}}
+\newlabel{fig:temperatura_resistenza_debye}{{6}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Metodo del $\chi ^2$ per l'analisi dati}{8}}
+\newlabel{chi2}{{3}{8}}
+\newlabel{dilatazione_termica}{{4}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Valori della funzione $\chi ^2$ per diverse temperature $\ensuremath  {\theta _d}$.\relax }}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Divisione 1 pto/K}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Divisione 10 pti/K ed errore}}}{9}}
+\newlabel{fig:chi2}{{7}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Risultati}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Metodo del $\chi ^2$ per determinare $\ensuremath  {\theta _d}$ a partire dai dati provenienti da diversi intervalli di temperature.\relax }}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {30--80 K}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {80--170 K}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {170--270 K}}}{10}}
+\newlabel{fig:debye3intervalli}{{8}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Appendice}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Calcolo errori}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Tabelle}{12}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Valori di ampiezza del segnale e frequenza del generatore con cui si \IeC {\`e} costruita la curva di risonanza.\relax }}{12}}
+\newlabel{tab:risonanza}{{2}{12}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Misure di pressione e temperatura in funzione del tempo. La temperatura $T$ \IeC {\`e} quella ottenuta dal potenziometro $\ensuremath  {R_{\text  {NT}}}$, mentre $T_c$ \IeC {\`e} quella del termometro di controllo $R_c$.\relax }}{12}}
+\newlabel{tab:tempo-P-T}{{3}{12}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Resistenza del filo di rame in funzione della temperatura della camera. Le misure, fatte con i potenziometri, sono state convertite in resistenze $\ensuremath  {R_{\text  {D}}}$ ed $\ensuremath  {R_{\text  {T}}}$, e quest'ultima poi in temperatura.\relax }}{13}}
+\newlabel{tab:temperatura_resistenza_debye}{{4}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Descrizione schematica dell'apparato sperimentale.\relax }}{14}}
+\newlabel{fig:apparato}{{9}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Grafici}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Ponte di Wheatstone per la misura della temperatura.\relax }}{15}}
+\newlabel{fig:rt}{{10}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Ponte di Wheatstone per la misura della resistenza $\ensuremath  {R_{\text  {D}}}$.\relax }}{16}}
+\newlabel{fig:rd}{{11}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Rappresentazione schematica dell'amplificatore selettivo.\relax }}{17}}
+\newlabel{fig:ampli.selettivo}{{12}{17}}

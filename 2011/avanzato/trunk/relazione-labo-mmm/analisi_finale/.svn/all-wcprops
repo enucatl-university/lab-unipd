@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/37/trunk/analisi_finale
+END
+chi2.out.eps
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/22/trunk/analisi_finale/chi2.out.eps
+END
+blocchi_temperatura.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/32/trunk/analisi_finale/blocchi_temperatura.py
+END
+DebyeFunction.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/21/trunk/analisi_finale/DebyeFunction.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/19/trunk/analisi_finale/__init__.py
+END
+A.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/21/trunk/analisi_finale/A.py
+END
+CorrezioneAreaLunghezza.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/37/trunk/analisi_finale/CorrezioneAreaLunghezza.py
+END
+temperatura_debye.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/25/trunk/analisi_finale/temperatura_debye.py
+END
+chi2.out
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/26/trunk/analisi_finale/chi2.out
+END
+DebyeTemperature.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/37/trunk/analisi_finale/DebyeTemperature.py
+END
+LettoreFileDebye.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/37/trunk/analisi_finale/LettoreFileDebye.py
+END
+BlochGruneisen.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/21/trunk/analisi_finale/BlochGruneisen.py
+END

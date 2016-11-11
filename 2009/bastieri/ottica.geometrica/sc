@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./autocoll.py
+./bessel.py
+./aberrazioni.py

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/!svn/ver/28/trunk/dati
+END
+debye_high
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/27/trunk/dati/debye_high
+END
+debye
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/28/trunk/dati/debye
+END
+debye_low
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/28/trunk/dati/debye_low
+END
+debye_med
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/28/trunk/dati/debye_med
+END

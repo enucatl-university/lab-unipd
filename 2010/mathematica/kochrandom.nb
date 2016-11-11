@@ -1,0 +1,359 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     12528,        350]
+NotebookOptionsPosition[     11528,        315]
+NotebookOutlinePosition[     11864,        330]
+CellTagsIndexPosition[     11821,        327]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Insiemi frattali: la curva di Koch", "Title",
+ CellChangeTimes->{{3.4656557919233*^9, 3.465655792392672*^9}, 
+   3.465656495028131*^9, {3.467527572330544*^9, 3.4675275785950727`*^9}}],
+
+Cell["\<\
+La curva di Koch si ottiene partendo da un segmento e sostituendo il terzo \
+centrale con un triangolo equilatero.\
+\>", "Text",
+ CellChangeTimes->{{3.46752759447738*^9, 3.467527612383781*^9}, 
+   3.467528220564465*^9},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"koch1", "[", 
+   RowBox[{"{", 
+    RowBox[{"p_", ",", " ", "q_"}], "}"}], "]"}], " ", ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"p1", " ", "=", " ", "p"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"p2", " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        FractionBox["2", "3"], "p"}], " ", "+", " ", 
+       RowBox[{
+        FractionBox["1", "3"], "q"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"v", " ", "=", " ", 
+      RowBox[{
+       FractionBox["1", "3"], 
+       RowBox[{"(", 
+        RowBox[{"q", " ", "-", " ", "p"}], ")"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"u", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"RotationMatrix", "[", 
+        RowBox[{"Pi", " ", "/", " ", "3"}], "]"}], ".", "v"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"p3", " ", "=", " ", 
+      RowBox[{"p", " ", "+", " ", "v", " ", "+", " ", "u"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"p4", " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        FractionBox["1", "3"], "p"}], " ", "+", " ", 
+       RowBox[{
+        FractionBox["2", "3"], "q"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"p5", " ", "=", " ", "q"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Partition", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"p1", ",", "p2", ",", "p3", ",", "p4", ",", "p5"}], "}"}], 
+       ",", "2", ",", "1"}], "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.465656509423187*^9, 3.465656751459329*^9}, {
+   3.465656861917101*^9, 3.465656897137897*^9}, {3.465656994198374*^9, 
+   3.465657014658067*^9}, {3.465657046254654*^9, 3.465657068717842*^9}, {
+   3.46565710220503*^9, 3.465657141051839*^9}, 3.465657190826721*^9, {
+   3.465657255496893*^9, 3.465657474292438*^9}, {3.465657882488954*^9, 
+   3.465657905382429*^9}, {3.465658782165751*^9, 3.465658784515861*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"k1", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "0"}], "}"}]}], "}"}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.465657217820322*^9, 3.465657230147009*^9}, {
+   3.465658002462409*^9, 3.465658004648506*^9}, {3.465658043326668*^9, 
+   3.465658044439887*^9}, {3.465658392149777*^9, 3.465658394655012*^9}, 
+   3.4675282588874607`*^9}],
+
+Cell["Ecco il risultato di questa funzione:", "Text",
+ CellChangeTimes->{{3.467527871188238*^9, 3.467527882542395*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Line", "[", 
+   RowBox[{"koch1", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "0"}], "}"}]}], "}"}], "]"}], "]"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.4675278842453623`*^9, 3.46752791907065*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"koch2", "[", "list_", "]"}], " ", ":=", " ", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{
+    RowBox[{"Map", "[", 
+     RowBox[{"koch1", ",", " ", "list"}], "]"}], ",", "1"}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.465657536172067*^9, 3.465657567107261*^9}, {
+  3.465657948191857*^9, 3.465657951674148*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"koch3", "[", 
+   RowBox[{"n_", ",", " ", "list_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Nest", "[", 
+   RowBox[{"koch2", ",", " ", "list", ",", "n"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.465657575133268*^9, 3.465657623841544*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"koch4", "[", 
+   RowBox[{"n_", ",", " ", "list_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Graphics", "[", " ", 
+   RowBox[{
+    RowBox[{"Line", "[", 
+     RowBox[{"koch3", "[", 
+      RowBox[{"n", ",", " ", "list"}], "]"}], "]"}], ",", 
+    RowBox[{"ImageSize", "\[Rule]", "900"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.46565766870503*^9, 3.465657756242152*^9}, {
+   3.465658168875271*^9, 3.465658172743447*^9}, 3.465658261334449*^9, {
+   3.46565833952774*^9, 3.465658364434944*^9}}],
+
+Cell["Si pu\[OGrave] ora iterare pi\[UGrave] volte:", "Text",
+ CellChangeTimes->{{3.467528061046166*^9, 3.4675280748642063`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[{
+ RowBox[{"koch4", "[", 
+  RowBox[{"5", ",", "k1"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k2", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         FractionBox["1", "2"], ",", 
+         FractionBox[
+          SqrtBox["3"], "2"]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         FractionBox["1", "2"], ",", 
+         FractionBox[
+          SqrtBox["3"], "2"]}], "}"}]}], "}"}]}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.465657762263674*^9, 3.465657766810975*^9}, {
+   3.465657956220555*^9, 3.465658031078047*^9}, {3.465658063909471*^9, 
+   3.465658065904366*^9}, {3.465658106570342*^9, 3.465658107491673*^9}, {
+   3.4656582295867*^9, 3.465658231328877*^9}, {3.465658323088998*^9, 
+   3.465658337216696*^9}, {3.465658399811861*^9, 3.465658436273209*^9}, {
+   3.465658475074809*^9, 3.4656585360971*^9}, {3.465658656794839*^9, 
+   3.465658685554495*^9}, 3.467527823869006*^9}],
+
+Cell["Oppure disegnare il \"fiocco di neve\"", "Text",
+ CellChangeTimes->{{3.467528082665387*^9, 3.4675280871218023`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Variazioni casuali", "Title",
+ CellChangeTimes->{{3.467528099804098*^9, 3.467528101908066*^9}}],
+
+Cell["\<\
+Pu\[OGrave] essere pi\[UGrave] interessante aggiungere delle variazioni \
+casuali (gaussiane in questo esempio) al frattale. La forma in questo caso \
+appare pi\[UGrave] naturale (qualsiasi cosa significhi).\
+\>", "Text",
+ CellChangeTimes->{{3.467528105852853*^9, 3.467528124007559*^9}, {
+  3.467528283134614*^9, 3.467528303704948*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"kochrand1", "[", 
+   RowBox[{"{", 
+    RowBox[{"p_", ",", " ", "q_"}], "}"}], "]"}], " ", ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"p1", " ", "=", " ", "p"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"p2", " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        FractionBox["2", "3"], "p"}], " ", "+", " ", 
+       RowBox[{
+        FractionBox["1", "3"], "q"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"v", " ", "=", " ", 
+      RowBox[{
+       FractionBox["1", "3"], 
+       RowBox[{"(", 
+        RowBox[{"q", " ", "-", " ", "p"}], ")"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"u", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"RotationMatrix", "[", 
+        RowBox[{"Pi", " ", "/", " ", "3"}], "]"}], ".", "v"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"nor", ":=", 
+      RowBox[{"RandomReal", "[", 
+       RowBox[{"NormalDistribution", "[", 
+        RowBox[{"1", ",", ".5"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     
+     RowBox[{"p3", " ", "=", " ", 
+      RowBox[{"p", " ", "+", 
+       RowBox[{"nor", " ", "v"}], " ", "+", " ", 
+       RowBox[{"nor", "  ", "u"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"p4", " ", "=", " ", 
+      RowBox[{
+       RowBox[{
+        FractionBox["1", "3"], "p"}], " ", "+", " ", 
+       RowBox[{
+        FractionBox["2", "3"], "q"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"p5", " ", "=", " ", "q"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Partition", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"p1", ",", "p2", ",", "p3", ",", "p4", ",", "p5"}], "}"}], 
+       ",", "2", ",", "1"}], "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.465656509423187*^9, 3.465656751459329*^9}, {
+   3.465656861917101*^9, 3.465656897137897*^9}, {3.465656994198374*^9, 
+   3.465657014658067*^9}, {3.465657046254654*^9, 3.465657068717842*^9}, {
+   3.46565710220503*^9, 3.465657141051839*^9}, 3.465657190826721*^9, {
+   3.465657255496893*^9, 3.465657474292438*^9}, {3.465657882488954*^9, 
+   3.465657905382429*^9}, {3.465658782165751*^9, 3.465658784515861*^9}, {
+   3.465745607583927*^9, 3.465745615261083*^9}, {3.465745721594838*^9, 
+   3.465745746137872*^9}, {3.465745790752242*^9, 3.465745818617212*^9}, {
+   3.465745855519069*^9, 3.465745871268566*^9}, {3.467527722310605*^9, 
+   3.467527736771359*^9}, {3.467527951980319*^9, 3.467527952478451*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"kochrand2", "[", "list_", "]"}], " ", ":=", " ", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{
+    RowBox[{"Map", "[", 
+     RowBox[{"kochrand1", ",", " ", "list"}], "]"}], ",", "1"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.465657536172067*^9, 3.465657567107261*^9}, {
+  3.465657948191857*^9, 3.465657951674148*^9}, {3.467527955180975*^9, 
+  3.4675279648379307`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"kochrand3", "[", 
+   RowBox[{"n_", ",", " ", "list_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Nest", "[", 
+   RowBox[{"kochrand2", ",", " ", "list", ",", "n"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.465657575133268*^9, 3.465657623841544*^9}, {
+  3.467527957300946*^9, 3.467527966214308*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"kochrand4", "[", 
+   RowBox[{"n_", ",", " ", "list_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Graphics", "[", " ", 
+   RowBox[{
+    RowBox[{"Line", "[", 
+     RowBox[{"kochrand3", "[", 
+      RowBox[{"n", ",", " ", "list"}], "]"}], "]"}], ",", 
+    RowBox[{"ImageSize", "\[Rule]", "900"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.46565766870503*^9, 3.465657756242152*^9}, {
+   3.465658168875271*^9, 3.465658172743447*^9}, 3.465658261334449*^9, {
+   3.46565833952774*^9, 3.465658364434944*^9}, {3.467527961098962*^9, 
+   3.4675279674004383`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"kochrand4", "[", 
+  RowBox[{"7", ",", "k2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.465658542908446*^9, 3.465658546920509*^9}, {
+   3.465658620537248*^9, 3.4656586915112*^9}, {3.465745621246408*^9, 
+   3.465745638189801*^9}, 3.465745676994491*^9, 3.465745882278043*^9, 
+   3.4675279626241827`*^9, 3.467528135619713*^9, {3.467528170674921*^9, 
+   3.467528171685144*^9}}]
+}, Open  ]]
+},
+WindowSize->{1440, 886},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"7.0 for Linux x86 (64-bit) (November 11, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 189, 2, 84, "Title"],
+Cell[759, 26, 267, 6, 45, "Text"],
+Cell[1029, 34, 1928, 47, 281, "Input"],
+Cell[2960, 83, 503, 13, 31, "Input"],
+Cell[3466, 98, 157, 2, 45, "Text"],
+Cell[3626, 102, 355, 11, 31, "Input"],
+Cell[3984, 115, 341, 9, 31, "Input"],
+Cell[4328, 126, 269, 6, 31, "Input"],
+Cell[4600, 134, 520, 12, 31, "Input"],
+Cell[5123, 148, 167, 2, 45, "Text"],
+Cell[5293, 152, 1351, 37, 84, "Input"],
+Cell[6647, 191, 160, 2, 45, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6844, 198, 101, 1, 84, "Title"],
+Cell[6948, 201, 384, 7, 45, "Text"],
+Cell[7335, 210, 2463, 57, 301, "Input"],
+Cell[9801, 269, 402, 10, 31, "Input"],
+Cell[10206, 281, 326, 7, 31, "Input"],
+Cell[10535, 290, 580, 13, 31, "Input"],
+Cell[11118, 305, 394, 7, 31, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

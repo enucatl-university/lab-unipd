@@ -1,0 +1,137 @@
+matteo@matteo:~/lab/partitore$ echo '5.027                                  
+6                                                                           
+FlukeVolt' | ./errori.py                                                    
+Misura: Fondo scala: Strumento [FlukeVolt, FlukeOhm, TAmp, TOhm]: errore:  0.0203491664121
+matteo@matteo:~/lab/partitore$ echo '100.5e-3                                             
+0.2                                                                                       
+TAmp' | ./errori.py                                                                  
+Misura: Fondo scala: Strumento [FlukeVolt, FlukeOhm, TAmp, TOhm]: errore:  0.000438990912017
+matteo@matteo:~/lab/partitore$ echo '5.018                                         
+6                                                                                         
+FlukeVolt' | ./errori.py                                                                  
+Misura: Fondo scala: Strumento [FlukeVolt, FlukeOhm, TAmp, TOhm]: errore:  0.0203128520564
+matteo@matteo:~/lab/partitore$ python                                                     
+Python 2.5.2 (r252:60911, Oct  5 2008, 19:24:49)                                          
+[GCC 4.3.2] on linux2                                                                     
+Type "help", "copyright", "credits" or "license" for more information.                    
+>>> from correlazioni import sigmaRG
+>>> sigmaRG(89e-3,9e-3,0.02*math.sqrt(2),100.5e-3,0.4e-3)
+Traceback (most recent call last):                       
+  File "<stdin>", line 1, in <module>                    
+NameError: name 'math' is not defined                    
+>>> import math                                          
+>>> sigmaRG(89e-3,9e-3,0.02*math.sqrt(2),100.5e-3,0.4e-3)
+0.28143626035571434                                      
+>>> sigmaRG(89e-3,9e-3,0.002*math.sqrt(2/3),100.5e-3,0.4e-3)
+0.00063905750972251187                                      
+>>> quit                                                    
+Use quit() or Ctrl-D (i.e. EOF) to exit                     
+>>>                                                         
+matteo@matteo:~/lab/partitore$ python                       
+Python 2.5.2 (r252:60911, Oct  5 2008, 19:24:49)            
+[GCC 4.3.2] on linux2                                       
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import math
+>>> import correlazioni
+>>> sigmaRG(89e-3,9e-3,correlazioni.s100,100.5,0.4)
+Traceback (most recent call last):                 
+  File "<stdin>", line 1, in <module>              
+NameError: name 'sigmaRG' is not defined           
+>>> correlazioni.sigmaRG(89e-3,9e-3,correlazioni.s100,100.5,0.4)
+0.016156376975268911                                            
+>>> correlazioni.sigmaRG(89e-3,9e-3,correlazioni.s100,100.5,0.4)/0.089
+0.18153232556481924                                                   
+>>>                                                                   
+KeyboardInterrupt                                                     
+>>>                                                                   
+matteo@matteo:~/lab/partitore$ sudo mount /dev/sdb1                
+[sudo] password for matteo:                                        
+matteo@matteo:~/lab/partitore$ clear                               
+matteo@matteo:~/lab/partitore$ python
+Python 2.5.2 (r252:60911, Oct  5 2008, 19:24:49) 
+[GCC 4.3.2] on linux2                            
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from correlazioni import *
+>>> s101 = sdiff((5.4e-6,5.4e-6),7.5e-3,1e-7)
+>>> s101                                     
+8.1649658092772591e-08                       
+>>> 5.027e6/0.4
+12567500.0     
+>>> sigmaRG(12.5675,4e-7,s101,5.027,0.02)
+2.5658174156429499                       
+>>> sigmaRG(12.5675e6,4e-7,s101,5.027,0.02)
+2565817.4156429498                         
+>>> sigmaRG(12.5675e6,4e-7,s101,5.027,0.02)/12.5675e6
+0.20416291351843643                                  
+>>> norm                                             
+Traceback (most recent call last):                   
+  File "<stdin>", line 1, in <module>                
+NameError: name 'norm' is not defined                
+>>> norm()                                           
+Traceback (most recent call last):                   
+  File "<stdin>", line 1, in <module>                
+NameError: name 'norm' is not defined                
+>>> from correlazioni import *
+>>> norm(10.4,(0.153,1e-3),(15.99,0.07))
+Traceback (most recent call last):      
+  File "<stdin>", line 1, in <module>   
+NameError: name 'norm' is not defined   
+>>> norm(10.4,(0.153,1e-3),(15.99,0.07))
+Traceback (most recent call last):      
+  File "<stdin>", line 1, in <module>   
+NameError: name 'norm' is not defined   
+>>>                                     
+matteo@matteo:~/lab/partitore$ python   
+Python 2.5.2 (r252:60911, Oct  5 2008, 19:24:49) 
+[GCC 4.3.2] on linux2                            
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from correlazioni import *
+>>> norm(10.4,(0.153,1e-3),(15.99,0.07))
+0.08181250129741649                     
+>>> norm(10.4,(0.153,1e-3),(15.99,0.07))/10.4
+0.0078665866632131234                        
+>>> 0.154/15.99e-3
+9.6310193871169467
+>>> 0.156/15.99e-3
+9.7560975609756095
+>>> 0.156/15.99
+0.0097560975609756097
+>>> norm(9.76,(0.153,1e-3),(15.99,0.07))
+0.07677788583296008
+>>> norm(9.76,(0.153,1e-3),(15.99,0.07))/9.76ù
+  File "<stdin>", line 1
+    norm(9.76,(0.153,1e-3),(15.99,0.07))/9.76ù
+                                             ^
+SyntaxError: invalid syntax
+>>> norm(9.76,(0.153,1e-3),(15.99,0.07))/9.76
+0.0078665866632131234
+>>> 10.4*15.99e-3
+0.16629600000000003
+>>> 0.166/15.99
+0.010381488430268919
+>>> norm(10.38,(0.153,1e-3),(15.99,0.07))
+0.081655169564152225
+>>> norm(10.38,(0.153,1e-3),(15.99,0.07))/10.38
+0.0078665866632131234
+>>> 16.58+7.55
+24.129999999999999
+>>> 12.58+7.55
+20.129999999999999
+>>> 16.58+7.55
+24.129999999999999
+>>> 12.31+7.55
+19.859999999999999
+>>> s102 = 0.3**2+0.5**2+7.5e-4**2*(19.86)**2
+>>> s102 = 0.3**2+0.5**2+7.5e-4**2*(19.86)**2/3
+>>> math.sqrt(s102)
+0.58315860078969939
+>>> s102 = 0.3**2+0.5**2+(7.5e-4)**2*(19.86)**2
+>>> math.sqrt(s102)
+0.58328540271894336
+>>> s103 = 0.3**2+0.5**2
+>>> math.sqrt(s103)
+0.58309518948452999
+>>> s103 = 0.03**2+0.05**2
+>>> math.sqrt(s103)
+0.058309518948453008
+>>>

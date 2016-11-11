@@ -1,0 +1,101 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url,wrapfig,multirow}
+\usepackage[text={6in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[Euler]{upgreek}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\include{pstricks}
+% \include{pstricks}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Grafico}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%------------- nuovi environment senza spazi
+%\newenvironment{packed_item}{
+%\begin{itemize}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{itemize}}
+%\newenvironment{packed_enum}{
+%\begin{enumerate}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{enumerate}}
+%\newenvironment{packed_description}{
+%\begin{enumerate}
+%   \setlength{\itemsep}{1pt}
+%   \setlength{\parskip}{0pt}
+%   \setlength{\parsep}{0pt}
+% }{\end{enumerate}}
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\newcommand{\micro}{\ensuremath{\upmu}} %prefisso micro
+\newcommand{\e}{\mathrm{e}} %numero di nepero
+\newcommand{\di}{\mathrm{d}} %simbolo di differenziale
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\pi}{\uppi} % costante pi greco
+\renewcommand{\tau}{\uptau} %momento della forza
+\newcommand{\coloneqq}{\mathrel{\mathop:}=} % := ``per definizione''
+\newcommand{\ms}{(\unitfrac{m}{s})}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+Da un calcolo numerico si trova, per un angolo di $5^\circ$:
+\begin{equation*}
+ I(5^\circ)=\dfrac 2 \pi \int_0^{5^\circ} \dfrac{\di x}{\sqrt{\cos x - \cos 5^\circ}} = 1.0004058\dots
+\end{equation*}
+Quindi l'approssimazione usata ($I(\alpha) \equiv 1$) risulta buona a meno di un'approssimazione dell'ordine di $4\cdot10^{-4}$. I seguenti grafici confermano questa influenza dell'errore sistematico.
+\begin{figure}[h]
+\centering
+\caption{Prima serie di cento misure, cronometro automatico. Scarti $x_i - \bar{x}$ rispetto al numero di oscillazioni.}\label{scarti1}
+ \include{scarti1}
+\end{figure}
+\begin{figure}[h]
+\centering
+\caption{Seconda serie di cento misure, cronometro automatico. Scarti $x_i - \bar{x}$ rispetto al numero di oscillazioni.}\label{scarti2}
+ \include{scarti2}
+\end{figure}
+\begin{figure}[h]
+\centering
+\caption{Terza serie di cento misure, cronometro automatico. Scarti $x_i - \bar{x}$ rispetto al numero di oscillazioni.}\label{scarti3}
+ \include{scarti3}
+\end{figure}
+\begin{figure}[h]
+\centering
+\caption{Quarta serie di cento misure, cronometro automatico. Scarti $x_i - \bar{x}$ rispetto al numero di oscillazioni.}\label{scarti4}
+ \include{scarti4}
+\end{figure}
+\begin{figure}[h]
+\centering
+\caption{Quinta serie di cento misure, cronometro automatico. Scarti $x_i - \bar{x}$ rispetto al numero di oscillazioni.}\label{scarti5}
+ \include{scarti5}
+\end{figure}
+\end{document}

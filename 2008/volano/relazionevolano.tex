@@ -1,0 +1,149 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url,wrapfig,multirow}
+\usepackage[text={6in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[Euler]{upgreek}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\include{pstricks}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Grafico}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{(\roman{enumi})}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%------------- nuovi environment senza spazi
+%\newenvironment{packed_item}{
+%\begin{itemize}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{itemize}}
+%\newenvironment{packed_enum}{
+%\begin{enumerate}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{enumerate}}
+%\newenvironment{packed_description}{
+%\begin{enumerate}
+%   \setlength{\itemsep}{1pt}
+%   \setlength{\parskip}{0pt}
+%   \setlength{\parsep}{0pt}
+% }{\end{enumerate}}
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\newcommand{\e}{\mathrm{e}} %numero di nepero
+\newcommand{\di}{\mathrm{d}} %simbolo di differenziale
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\pi}{\uppi} % costante pi greco
+\renewcommand{\tau}{\uptau} %momento della forza
+\newcommand{\coloneqq}{\mathrel{\mathop:}=} % := ``per definizione''
+\newcommand{\ms}{(\unitfrac{m}{s})}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di laboratorio: il volano}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}}
+\date{\today}
+\maketitle
+%------------------
+\section{Obiettivo dell'esperienza}
+Gli obiettivi dell'esperienza sono verificare la legge del moto rotatorio del volano, stimare il valore del momento d'inerzia $I$ dello stesso rispetto all'asse di rotazione e misurare il momento delle forze di attrito $\tau_a$.
+\section{Descrizione dell'apparato strumentale}
+Il volano è un corpo rigido vincolato a ruotare intorno a un asse fisso perpendicolare al muro. Per ridurre l'attrito, il volano è collegato a un sistema di cuscinetti a sfera. Intorno all'asse di rotazione  e è fissata anche una puleggia (raggio $r=\unit[18.95\pm0.01]{mm}$) con scanalatura elicoidale di tredici giri, lungo la quale si può avvolgere un filo di refe che sostiene un peso di ottone (massa $m=\unit[34.0\pm0.5]{g}$). Il filo si può considerare con ottima approssimazione privo di massa e inestensibile.
+Per misurare i periodi di rotazione è stato impiegato un cronometro con sensibilità~$\unit[10^3]{s^{-1}}$.
+\section{Descrizione della metodologia di misura}
+Il volano accelera per tredici giri, ovvero finché il filo si svolge attorno alla puleggia, quindi il peso si stacca e il moto rallenta per effetto dell'attrito. Il cronometro è stato avviato al primo traguardo sul riferimento, ovvero dopo il primo giro completo, e sono stati registrati i successivi dodici passaggi in accelerazione. Dopo il distacco del peso e un intervallo di tre giri, son stati acquisiti i tempi su blocchi di dieci rotazioni consecutive per stimare l'effetto dell'attrito. La procedura è stata ripetuta per dieci volte.
+\section{Risultati sperimentali ed elaborazione dati}
+Dei tempi misurati (tabella~\ref{tabtempi}) è stata calcolata la media, l'errore quadratico medio e i tempi di percorrenza di singoli giri o dei blocchi di dieci, per differenza (tabella~\ref{tabtempielab}). Da questi è stata calcolata la velocità angolare media $\bar{\omega} = \nicefrac{2\pi}{\Delta t}$. I tempi intermedi $t^{\ast}_i=\nicefrac{1}{2}(t_{i-1}+t_{i})$ sono i tempi in cui la velocità istantanea è uguale alla velocità media e sono riportati in ascissa nei grafici~{\ref{acc}}~e~{\ref{dec}}. Dall'interpolazione lineare di questi dati sono state ricavate l'accelerazione angolare~$\alpha$  nei primi dodici giri e l'accelerazione~$\beta$ dovuta all'attrito. I valori $\omega_0$ e $\omega_{\mathrm{max}}$ sono le rispettive ordinate all'origine:
+\begin{align*}
+		\alpha &=  0.0419 \pm 0.0002\ \unitfrac{rad}{s^2}\\
+		\omega_0 &= 0.731 \pm 0.007\  \unitfrac{rad}{s}\\
+		\beta &= (3.34 \pm 0.03)\cdot10^{-4}\  \unitfrac{rad}{s^2}\\
+		\omega_{\mathrm{max}} &= 0.257 \pm 0.003\  \unitfrac{rad}{s}
+\end{align*}
+Da cui, essendo $\beta=-\nicefrac{\tau_a}{I}$ e propagando l'errore con $g=\unitfrac[9.806\pm0.001]{m}{s^2}$, è:
+\begin{equation*}
+	I_1=\dfrac{mrg-\alpha mr^2}{\alpha-\beta} = \unit[0.149 \pm 0.002]{kg \, m^2}
+\end{equation*}
+Un'altra possibilità per l'interpolazione dell'accelerazione angolare è esprimere il tempo in funzione dello spazio percorso dal peso, secondo la relazione $\nicefrac{1}{2}at^2 = 2\pi r n$, dove $a$ è l'accelerazione del peso in caduta, $r$ è il raggio della puleggia e $n$ il numero di giri. Da questa si ricava $t=\theta \sqrt{n}$, posto:
+\begin{equation*}
+	\theta \coloneqq 2\sqrt{\dfrac{\pi(I+mr^2)}{mrg-\tau_a}}
+\end{equation*}
+Poiché il cronometro parte dal secondo giro, l'ordinata all'origine nell'interpolazione ($\unit[-17.32\pm0.02]{s}$) è il tempo impiegato a percorrere il primo giro, e non ci si aspetta che sia compatibile con zero. Il valore interpolato (vedi grafico~{\ref{acc2}}) risulta $\theta = \unit[17.286 \pm 0.009]{s}$, e dunque:
+\begin{equation*}
+	I_2 = \dfrac{mr(g\theta^2-4\pi r)}{4\pi - \beta \theta^2} =  \unit[0.1490 \pm 0.0002]{kg \, m^2}
+\end{equation*}
+\`E stata calcolata la compatibilità fra i valori $I_1$, $I_2$ e il valore atteso $I_0=\ \unit[0.164 \pm 0.001]{kg \, m^2}$.
+\begin{align*}
+	\lambda_{01} &= 5.7 \\
+	\lambda_{02} &= 14.8 \\
+	\lambda_{12} &= 0.0
+\end{align*}
+Infine, dalla relazione $\tau_a = -\beta I$, si ricava il momento della forza di attrito:
+\begin{align*}
+	\tau_{1} &= \unit[(4.98\pm0.09)\cdot10^{-5}]{Nm} \\
+	\tau_{2} &= \unit[(4.98\pm0.04)\cdot10^{-5}]{Nm}
+\end{align*}
+\section{Discussione dei risultati}
+Il valore fornito $I_0$ è una media pesata dei momenti di inerzia dei volani del laboratorio, ma non è compatibile con i valori misurati in questo esperimento, che invece sono assolutamente compatibili fra loro. Questo può essere dovuto al fatto che il volano impiegato ha un momento di inerzia di poco inferiore alla media.
+L'unica differenza apprezzabile tra i valori ottenuti è l'errore sulla misura, che risulta di un ordine di grandezza inferiore con il secondo metodo di interpolazione dei dati. Infatti, per poter interpolare i dati come nel primo grafico, è necessario fare più passaggi intermedi: calcolo delle differenze dei tempi, della velocità media, dei tempi intermedi. Questo può giustificare una maggiore propagazione dell'errore sul risultato finale.
+Il momento delle forze di attrito risulta molto piccolo, al punto che, trascurandolo, si ottiene:
+\begin{equation*}
+	I = \dfrac{mrg}{\alpha} = \unit[0.151 \pm 0.002]{kg \, m^2}
+\end{equation*}
+che è pienamente compatibile ($\lambda=0.003$) con la misura di $I_1$.
+\section{Conclusioni}
+La velocità angolare cresce in modo lineare, quindi la legge del moto, come evidente dai grafici in appendice, è verificata. Il momento d'inerzia del volano risulta al di sotto della media, secondo entrambi i metodi di analisi dei dati. Di questi il secondo appare migliore, nel senso che permette di ridurre l'errore sulla misura finale. Questo però presupponendo che l'errore sul numero di giri, in ascissa nell'interpolazione, rimanga trascurabile nonostante aumenti con l'aumentare della velocità angolare.
+\newpage
+\section{Appendice}
+\begin{table}[hp]\caption{Dati raccolti per la percorrenza di dodici giri in accelerazione e sessanta in decelerazione. I tempi sono in secondi.}\label{tabtempi}
+\centering \small
+\setlength{\tabcolsep}{4pt}
+	\include{tabtempi}
+\end{table}
+\begin{table}[hp]\caption{Elaborazione dei dati per la percorrenza di dodici giri in accelerazione e sessanta in decelerazione: medie dei tempi della tabella precedente, differenze e tempi intermedi, misure in secondi tutte con il relativo errore. Le ultime due colonne riguardano la velocità angolare media (\unitfrac{rad}{s}).}\label{tabtempielab}
+\centering \small
+	\include{tabtempielab}
+\end{table}
+\begin{figure}[hp]\caption{Fase di accelerazione, interpolazione con tempi intermedi in ascissa~(\unit{s}) e velocità angolari medie in ordinata~(\unitfrac{rad}{s}). L'errore sulla misura è minore della dimensione del punto che la rappresenta sul grafico.}\label{acc}
+\centering 
+\include{graficoacc}
+\end{figure}
+\begin{figure}[hp]\caption{Fase di accelerazione, interpolazione con radice quadrata del numero di giri in ascissa e tempi in ordinata. L'errore sui tempi è minore della dimensione del punto sul grafico.}\label{acc2}
+\centering 
+\include{graficoacc2}
+\end{figure}
+\begin{figure}[hp]\caption{Fase di decelerazione, interpolazione con tempi intermedi in ascissa e velocità angolari medie in ordinata.}\label{dec}
+\centering 
+\include{graficodec}
+\end{figure}
+\end{document}

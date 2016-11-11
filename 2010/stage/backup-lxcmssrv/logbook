@@ -1,0 +1,96 @@
+Fri Sep 18
+- code [muon_reconstruct{.cpp,.h}] which reads simulated data, finds closest
+  generated particle for each reconstructed one, then stores delta r and
+  delta pt / pt of the pair.
+- cut if delta pt / pt or r > 0.1
+- store data in histograms
+- from mother() of generated particle store (histogram) impact parameter distribution
+  for all muons, muons coming from B, muons coming from D or both.
+- code saved as muon_reconstruct190909.cpp
+- run on 1-100 series (around 1M events)
+
+Sun Sep 20 12:07:59 CEST 2009
+- same data stored in trees, not only in histograms
+- changed histogram fill instructions so that they store the absolute
+  value of the impact parameter. Trees still store the value as is.
+- 13.15 started job with all available events.
+- 20.05 job completed. Checked tree data against hist data with a simple python
+  (PyROOT) tool. Trees did store the correct values.
+- copied output muon_reco.root on localhost to work on kolmogorov test.
+kolmogorov_test.cpp
+a class that inherits from TTree, with an additional method to sort data,
+then calculate Kolmogorov probability.
+- Kolmogorov Prob from tree analysis is 3.23683e-15. I don't know if this
+  value is correct, but the algorithm returns probability one if I run the
+  test of a tree with itself (which is correct).
+  The same test with the two histograms returned 0.00000e+00 (PyROOT).
+  c++ returned values between 2e-16 and 10e-22
+
+Mon Sep 21 21:12:39 CEST 2009
+- hist_container deleted, I'm going to work with trees only
+- class CircularReconstruction in Bortignon_Global.h calculates impact
+  parameter with a circular approximation
+- each tree stores:
+    - pt [transverse momentum]
+    - n_muons [number of muons in the same event]
+    - muon_id [progressive numbering of muons during the same event]
+    - d_lin [impact parameter with linear approximation]
+    - d_circ [impact parameter with circular approximation]
+    - phi [angle of momentum with respect to x axis at reference point]
+    - x_ref, y_ref [coordinates of reference point, i.e. closest approach
+      point]
+from these trees I'm going to Project a few histograms and do some
+Kolmogorov tests. I should be able to compute Kolmogorov Probability as a
+function of:
+    - pt cut
+    - n_muons
+    - total number of events
+    - linear vs circular approximation
+In all the histograms with an impact parameter distribution keep in mind
+that there is a measurement error of ~50 microns. Therefore this should be
+the standard bin width.
+
+Tue Sep 22 17:06:12 CEST 2009
+histograms of kolmogorov probability filled.
+code in kolmogorov_distribution.py and iterated_kolmogorov.py
+distribution of d in D and B
+
+Wed Sep 23 17:08:42 CEST 2009
+More graphs with number of events in each kolmogorov test to investigate its
+statistical stability.
+Histogram of pt distribution.
+
+In analyzer code: corrected factor for luminosity (waiting for a run during
+the night).
+reco::Particle::track() returns a pointer to innerTrack, that is the
+reconstructed track from tracker data.
+Changed everywhere with globalTrack() [tracker + muon detectors], it's going
+to change the values of d_lin.
+Tests made so far show that the new values are clearly closer to the d_circ
+distribution
+
+Thu Sep 24 20:00:00 CEST 2009
+in abis_func.h, created a function that iterates over all trees in map and
+adds a branch to all trees.
+
+in main analyzer: removed all unnecessary trees, I now save a new branch
+with pdg_id of mother and grandmother.
+This will make the analysis more reusable and expandable, while at the same
+time making code faster and saving disk space.
+
+discovered a problem with the "circular_reconstruction.h". It calculated the
+"inner" circular reconstruction from "globalTrack" data (vertex, eta, pt).
+That caused it to disagree with the inner_lin impact parameter.
+It now has been fixed, and results show that linear and circular
+reconstruction are clearly the same.
+
+Therefore, Kolmogorov tests are to be run on inner vs global track, not on
+linear vs circular.
+
+To be done tomorrow:
+- new plots of kolmogorov probability as a function of minimum pt and
+  luminosity. inner vs global.
+  We expect inner track to be better, as it has greater resolution for
+  impact parameter. This may change as pt gets higher, though.
+
+

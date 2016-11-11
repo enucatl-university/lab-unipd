@@ -1,0 +1,125 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      3913,        116]
+NotebookOptionsPosition[      3347,         92]
+NotebookOutlinePosition[      3677,        107]
+CellTagsIndexPosition[      3634,        104]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"parametri", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0", ",", "100", ",", "20"}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.4684920098231277`*^9, 3.468492022049487*^9}, {
+  3.468493078734675*^9, 3.468493097110538*^9}, {3.468493755714067*^9, 
+  3.468493755823839*^9}, {3.4684940013970137`*^9, 3.468494016369935*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "[", "\"\</home/matteo/lab/mathematica\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.4684920377382174`*^9, 3.4684920559942102`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Run", "[", "\"\<make poincare\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.46849321830233*^9, 3.468493224507245*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{
+  3.468493226959353*^9, 3.4684943908255997`*^9, 3.468494449577263*^9, 
+   3.468494502092557*^9, 3.46849461932638*^9, 3.4684947479927797`*^9, {
+   3.4684948161208477`*^9, 3.468494827247509*^9}, 3.4684948914192553`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"out", " ", "=", " ", 
+   RowBox[{"RunThrough", "[", 
+    RowBox[{"\"\<./forzato.py\>\"", ",", " ", "parametri"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.4684920013485203`*^9, 3.468492034594199*^9}, {
+  3.468492069483992*^9, 3.468492070554003*^9}, {3.4684921133572397`*^9, 
+  3.468492146418942*^9}, {3.4684931061894617`*^9, 3.468493106921257*^9}, {
+  3.468493765780183*^9, 3.468493767816146*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "out", "]"}]], "Input",
+ CellChangeTimes->{{3.468493746460634*^9, 3.468493749005993*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  {Hue[0.67, 0.6, 0.6], PointBox[CompressedData["
+1:eJwBUQGu/iFib1JlAgAAABQAAAACAAAAAAAAAAAAAAAAAAAAAADwP2b35GGh
+1tO/ZCE6BI4E6j+HbCBdbFravylBf6FHjOM/cnDpmPOM2r9Sf73CgvvcP0KZ
+RpOLMdi/0t9L4UGz1T97gy9MpgrVv3hgAOFDidA/hPQUOUTc0b+SJXMs76rJ
+PwKDpE+r6M2/3J4gsd09xD9wzR39L9fIv/5+MVuyKsA/gVt381SHxL/rVWR0
+QBK6PwBTBg5o6cC/1BPxMbMqtT8qqKj6lc67v4kMBjKWRLE/8j/5u3fUtr9m
+m8AZoUSsP5G+pIwTurK/K152maswpz+bPpaZLbSuv/iB9cmbDaM/U8fP6/Qo
+qb/ul09WDFefPwwh5/1/nKS/pWIIpdTKmT+AD167tOGgv1ZGI59XPJU/idS0
+i2mmm7/cy8f/Ln2RPzURkfUvpJa/cLlVa7zPjD8vjqOz
+    "]]},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  PlotRange->Automatic,
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{{3.468493749390815*^9, 3.468493769796094*^9}, {
+   3.4684940066369658`*^9, 3.4684940211779013`*^9}, {3.468494393064926*^9, 
+   3.468494396429882*^9}, 3.468494453436417*^9, {3.468494498966234*^9, 
+   3.4684945056086483`*^9}, 3.468494620736895*^9, 3.468494749815126*^9, {
+   3.4684948290713882`*^9, 3.46849483068347*^9}, 3.468494892944721*^9}]
+}, Open  ]],
+
+Cell[BoxData["out"], "Input",
+ CellChangeTimes->{{3.46849207237512*^9, 3.4684920725042667`*^9}}]
+},
+WindowSize->{1440, 886},
+WindowMargins->{{0, Automatic}, {540, 0}},
+FrontEndVersion->"7.0 for Linux x86 (64-bit) (November 11, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 384, 8, 31, "Input"],
+Cell[932, 30, 191, 4, 31, "Input"],
+Cell[CellGroupData[{
+Cell[1148, 38, 141, 2, 31, "Input"],
+Cell[1292, 42, 266, 4, 31, "Output"]
+}, Open  ]],
+Cell[1573, 49, 442, 9, 31, "Input"],
+Cell[CellGroupData[{
+Cell[2040, 62, 129, 2, 31, "Input"],
+Cell[2172, 66, 1060, 20, 248, "Output"]
+}, Open  ]],
+Cell[3247, 89, 96, 1, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

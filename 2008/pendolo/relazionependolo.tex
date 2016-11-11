@@ -1,0 +1,259 @@
+\documentclass[italian,a4paper,10pt]{article}
+\usepackage[footnotesize,bf]{caption}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url,array,wrapfig,subfig}
+\usepackage[text={6in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[usenames]{color}
+\frenchspacing
+\pagestyle{plain}
+\captionsetup[subfloat]{labelformat=simple,listofformat=subsimple}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%------------- impostazioni environment teoremi
+\theoremstyle{definition}
+\newtheorem{theorem}{Esercizio}
+%\newtheorem{lemma}[theorem]{Lemma} % [theorem] usa lo stesso contatore dei teoremi
+%\newtheorem{prop}[theorem]{Proposizione}
+%\newtheorem{definition}[theorem]{Definizione}
+%\newtheorem{corollary}[theorem]{Corollario}
+%\newtheorem{notation}[theorem]{Notazione}
+%
+%
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thetheorem.\arabic{equation}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thesubtable}{\thetable.\arabic{subtable}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Grafico}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{(\roman{enumi})}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%------------- nuovi environment senza spazi
+%\newenvironment{packed_item}{
+%\begin{itemize}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{itemize}}
+%\newenvironment{packed_enum}{
+%\begin{enumerate}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{enumerate}}
+%\newenvironment{packed_description}{
+%\begin{enumerate}
+%   \setlength{\itemsep}{1pt}
+%   \setlength{\parskip}{0pt}
+%   \setlength{\parsep}{0pt}
+% }{\end{enumerate}}
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\epsi}{\varepsilon}
+\newcommand{\eqnum}{\setcounter{equation}{0}}
+\newcommand{\spazio}{\vspace{.5\baselineskip}\\}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di Laboratorio: il pendolo}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}}
+\date{\today}
+\maketitle
+%------------------
+\begin{table}[hpt]
+ \begin{tabular}{l l}
+  \emph{Corso:} &Esperimentazioni Fisica 1 -- LT, A.A. 2007--2008\\
+  \emph{Docente:} &dott. Cinzia Sada\\
+ \end{tabular}
+\end{table}
+\section{Obiettivo dell'esperienza}
+L'obiettivo primario dell'esperienza è il confronto di vari metodi di raccolta di dati sperimentali e la loro analisi, con particolare attenzione alla stima del ``valor vero'' e degli errori casuali e sistematici, per stabilire quale possa essere il modo migliore per misurare il periodo di oscillazione del pendolo, a parità di condizioni e tempo a disposizione.
+\section{Descrizione dell'apparato strumentale}
+\renewcommand{\arraystretch}{1.2}
+\begin{wrapfigure}[16]{r}{40mm}
+  \begin{center}
+    \includegraphics{disegno.jpg}
+  \end{center}
+  \caption{Rappresentazione schematica del pendolo.}\label{disegno}
+\end{wrapfigure}
+Lo strumento è un pendolo (vedi figura~\ref{disegno}), costituito da una barra di metallo a cui sono fissate due masse: una $60$~cm al di sotto del sostegno e un contrappeso al di sopra. Il pendolo oscilla su un coltello di acciaio temprato largo $5\cdot10^{-2}$~mm.
+
+Nella prima parte dell'esperienza è stato utilizzato un cronometro manuale, con sensibilità di $10^{-3}$~s. Nella seconda parte, invece, il cronometro era dotato di un sistema di rilevazione automatico, ovvero una fotocellula sensibile al passaggio del pendolo nel punto più basso della traiettoria di oscillazione. Tale sistema ha una sensibiltà di $10^{-4}$~s ed è programmato in modo da registrare la durata di un periodo intero.
+\section{Descrizione della metodologia di misura}
+Sono stati registrati manualmente tre campioni di dati: un primo di 120 misure di una singola oscillazione completa (vedi tabella~\ref{tab100}), un secondo di 52 misure di due oscillazioni (vedi tabella~\subref{tab50}) e un terzo campione di 28 misure di quattro oscillazioni (vedi tabella~\subref{tab25}). Il tempo qui misurato come periodo è l'intervallo tra due arresti consecutivi del pendolo sullo stesso lato.
+
+Con l'apparato automatico sono state raccolte prima 100, poi 999 misure. Il sistema rileva il tempo trascorso tra due passaggi consecutivi del pendolo nel punto più basso del suo movimento, ed è programmato per salvare dati relativi a un'oscillazione completa, e non ai semiperiodi.
+\newpage
+\section{Risultati sperimentali ed elaborazione dati}
+I tempi registrati nei campioni sono riportati nelle tabelle successive. Per ogni campione è stato elaborato un istogramma suddividendo i dati in classi di frequenza dell'ampiezza di $15$~ms, messo a confronto con una distribuzione casuale gaussiana. Sono stati inoltre calcolati media aritmetica~$\bar{x}$, l'errore quadratico medio~$\sigma$ e l'errore della media~$\sigma_{\bar{x}}$. Nel campione relativo alle misure manuali della singola oscillazione, è stato individuato un valore esterno all'intervallo $[\bar{x} - 3\sigma,\bar{x} + 3\sigma]$ e quindi escluso.
+\begin{table}[h!]\centering
+\begin{tabular}{ c *3{r@{.}l}r@{ $\pm$ }l }
+ \multicolumn{1}{ c }{n. misure $\times$ osc.}&
+ \multicolumn{2}{c}{$\bar{x}$ (ms)}&
+ \multicolumn{2}{c}{$\sigma$} &
+ \multicolumn{2}{c}{$\sigma_{\bar{x}}$} &
+ \multicolumn{2}{c}{risultato}\\
+ \hline
+ $120 \times 1$  	& 1936&47	&  63&64 	& 5&81 		&  1936.5  & 5.8\\
+ $52 \times 2$  	& 3859&51 	&  88&07 	& 12&10 	&  3859.5  &12.1\\
+ $28 \times 4$  	& 7711&79  	&   88&09  	&  16&65  	&   7711.8 &16.7\\
+ $100$ (auto)		& 1927&21 	&  0&09 	& 0&01 		&  1927.21 &0.01\\
+\end{tabular}
+\end{table}\\
+Ovvero, riportando i valori a un'oscillazione:
+\begin{table}[h]\centering
+\begin{tabular}{r r@{.}l @{ $\pm$ } r@{.}l @{ ms}}
+120 & 1936&5 & 5&8 \\
+52 & 1929&7 & 6&0  \\
+28 & 1927&9 & 4&1  \\
+100a & 1927&21 & 0&01  \\
+\end{tabular}
+\end{table}\\
+\`{E} stata calcolata la compatibilità $\lambda$ di tali valori, secondo la formula:
+\begin{equation*}
+ \lambda_{i,j} = \dfrac{|\bar{x}_i - \bar{x}_j|}{\sqrt{\sigma_{\bar{x}_i}^2 + \sigma_{\bar{x}_j}^2}}
+\end{equation*}
+Con i seguenti risultati:
+\begin{table}[h]\centering
+\begin{tabular}{@{}r|r@{.}l r@{.}l r@{.}l}
+ $\lambda$	&
+ \multicolumn{2}{c}{120}
+&   \multicolumn{2}{c}{52}
+&   \multicolumn{2}{c}{28}  		\\
+ \hline
+ 100a 		&  1&59 	&  0&42 	& 0&18 		\\
+ 28   		&  1&19 	&  0&25 	& \multicolumn{2}{c}{} \\
+ 52  	 	&  0&80 	& \multicolumn{2}{c}{}	& \multicolumn{2}{c}{}		 \\
+\end{tabular}
+\end{table}\\
+La compatibilità si dice buona se ha valore compreso tra $0$ e $1$, mediocre tra~$1$~e~$2$~e scarsa tra~$2$~e~$3$.
+I dati sono stati anche organizzati in istogrammi e confrontati con la curva gaussiana:
+\begin{equation*}
+ f(x) = \dfrac{N\Delta x}{\sigma \sqrt{2\pi}}\exp \left\{-\dfrac 1 2 \Big({\dfrac{x-\bar{x}}{\sigma}}\Big)^2\right\}
+\end{equation*}
+Dove $\Delta x$ è l'ampiezza delle classi di frequenza (15 ms), $N$ il numero totale di osservazioni e $\bar{x}$ la media aritmetica.
+\section{Discussione dei risultati}
+L'indice di compatibilità rispetto alle misure automatiche, gli errori sulle misure e sulla media mostrano chiaramente che la stima migliore è quella data dalle osservazioni su più periodi consecutivi. Ciò è giustificato dal fatto che l'errore $\sigma$ dovuto soprattutto al tempo di reazione dell'osservatore, è pressapoco costante su ogni misura, ma viene distribuito su un maggior numero di periodi, dunque influisce meno sulla stima della singola oscillazione. A conferma 
+
+Per quanto riguarda i grafici, la distribuzione casuale degli errori è più evidente nelle misure di singole oscillazioni (come si vede dal grafico~\ref{gr1}) nonostante il picco sia spostato di circa 20~ms a destra. Il secondo grafico~(\ref{gr2}) rispetta meglio la stima centrale, anche se la scarsità di dati produce numerose irregolarità, che sono ancora più evidenti nel terzo istogramma~(\ref{gr4}) dove il picco di frequenza è quasi isolato. In tutti e tre i grafici si nota inoltre che la forma dell'istogramma presenta massimi secondari in eccesso di circa 50~ms.
+
+Più interessante risulta il grafico delle 999 rilevazioni automatiche, in cui il massimo è nettamente spostato a sinistra e la distribuzione non è affatto simmetrica per la presenza di un errore sistematico dovuto all'approssimazione del periodo di oscillazione come indipendente dall'ampiezza dell'angolo. Una migliore approssimazione sarebbe infatti:
+\begin{equation*}
+ T = T_0\left(1+\dfrac{\alpha^2}{16}+\dfrac{9\alpha^4}{1024}+\cdots\right)
+\end{equation*}
+Come testimonia anche il grafico~\ref{gr1000} con le misure in ordine di rilevazione, il periodo diminuisce con lo smorzamento dell'oscillazione di circa 3~ms dopo 1000 periodi, ma non in modo lineare, ovvero in modo sempre meno marcato. Di conseguenza l'errore casuale è più evidente nelle ultime misure, che risultano più irregolari. Per lo stesso motivo l'istogramma delle frequenze si avvicina a una distribuzione casuale solo nella sua parte sinistra. Il grafico~\ref{sist} mostra una gaussiana con i dati di tutte le 999 misure, evidentemente inadeguata a rendere conto della distribuzione per la presenza dell'errore sistematico, mentre la gaussiana relativa ai dati delle ultime 500 osservazioni risulta meglio centrata sul massimo e più coerente con le misure intorno.
+
+La serie di 999~misure automatiche è stato poi analizzato suddividendolo in dieci blocchi (vedi tabella~\ref{blocchi}), cosa che evidenzia ancora una volta la diminuzione della durata delle oscillazioni.
+
+\section{Conclusioni}
+L'esperienza dimostra chiaramente che per misurare manualmente il periodo di un pendolo è utile raggruppare più oscillazioni in una stessa misura, per distribuire l'effetto dell'imprecisione dovuta alla prontezza dell'operatore, che si può quantificare nell'ordine di grandezza di $10^{-1} s$. Una strumentazione elettronica permette invece di ridurre tali errori di tre ordini di grandezza rendendo possibile lo studio di errori sistematici dovuti allo smorzamento dell'ampiezza di oscillazione.
+\newpage
+\section{Appendice}
+   \begin {figure}[hp]\caption{Campione di 120 misure di un'oscillazione.}\label{gr1}
+      \begin{center}
+        \include{grafico}
+      \end{center}
+    \end {figure}
+      \begin {figure}[hp]\caption{Campione di 52 misure di due oscillazioni.}\label{gr2}
+      \begin{center}
+        \include{gr2}
+      \end{center}
+    \end {figure}
+         \begin {figure}[hp]\caption{Campione di 28 misure di quattro oscillazioni.}\label{gr4}
+      \begin{center}
+        \include{gr4}
+      \end{center}
+    \end {figure}
+    \begin{table}[p]\caption{Tabella con media, errore quadratico medio ed errore sulla media relativo ai dieci blocchi delle 999~misure automatiche.}\label{blocchi}
+\centering
+ \begin{tabular}{r@{--}l r@{.}l r@{.}l r@{.}l}
+ \multicolumn{2}{c}{} &
+\multicolumn{2}{c}{$\bar{x}$} &
+\multicolumn{2}{c}{$\sigma$} &
+\multicolumn{2}{c}{$\sigma_{\bar{x}}$} \\
+ \hline
+ 1&100		&1929&7720	&0&1761	&0&0176\\
+ 101&200	&1929&2590	&0&1393	&0&0139\\
+ 201&300	&1928&8430	&0&2104	&0&0210\\
+ 301&400	&1928&5160	&0&1046	&0&0105\\
+ 401&500	&1928&2510	&0&0780	&0&0078\\
+ 501&600	&1928&0480	&0&0943	&0&0094\\
+ 601&700	&1927&8920	&0&0744	&0&0074\\
+ 701&800	&1927&7470	&0&0865	&0&0087\\
+ 801&900	&1927&5950	&0&0753	&0&0075\\
+ 901&999	&1927&4449	&0&1054	&0&0105\\
+ \end{tabular}
+\end{table}
+       \begin {figure}[p]\caption{Durata delle oscillazioni su 999 periodi, rilevazione automatica.}\label{gr1000}
+      \begin{center}
+        \include{gr1000}
+      \end{center}
+    \end {figure}
+           \begin {figure}[p]\caption{Durata delle oscillazioni su 999 periodi con rilevazione automatica e classi di frequenza da $10^{-4}~s$. Tratteggiata la gaussiana con media ed errore relativi a tutte le misure, linea continua per la gaussiana sugli ultimi 500 dati.}\label{sist}
+      \begin{center}
+        \include{sist}
+      \end{center}
+    \end {figure}
+    \renewcommand{\arraystretch}{1}
+        \begin{table}[hp]\caption{120 rilevazioni manuali (ms).}\label{tab100}
+        	\small \centering
+        \include{tabella100}
+        \end{table}
+       \begin{table}[hp]\caption{Altri dati raccolti manualmente}
+       \small \centering
+\subfloat[52 $\times$ 2 oscillazioni~(ms).]{
+\label{tab50}
+\begin{tabular}{@{\hspace{5em}}*{4}{c}@{\hspace{5em}}}
+3825 &3738 &3987 &3844\\
+3911 &3961 &3877 &3901\\
+3757 &3887 &3899 &3935\\
+3661 &3738 &4084 &3868\\
+3846 &3861 &3880 &3763\\
+3882 &3835 &3958 &3875\\
+3826 &3849 &3965 &3763\\
+3915 &3857 &3800 &4003\\
+3697 &3800 &3741 &3984\\
+4027 &3919 &3731 &3845\\
+3943 &3845 &3864 &3892\\
+3812 &3779 &3906 &3918\\
+3877 &3828 &3911 &3808
+\end{tabular}}
+\subfloat[28 $\times$ 4 oscillazioni~(ms).]{
+\label{tab25}
+\begin{tabular}{@{\hspace{5em}}*{4}{c}@{\hspace{5em}}}
+7875 &7753 &7781 &7873\\
+7770 &7822 &7695 &7731\\
+7600 &7746 &7699 &7690\\
+7762 &7509 &7690 &7747\\
+7577 &7697 &7585 &7793\\
+7559 &7711 &7760 &7736\\
+7733 &7605 &7676 &7755
+\end{tabular}}
+        \end{table}
+\begin{table}[p]
+\caption{999 rilevazioni automatiche (ms).}\label{tab1000}
+	\begin{scriptsize}
+	\renewcommand{\arraystretch}{0.8}
+ \centering
+        \include{tabella1000}
+        \end{scriptsize}
+        \end{table}
+\end{document}

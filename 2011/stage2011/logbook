@@ -1,0 +1,25 @@
+ven  9 set 2011, 10.30.50, CEST
+
+copiato le Macro da /lustre/../simo/MultiMuons/..
+
+eseguito un primo Skim su 1000 eventi. Sembra funzionare.
+
+cambiato bTagValidation in ParticleSelector perché tagli sopra 10 Gev e non
+sopra 30 Gev il pt dei jet.
+
+cambiato Skim.C perché continui a prendere come parametro myName, come
+TreeAnalyzerBase. In questo modo i file si possono spostare su altre
+cartelle.
+
+----------------------------------------------
+
+
+sab 10 set 2011, 08.48.01, CEST
+skim completati:
+Skim__Histograms__Data__Mu__Run2010B-Nov4ReReco_v1__DoubleMu3_v2-AllSelections_V3__147146-149711__muonV0Pt3.root
+Skim__Histograms__MC__QCD_2MuPtFilter_OSAndSSMuons_7TeV-pythia6__Fall10-START38_V12-v2__NoSelections_V3__muonV0Pt3.root
+
+
+TreeReaderData.h: aggiunta variabile isData_, che controlla se il file è di
+dati o MC in base al numero di rami nell'albero. In questo modo si possono
+eliminare i controlli espliciti in TreeReaderMC.h e muJet.C

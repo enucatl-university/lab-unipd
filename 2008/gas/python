@@ -1,0 +1,73 @@
+0c 0e 15c 15e 25c 25e 35c 35e 45c 45e 55c 55e
+1
+2
+# coding=utf-8
+
+import sys,  math, Gnuplot, Gnuplot.PlotItems, Gnuplot.funcutils,  rpy
+ 
+#FUNZIONI:
+def legginumeri(righe):
+    x = [0]*len(lines)
+    y = [0]*len(lines)
+    for i in range(len(righe)):
+        num =righe[i].split()
+        x[i]=float(num[ascissa]) #salva la colonna "ascissa" nella lista x e la colonna "ordinata" nella lista y
+        y[i]=float(num[ordinata])
+    return (x, y)
+
+class Datisperimentali:
+    #calcola la media pesata di una successione di dati (lista o upla) così disposta: dato errore dato errore ... dato errore
+    def mediapesata(self):
+        (num, den) = 0
+        for i in range(math.floor(len(self)/2)):
+            num += self[2*i]/self[2*i+1]**2
+            den += self[2*i+1]**(-2)
+        self.mp = num/den
+        self.errmp=den**(-0.5)
+
+stringanomi = raw_input('Inserisci i nomi dei file da analizzare, separati da spazi: ')
+ascissa = input('Colonna ascisse: ')
+ordinata = input('Colonna ordinata: ')
+ascissa -=1
+ordinata -=1
+filedati = stringanomi.split() #separa i nomi dei file
+rpy.set_default_mode(rpy.NO_CONVERSION) #serve per l'ultima parte in R
+linear_model = [rpy.r(0)]*len(filedati)
+
+for i in range(len(filedati)):
+    file = open(filedati[i], 'r')
+    lines = file.readlines()
+    (x, y)=legginumeri(lines)
+    linear_model[i] = rpy.r.lm(rpy.r("y ~ x"), data = rpy.r.data_frame(x=x, y=y))
+    file.close()
+rpy.set_default_mode(rpy.BASIC_CONVERSION)
+summary = [0]*len(linear_model)
+risultati = [0]*len(filedati)
+for i in range(len(filedati)):
+    summary[i] = rpy.r.summary(linear_model[i])
+    #pendenza,errpendenza,intercetta,errintercetta
+    risultati[i] = {'nome':filedati[i], \
+                    'valori':[summary[i]['coefficients'][0][0], \
+                    summary[i]['coefficients'][0][1], \
+                    summary[i]['coefficients'][1][0], \
+                    summary[i]['coefficients'][1][1]]}
+    print """    %s
+Intercetta: %15.6g ± %-15.6g
+Pendenza: %15.6g ± %-15.6g
+    """ % (risultati[i]['nome'],\
+           risultati[i]['valori'][0], \
+           risultati[i]['valori'][1], \
+           risultati[i]['valori'][2], \
+           risultati[i]['valori'][3])
+#ora bisogna accoppiare dati sulla stessa temperatura
+pendenze =  intercette = [0]*(2*len(risultati))
+for i in range(int(math.floor(len(risultati)/2))):
+    intercette[i] = (risultati[2*i]['valori'][2], \
+                     risultati[2*i]['valori'][3], \
+                     risultati[2*i+1]['valori'][2],
+                     risultati[2*i+1]['valori'][3])
+    pendenze[i] = (risultati[2*i]['valori'][0], \
+                     risultati[2*i]['valori'][1], \
+                     risultati[2*i+1]['valori'][0],
+                     risultati[2*i+1]['valori'][1])
+print intercette + pendenze + '\n'

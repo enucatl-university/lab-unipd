@@ -1,0 +1,19 @@
+\select@language {italian}
+\contentsline {section}{\numberline {1}Obiettivi}{2}
+\contentsline {section}{\numberline {2}Apparato sperimentale}{2}
+\contentsline {subsection}{\numberline {2.1}Ponte di Wheatstone per il termometro}{2}
+\contentsline {subsection}{\numberline {2.2}Termoregolatore}{3}
+\contentsline {subsection}{\numberline {2.3}Ponte di Wheatstone per il campione}{3}
+\contentsline {subsection}{\numberline {2.4}Amplificatore selettivo}{3}
+\contentsline {section}{\numberline {3}Calibrazione dell'apparato}{5}
+\contentsline {subsection}{\numberline {3.1}Potenziometri}{5}
+\contentsline {subsection}{\numberline {3.2}Amplificatore selettivo}{5}
+\contentsline {subsection}{\numberline {3.3}Termometro di controllo}{6}
+\contentsline {subsection}{\numberline {3.4}Inserimento del campione}{7}
+\contentsline {section}{\numberline {4}Misura della temperatura di Debye}{9}
+\contentsline {subsection}{\numberline {4.1}Metodo del $\chi ^2$ per l'analisi dati}{9}
+\contentsline {subsection}{\numberline {4.2}Risultati}{11}
+\contentsline {section}{\numberline {5}Appendice}{12}
+\contentsline {subsection}{\numberline {5.1}Calcolo errori}{12}
+\contentsline {subsection}{\numberline {5.2}Tabelle}{13}
+\contentsline {subsection}{\numberline {5.3}Grafici}{15}

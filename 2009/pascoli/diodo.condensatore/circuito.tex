@@ -1,0 +1,47 @@
+\psset{unit=1in,cornersize=absolute,dimen=middle}%
+\begin{pspicture}(-0.054722,-0.6625)(1.404722,0.051253)%
+% dpic version 16.Jan.09 for PSTricks 0.93a or later
+\psset{linewidth=0.8pt}%
+\psset{linewidth=0.8pt}%
+\makeatletter\@ifundefined{MPSTPatchA}{\def\psbezier@ii{\addto@pscode{%
+\ifshowpoints true \else false \fi\tx@OpenBezier%
+\ifshowpoints\tx@BezierShowPoints\fi}\end@OpenObj}%
+\global\def\MPSTPatchA{}}{}\makeatother%
+\psset{arrowsize=1.1pt 4,arrowlength=1.64,arrowinset=0}%
+\pscircle[fillstyle=solid,fillcolor=black](0,0){0.02}
+\uput{0.501875ex}[ul](-0.02,0){\llap{$ V_{\text{in}}$}}
+\psline(0,0)(0.263916,0)
+\newgray{m4fillv}{0}
+\pscustom[fillstyle=solid,fillcolor=m4fillv]{%
+\psline(0.336084,0)(0.263916,0.041667)
+(0.263916,0.041667)(0.263916,-0.041667)
+(0.263916,-0.041667)(0.336084,0)
+}%
+\psline(0.336084,-0.045718)(0.336084,0.045718)
+\psline(0.336084,0)(0.6,0)
+\psline(0.6,0)(0.6,-0.175)
+(0.6,-0.175)(0.641667,-0.195833)
+(0.641667,-0.195833)(0.558333,-0.2375)
+(0.558333,-0.2375)(0.641667,-0.279167)
+(0.641667,-0.279167)(0.558333,-0.320833)
+(0.558333,-0.320833)(0.641667,-0.3625)
+(0.641667,-0.3625)(0.558333,-0.404167)
+(0.558333,-0.404167)(0.6,-0.425)
+(0.6,-0.425)(0.6,-0.6)
+\uput{0.501875ex}[l](0.558333,-0.3){\llap{$ R$}}
+\psline(0.683333,-0.6)(0.516667,-0.6)
+\psline(0.655556,-0.63125)(0.544444,-0.63125)
+\psline(0.635714,-0.6625)(0.564286,-0.6625)
+\psline(0.6,0)(1.05,0)
+\psline(1.05,0)(1.05,-0.275)
+\psline(0.966667,-0.275)(1.133333,-0.275)
+\psline(0.966667,-0.325)(1.133333,-0.325)
+\psline(1.05,-0.325)(1.05,-0.6)
+\uput{0.501875ex}[r](1.133333,-0.3){\rlap{$ C$}}
+\psline(1.133333,-0.6)(0.966667,-0.6)
+\psline(1.105556,-0.63125)(0.994444,-0.63125)
+\psline(1.085714,-0.6625)(1.014286,-0.6625)
+\psline(1.05,0)(1.35,0)
+\pscircle[fillstyle=solid,fillcolor=black](1.35,0){0.02}
+\uput{0.501875ex}[ur](1.37,0){\rlap{$ V_{\text{out}}$}}
+\end{pspicture}%

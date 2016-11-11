@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/20/trunk/calibrazione
+END
+potenziometro1
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/18/trunk/calibrazione/potenziometro1
+END
+potenziometro1.oscilloscopio
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/18/trunk/calibrazione/potenziometro1.oscilloscopio
+END
+calibrazione.potenziometro1
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/18/trunk/calibrazione/calibrazione.potenziometro1
+END
+calibrazione.potenziometro1.oscilloscopio
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/18/trunk/calibrazione/calibrazione.potenziometro1.oscilloscopio
+END
+potenziometro2
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/18/trunk/calibrazione/potenziometro2
+END
+calibrazione.potenziometro2
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/18/trunk/calibrazione/calibrazione.potenziometro2
+END
+calibrazione_potenziometri.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/18/trunk/calibrazione/calibrazione_potenziometri.py
+END
+fit.calibrazione.potenziometro1.oscilloscopio
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/18/trunk/calibrazione/fit.calibrazione.potenziometro1.oscilloscopio
+END
+fit.calibrazione.potenziometro2
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/18/trunk/calibrazione/fit.calibrazione.potenziometro2
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/20/trunk/calibrazione/__init__.py
+END
+resistenza_temperatura.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/20/trunk/calibrazione/resistenza_temperatura.py
+END
+tabellaPT
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/20/trunk/calibrazione/tabellaPT
+END
+potenziometro_resistenza.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/18/trunk/calibrazione/potenziometro_resistenza.py
+END
+potenziometro_temperatura.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/20/trunk/calibrazione/potenziometro_temperatura.py
+END

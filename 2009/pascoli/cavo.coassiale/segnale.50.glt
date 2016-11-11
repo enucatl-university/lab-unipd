@@ -1,0 +1,9 @@
+set terminal pstricks
+set output "segnale.50.tex"
+unset key
+set tics nomirror
+set xlabel "tempo (\\micro s)"
+set ylabel "potenziale (mV)"
+set yrange[-500:500]
+plot "segnale.50" w l
+set output

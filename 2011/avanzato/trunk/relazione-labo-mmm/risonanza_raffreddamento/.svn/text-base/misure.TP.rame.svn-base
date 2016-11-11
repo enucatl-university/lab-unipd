@@ -1,0 +1,14 @@
+//tempo (minuti) Pressione (mbar * 10^-3) Potenziometro Rnd  Resistenza contatti (ohm) 	
+// fs = 200 ohm
+//resistenza interna 0.9 ohm (non ancora sottratta dall'ultima colonna)
+10  2.2e-2 6.86 81.9
+15  5.3e-3 5.89 75.9
+20  9.4e-4 5.10 66.3
+25  5.4e-4 4.14 53.5
+30  4.3e-4 3.42 44.2
+35  3.7e-4 2.58 32.8
+40  3.6e-4 1.72 21.2
+45  2.6e-5 0.76 7.9
+50  2.0e-5 0.22 4.7
+55  1.5e-5 0.16 4.4
+60  8.1e-6 0.14 4.2

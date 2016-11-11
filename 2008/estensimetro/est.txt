@@ -1,0 +1,17 @@
+stesso diametro
+14
+17
+18
+16
+
+stessa lunghezza
+9
+8
+7
+6
+
+ottone
+3
+
+tungsteno
+1

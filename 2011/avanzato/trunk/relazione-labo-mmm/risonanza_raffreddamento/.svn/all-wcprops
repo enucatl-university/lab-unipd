@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/35/trunk/risonanza_raffreddamento
+END
+risonanza
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/18/trunk/risonanza_raffreddamento/risonanza
+END
+misure.TP
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/18/trunk/risonanza_raffreddamento/misure.TP
+END
+risonanza.misure
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/18/trunk/risonanza_raffreddamento/risonanza.misure
+END
+curva_raffreddamento.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/35/trunk/risonanza_raffreddamento/curva_raffreddamento.py
+END
+tabella_temperature.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/20/trunk/risonanza_raffreddamento/tabella_temperature.py
+END
+misure.TP.rame
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/18/trunk/risonanza_raffreddamento/misure.TP.rame
+END
+risonanza.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/18/trunk/risonanza_raffreddamento/risonanza.py
+END
+misure.TP.circuito.out
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/18/trunk/risonanza_raffreddamento/misure.TP.circuito.out
+END

@@ -1,0 +1,132 @@
+% GNUPLOT: LaTeX picture using PSTRICKS macros
+% Define new PST objects, if not already defined
+\ifx\PSTloaded\undefined
+\def\PSTloaded{t}
+\psset{arrowsize=.01 3.2 1.4 .3}
+\psset{dotsize=.01}
+\catcode`@=11
+
+\newpsobject{PST@Border}{psline}{linewidth=.0015,linestyle=solid}
+\newpsobject{PST@Axes}{psline}{linewidth=.0015,linestyle=dotted,dotsep=.004}
+\newpsobject{PST@Solid}{psline}{linewidth=.0015,linestyle=solid}
+\newpsobject{PST@Dashed}{psline}{linewidth=.0015,linestyle=dashed,dash=.01 .01}
+\newpsobject{PST@Dotted}{psline}{linewidth=.0025,linestyle=dotted,dotsep=.008}
+\newpsobject{PST@LongDash}{psline}{linewidth=.0015,linestyle=dashed,dash=.02 .01}
+\newpsobject{PST@Diamond}{psdots}{linewidth=.001,linestyle=solid,dotstyle=square,dotangle=45}
+\newpsobject{PST@Filldiamond}{psdots}{linewidth=.001,linestyle=solid,dotstyle=square*,dotangle=45}
+\newpsobject{PST@Cross}{psdots}{linewidth=.001,linestyle=solid,dotstyle=+,dotangle=45}
+\newpsobject{PST@Plus}{psdots}{linewidth=.001,linestyle=solid,dotstyle=+}
+\newpsobject{PST@Square}{psdots}{linewidth=.001,linestyle=solid,dotstyle=square}
+\newpsobject{PST@Circle}{psdots}{linewidth=.001,linestyle=solid,dotstyle=o}
+\newpsobject{PST@Triangle}{psdots}{linewidth=.001,linestyle=solid,dotstyle=triangle}
+\newpsobject{PST@Pentagon}{psdots}{linewidth=.001,linestyle=solid,dotstyle=pentagon}
+\newpsobject{PST@Fillsquare}{psdots}{linewidth=.001,linestyle=solid,dotstyle=square*}
+\newpsobject{PST@Fillcircle}{psdots}{linewidth=.001,linestyle=solid,dotstyle=*}
+\newpsobject{PST@Filltriangle}{psdots}{linewidth=.001,linestyle=solid,dotstyle=triangle*}
+\newpsobject{PST@Fillpentagon}{psdots}{linewidth=.001,linestyle=solid,dotstyle=pentagon*}
+\newpsobject{PST@Arrow}{psline}{linewidth=.001,linestyle=solid}
+\catcode`@=12
+
+\fi
+\psset{unit=5.0in,xunit=5.0in,yunit=3.0in}
+\pspicture(0.000000,0.000000)(1.000000,1.000000)
+\ifx\nofigs\undefined
+\catcode`@=11
+
+\PST@Border(0.1170,0.0840)
+(0.1320,0.0840)
+
+\rput[r](0.1010,0.0840){-6}
+\PST@Border(0.1170,0.2313)
+(0.1320,0.2313)
+
+\rput[r](0.1010,0.2313){-4}
+\PST@Border(0.1170,0.3787)
+(0.1320,0.3787)
+
+\rput[r](0.1010,0.3787){-2}
+\PST@Border(0.1170,0.5260)
+(0.1320,0.5260)
+
+\rput[r](0.1010,0.5260){ 0}
+\PST@Border(0.1170,0.6733)
+(0.1320,0.6733)
+
+\rput[r](0.1010,0.6733){ 2}
+\PST@Border(0.1170,0.8207)
+(0.1320,0.8207)
+
+\rput[r](0.1010,0.8207){ 4}
+\PST@Border(0.1170,0.9680)
+(0.1320,0.9680)
+
+\rput[r](0.1010,0.9680){ 6}
+\PST@Border(0.1170,0.0840)
+(0.1170,0.1040)
+
+\rput(0.1170,0.0420){ 0}
+\PST@Border(0.2110,0.0840)
+(0.2110,0.1040)
+
+\rput(0.2110,0.0420){ 2}
+\PST@Border(0.3050,0.0840)
+(0.3050,0.1040)
+
+\rput(0.3050,0.0420){ 4}
+\PST@Border(0.3990,0.0840)
+(0.3990,0.1040)
+
+\rput(0.3990,0.0420){ 6}
+\PST@Border(0.4930,0.0840)
+(0.4930,0.1040)
+
+\rput(0.4930,0.0420){ 8}
+\PST@Border(0.5870,0.0840)
+(0.5870,0.1040)
+
+\rput(0.5870,0.0420){ 10}
+\PST@Border(0.6810,0.0840)
+(0.6810,0.1040)
+
+\rput(0.6810,0.0420){ 12}
+\PST@Border(0.7750,0.0840)
+(0.7750,0.1040)
+
+\rput(0.7750,0.0420){ 14}
+\PST@Border(0.8690,0.0840)
+(0.8690,0.1040)
+
+\rput(0.8690,0.0420){ 16}
+\PST@Border(0.9630,0.0840)
+(0.9630,0.1040)
+
+\rput(0.9630,0.0420){ 18}
+\PST@Border(0.1170,0.9680)
+(0.1170,0.0840)
+(0.9630,0.0840)
+(0.9630,0.9680)
+(0.1170,0.9680)
+
+\PST@Solid(0.1170,0.9091)
+(0.1170,0.9091)
+(0.3077,0.1547)
+(0.4985,0.9091)
+(0.6892,0.1547)
+(0.8799,0.9091)
+
+\PST@Dashed(0.1170,0.8736)
+(0.1170,0.8736)
+(0.4874,0.8280)
+(0.4985,0.8736)
+(0.8688,0.8280)
+(0.8799,0.8736)
+
+\PST@Border(0.1170,0.9680)
+(0.1170,0.0840)
+(0.9630,0.0840)
+(0.9630,0.9680)
+(0.1170,0.9680)
+
+\catcode`@=12
+\fi
+\endpspicture

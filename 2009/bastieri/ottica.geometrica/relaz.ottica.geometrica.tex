@@ -1,0 +1,310 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url}
+\usepackage[text={5.5in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\include{pstricks}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Figura}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\renewcommand{\leq}{\leqslant}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di laboratorio: ottica geometrica}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}}
+\date{\today}
+\maketitle
+%------------------
+\section{Obiettivo dell'esperienza}
+Obiettivo dell'esperienza è lo studio delle proprietà ottiche di una lente convergente. In particolare si vuole dare una stima della sua lunghezza focale, attraverso il confronto di tre diversi metodi di misura: autocollimazione, punti coniugati e metodo di Bessel. Si vogliono inoltre studiare gli effetti delle aberrazioni sferica e cromatica, determinando i valori del coefficiente di aberrazione sferica e del numero di Abbe, così da correggere al meglio i risultati ottenuti nella prima parte dell'esperienza.
+
+\section{Descrizione dell'apparato strumentale}
+L'apparato strumentale è costituito da un banco ottico di circa \unit[1.5]{m} di lunghezza e dotato di una scala graduata a passi di \unit[0.5]{mm} che permette di misurare la posizione degli elementi montati su di esso. Sulla guida sono posizionati una sorgente di luce bianca, uno o due cavalieri portalenti e un cavaliere portaschermo. Tutti i cavalieri sono muniti di micrometro con sensibilità \unit[0.01]{mm} per un posizionamento più preciso.
+
+Tra la sorgente luminosa e la lente si può porre un diaframma che lasci passare solo i raggi a una determinata distanza dall'asse ottico e sono disponibili dei filtri colorati per selezionare la lunghezza d'onda, come indicato in tabella:
+\begin{table*}[h]
+\centering
+ \begin{tabular}{cccl}
+filtro&	colore&	$\lambda$ (\unit{\AA{}})&	riga spettrale corrisp.\\\hline
+\textbf{F}&	blu&	4861&				F dell idrogeno $(H_{\beta})$\\
+\textbf{D}&	gialla&	5893&				doppietto D del sodio\\
+\textbf{C}&	rossa&	6563&				C dell'idrogeno $(H_{\alpha})$
+\end{tabular}
+\end{table*}\\
+Tutte le misure per la lunghezza focale e l'aberrazione sferica sono state effettuate con il filtro giallo (\textbf{D}). Gli altri due filtri sono stati utilizzati nella parte relativa all'aberrazione cromatica.
+
+In tutte le fasi dell'esperienza è stata impiegata la lente biconvessa numero 9. Il suo indice di rifrazione per la luce di colore giallo è $n=1.5168$, di seguito riportiamo le principali caratteristiche geometriche:
+\begin{table*}[h!]
+\centering
+ \begin{tabular}{lc}
+distanza minima tra le superfici curve (spigoli)&	$dr=\unit[2.70]{mm}$\\
+distanza massima tra le sperfici curve (vertici)&	$VV'=\unit[10.10]{mm}$
+\end{tabular}
+\end{table*}\\
+Quando il micrometro è al suo valore di azzeramento $\mu_0=\unit[8.50]{mm}$, la posizione della lente $P_L$ misurata sulla scala graduata del banco ottico corrisponde a quella dello ``spigolo'' sinistro della lente stessa.
+
+Lo schermo, infine, è in vetro smerigliato con inciso un reticolo di maglia \unit[1.0]{cm} ed è possibile spostarlo in direzione ortogonale alla guida grazie ad un altro micrometro. Si può così misurare la distanza trasversale tra due punti del fascio come differenza tra due posizioni dello schermo.
+\section{Descrizione della metodologia di misura}
+\subsection{Misura della lunghezza focale della lente}
+\subsubsection*{Metodo dell'autocollimazione}
+La sorgente di luce è stata fissata in $P_0=\unit[20.00 \pm 0.05]{cm}$ e sono stati impiegati il filtro \textbf{D} e un diaframma con un unico foro centrale del diametro di \unit[1.0]{cm}, che lascia passare i soli raggi parassiali. 
+
+Si vuole determinare la lunghezza focale $f$ sfruttando il fatto che quando la sorgente si trova proprio a distanza $p=f$ dalla lente, questa produce un fascio luminoso parallelo. 
+Sono state perciò eseguite misure ripetute del diametro del fascio a piccola e grande distanza dalla lente (rispettivamente $D_V$, $D_L$) per diverse posizioni della lente stessa, spostando quest'ultima solo con il micrometro, dopo aver fissato il cavaliere portalenti in $P_L=\unit[25.4]{mm}$. I valori di $D_V$ e $D_L$ sono stati ottenuti per differenza utilizzando la griglia incisa sullo schermo.
+\subsubsection*{Metodo dei punti coniugati}
+Come nella sezione precedente, la sorgente è fissa in $P_0=\unit[20.00 \pm 0.05]{cm}$, con filtro giallo e diaframma per raggi parassiali.
+
+Il metodo dei punti coniugati si basa sulla relazione:
+\begin{equation*}
+\dfrac{1}{p}+\dfrac{1}{q}=\dfrac{1}{f}
+\end{equation*}
+dove si è indicato con $q$ la distanza tra la lente e l'immmagine prodotta.
+Per la stima di $f$ sono stati quindi raccolti i valori di $q$ in corrispondenza di 20 diverse posizioni della lente lungo tutta la guida del banco ottico. Come $q$ si è assunta la differenza tra le posizioni $P_S$ dello schermo a cui l'immagine è a fuoco e $P_L$ della lente lette sulla riga graduata, opportunamente corretta per l'approssimazione a lente sottile.
+\subsubsection*{Metodo di Bessel}
+La sorgente è fissa in $P_0=\unit[20.00 \pm 0.05]{cm}$, con filtro giallo e diaframma per raggi parassiali.
+
+Fissata una distanza $L>4f$ tra lo schermo e la sorgente, si possono trovare due posizioni della lente rispetto alle quali l'immagine raccolta sullo schermo è a fuoco. Dall'equazione dei punti coniugati si ricava che tali distanze dalla sorgente sono:
+$$p_{1,2}=\dfrac{1}{2}\left(L\pm\sqrt{L^2-4fL}\right)$$
+$p_1$ e $p_2$ si trovano a distanza $s=\sqrt{L^2-4fL}$ l'una dall'altra, per cui
+\begin{equation*}
+f=\dfrac{L^2-s^2}{4L}
+\end{equation*}
+Lo schermo è stato fissato in $P_S=\unit[41.0]{cm}$ e sono state effettuate 10 misure ripetute delle posizioni $P_1$ e $P_2$ della lente per cui si aveva la messa a fuoco, leggendo i valori sulla scala graduata della guida.
+\subsection{Misura del numero di Abbe}
+La sorgente luminosa è stata fissata e sono stati impiegati alternativamente i filtri \textbf{F} (blu) e \textbf{C} (rosso), con un diaframma nel quale sono presenti quattro fori del diametro di \unit[0.5]{mm}, due vicini all'asse ottico e due lontani (a distanza $R=\unit[14.0]{mm}$).
+Tra la sorgente e la lente è stato posto inoltre un doppietto acromatico di Dollond, che permette di avere un fascio di raggi sempre paralleli indipendentemente dalla lunghezza d'onda impiegata.
+
+L'aberrazione cromatica relativa alla lente è caratterizzata quantitativamente dal numero di Abbe $\nu=f_D/A$, dove $f_D$ è la lunghezza focale per la luce gialla e $A$ è la distanza tra i fuochi per la luce rossa e la blu.
+
+Lo schermo è stato posizionato grossolanamente nella zona di messa a fuoco e durante l'esperienza è stato spostato lungo l'asse ottico solo con il micrometro. Sono state registrate in questo modo 10 posizioni $x_C$ e $x_F$ di messa a fuoco dei raggi nel rosso e nel blu e sono stati calcolati i corrispondenti valori della distanza $A=x_C-x_F$, da cui calcolare $\nu$.
+
+Per una misura più agevole sono stati considerati i raggi marginali, provenienti dai fori a distanza maggiore dall'asse ottico. In questo modo la messa a fuoco risulta infatti più nitida, mentre l'errore commesso sulla stima dei fuochi parassiali è comunque accettabile essendo almeno inferiore al 10\%.
+\subsection{Misura del coefficiente di aberrazione sferica}
+La sorgente luminosa è stata fissata e si è impiegato il filtro giallo con il diaframma a quattro fori e il doppietto di Dollond come nella sezione precedente.
+
+Vogliamo dare una stima del coefficiente di aberrazione sferica $C$ per la luce gialla a partire da due serie di dati: una misura della distanza $\ell$ tra i punti di messa a fuoco dei raggi marginali e di quelli parassiali, da cui $C_\ell=f\ell/R^2$, e una misura dell'ampiezza $t$ del fascio prodotto dai raggi marginali all'altezza del fuoco dei parassiali, da cui $C_t=tf^2/R^2(2R+t)$
+
+Spostando lo schermo con il solo micrometro sono state misurate le posizioni $x_m$ di messa a fuoco dei raggi marginali, $x_i$ e $x_f$ di inizio e fine della zona di messa a fuoco dei raggi parassiali. Si è quindi assunta come misura $x_p$ del fuoco parassiale la media aritmetica di $x_i$ e $x_f$, e in tale punto si è misurata la distanza $t$ tra i raggi marginali con il micrometro trasversale dello schermo. L'intera operazione è stata ripetuta sette volte.
+\section{Risultati sperimentali ed elaborazione dati}
+\subsection{Misura della lunghezza focale della lente}
+\subsubsection*{Metodo dell'autocollimazione}
+Dopo aver fissato la sorgente in $P_0=\unit[20.00]{cm}$  e la lente in $P_L=\unit[25.40]{cm}$, si è spostata la lente con la chiave micrometrica e sono state registrate le misure $D_V$ e $D_L$ dei diametri del fascio vicino e lontano dalla lente. Nella tabella seguente sono riportati i dati raccolti al variare del valore $\mu_L$ letto sul micrometro del cavaliere portalenti:
+\begin{table}[h!]
+\centering
+\begin{tabular}{*3r}
+$\mu_L\:(\unit{mm})$& $D_V\:(\unit{mm})$& $D_L\:(\unit{mm})$\\\hline
+9.75 &14.05 &12.60 \\
+10.00 &14.19 &13.94 \\
+10.05 &14.55 &14.45 \\
+10.10 &14.26 &14.76 \\
+10.15 &14.58 &14.90 \\
+10.20 &14.58 &14.92 \\
+10.25 &14.33 &15.15 \\
+10.27 &14.44 &15.06 \\
+10.28 &14.34 &15.23 \\
+10.29 &14.47 &15.64 \\
+10.30 &14.26 &15.60 \\
+10.30 &14.32 &15.52 \\
+10.32 &14.38 &15.59 \\
+\end{tabular}
+\end{table}\\
+Tali valori sono stati successivamente riportati in grafico e interpolati con due rette $y = m_{V/L}x+ c_{V/L}$. Le serie di $D_L$ e $D_V$ risultano intersecarsi in $\mu^*_L=\unit[10.06 \pm 0.02]{mm}$, posizione alla quale il fascio risulta perciò essere parallelo. L'errore è stato corretto per la correlazione tra le misure con la seguente formula, dove indichiamo con $\sigma_\mu$ e $\bar\mu$ rispettivamente il residuo quadratico medio e la media delle misure di $\mu_L$:
+\begin{equation*}
+ \sigma_{\mu_L^*}^2 = \dfrac{(\sigma_{m_V}^2+\sigma_{m_L}^2)[\sigma_\mu^2+(\bar\mu-x)^2]}{(m_V-m_L)^2}
+\end{equation*}
+
+\begin{figure}[hp]
+\centering
+\caption{Grafico dei diametri in funzione della posizione $\mu_L$. La retta più pendente è quella relativa ai diametri da lontano.}\label{autocoll}
+ \include{autoc}
+\end{figure}
+Possiamo ora stimare la distanza focale dalla proprietà del fuoco di generare un fascio parallelo quando la distanza della lente dalla sorgente è proprio $p=f$.
+Dato che il micrometro fornisce una misura della posizione dello spigolo sinistro della lente, mentre vogliamo che la distanza focale sia riferita al suo centro, una stima più corretta è $p=P_L+\mu_0+\mu_L^*+\nicefrac{dr}{2}-P_0 = \unit[53.79]{mm}$, dove $\mu_0=\unit[8.50]{mm}$ è la posizione di azzeramento del micrometro e $dr$ la distanza tra i due spigoli della lente.
+
+Questo risultato va ancora corretto per la presenza degli errori sistematici. A causa dell'aberrazione sferica, la determinazione risulta in difetto di una quantità pari a $\frac{\ell}{2}=\frac{1}{2}C\frac{R^2}{f}$, dove $C=1.62$ è il coefficiente di aberrazione sferica, $R=\unit[5]{mm}$ è il raggio del diaframma e $f$ è la distanza focale calcolata come sopra. Infine avendo utilizzato una lente spessa, bisogna tener conto del fatto che la $p$ che compare nella relazione $p=f$ è la distanza rispetto al centro della lente, mentre quella da noi misurata è la relativa al secondo piano principale $\pi_2$. Per questo motivo la nostra stima è in eccesso di $\frac{\pi_1\pi_2}{2}$. In definitiva la lunghezza focale, con errore calcolato come somma in quadratura dei cinque contributi, risulta essere:
+$$f_{\text{ac}}=P_L+\mu_0-\mu_L^*-P_0+\dfrac{\ell}{2}-\dfrac{\pi_1\pi_2}{2}= \unit[52.35 \pm 0.81]{mm}$$
+\subsubsection*{Metodo dei punti coniugati}
+Sono state qui misurate le posizioni $P_S$ di messa a fuoco sullo schermo al variare della posizione $P_L$ della lente sul banco ottico. Da qui sono stati calcolati $p=P_L-P_0+\frac{dr}{2}-\frac{\pi_1\pi_2}{2}$ e $q=P_S-P_0-\pi_1\pi_2-p$, già corretti per la distanza del vertice dal centro della lente e per l'approssimazione a lente sottile. La tabella riporta (in centimetri) i risultati ottenuti:
+\begin{table}[tp]
+\centering
+\begin{tabular}{*6c}
+$P_L$& $P_S$& $p$& $q$& $x\:(\unit{cm^{-1}})$& $y\:(\unit{cm^{-1}})$\\\hline
+26.50 &50.13 &6.45 &23.31 &0.155 &0.043\\
+27.00 &46.83 &6.95 &19.51 &0.144 &0.051\\
+28.00 &42.75 &7.95 &14.43 &0.126 &0.069\\
+30.00 &40.95 &9.95 &10.63 &0.100 &0.094\\
+33.00 &42.03 &12.95 &8.71 &0.077 &0.115\\
+36.00 &44.00 &15.95 &7.68 &0.063 &0.130\\
+41.00 &48.23 &20.95 &6.91 &0.048 &0.145\\
+46.00 &52.88 &25.95 &6.56 &0.039 &0.152\\
+52.00 &58.60 &31.95 &6.28 &0.031 &0.159\\
+60.00 &66.35 &39.95 &6.03 &0.025 &0.166\\
+68.00 &74.28 &47.95 &5.96 &0.021 &0.168\\
+76.00 &82.08 &55.95 &5.76 &0.018 &0.174\\
+84.00 &90.00 &63.95 &5.68 &0.016 &0.176\\
+94.00 &99.93 &73.95 &5.61 &0.014 &0.178\\
+104.00 &109.95 &83.95 &5.63 &0.012 &0.178\\
+114.00 &119.93 &93.95 &5.61 &0.011 &0.178\\
+120.00 &125.83 &99.95 &5.51 &0.010 &0.182\\
+125.00 &130.88 &104.95 &5.56 &0.010 &0.180\\
+130.00 &135.83 &109.95 &5.51 &0.009 &0.182
+\end{tabular}
+\end{table}
+\begin{figure}[bp]
+\centering
+\caption{Grafico con i reciproci delle distanze $p$ in ascissa e $q$ in ordinata.} \include{puntic}
+\end{figure}
+\newpage\noindent
+Sono stati riportati in grafico i reciproci $x=\nicefrac{1}{p}$ e $y=\nicefrac{1}{q}$ e sono stati interpolati con una retta del tipo $y=mx+c$.
+ Dall'equazione dei punti coniugati si può allora ricavare $c=\nicefrac{1}{f}$. Di fatto, dovendo essere $m\simeq -1$, si hanno due stime distinte $f_1$ e $f_2$ in corrispondenza delle intercette con gli assi $x$ e $y$ rispettivamente.
+
+Dall'interpolazione si è ottenuto $m=-0.956\pm0.005$, $c=\unit[0.1897\pm0.0003]{cm^{-1}}$, da cui
+$$f_1=-\dfrac{m}{c}=\unit[50.38\pm0.18]{mm}\qquad f_2=\dfrac{1}{c}=\unit[52.71\pm0.08]{mm}$$
+con errori calcolati per propagazione, e tenendo conto della correlazione tra $m$ e $c$ per l'errore su $f_1$.
+
+La stima definitiva di $f$ è fornita dalla media di questi due valori ($f_3=\unit[51.54\pm1.16]{mm}$) corretta poi per l'aberrazione sferica, usando come $f$ nel calcolo di $\ell$  proprio $f_3$, cui associamo come errore la semidispersione $|f_1-f_2|/2$:
+$$f_{\text{pc}}=f_3 + \dfrac{\ell}{2}=\unit[51.93 \pm 1.16]{mm}$$
+\subsubsection*{Metodo di Bessel}
+Lo schermo è stato fissato in $P_S=\unit[41.0]{cm}$, così che la distanza dalla sorgente vale $L=P_S-P_0=\unit[21.0]{cm}$.
+Sono state quindi raccolte 10 misure ripetute delle due posizioni di messa a fuoco $P_1$ e $P_2$, riportate in tabella con la corrispondente distanza $s=P_2-P_1$. Tutte le misure sono in cm.
+\begin{table}[h!]
+\centering
+\begin{tabular}{*3c}
+$P_1$& $P_2$& $s$\\\hline
+28.85 &32.95 &4.10\\
+28.60 &32.95 &4.35\\
+28.60 &33.00 &4.40\\
+28.54 &32.92 &4.38\\
+28.62 &32.90 &4.28\\
+28.56 &33.08 &4.52\\
+28.57 &33.00 &4.43\\
+28.51 &32.96 &4.45\\
+28.49 &32.81 &4.32\\
+28.40 &33.05 &4.65\\
+\end{tabular}
+\end{table}\\
+Dalla media aritmetica $\bar{s}=\unit[4.388]{cm}$, è stata calcolata con errore per propagazione la distanza focale:
+$$f_{\text{Bessel}}=\dfrac{L^2-s^2}{4L}=\unit[51.86 \pm 0.18]{mm}$$
+\begin{equation*}
+ \sigma_{f_\text{Bessel}}^2 = 2\cdot 0.5^2\cdot\left(\dfrac{L'^2 + \bar{s}^2}{4 L'^2}\right)^2+\left(\dfrac{\bar s \sigma_{\bar s}}{2L'}\right)^2
+\end{equation*}
+
+In conclusione, facendo una media pesata delle tre stime della distanza focale ottenute con i tre metodi, si ottiene un risultato finale pari a 
+$$f=\unit[51.88 \pm 0.17]{mm}$$
+\newpage
+\subsection{Misura del numero di Abbe}
+Una volta fissato lo schermo nella zona di messa a fuoco, sono state raccolte due serie da 10 dati delle posizioni del fuoco rispettivamente per la luce rossa ($x_c$) e per la blu ($x_F$). I dati, riportati in tabella, sono espressi in millimetri e corrispondono alle letture del micrometro del cavaliere portaschermo. Non sono perciò delle misure assolute, ma relative alla posizione $P_S$ dello schermo. I valori importanti in queste misure sono infatti quelli delle differenze $A=x_C-x_F$:
+\begin{table}[!h]
+\centering
+\begin{tabular}{*3c}
+$x_F$& $x_C$& $A$\\\hline
+0.88 &1.74 &0.86\\
+0.86 &1.75 &0.89\\
+0.84 &1.64 &0.80\\
+0.85 &1.73 &0.88\\
+0.93 &1.84 &0.91\\
+0.95 &1.77 &0.82\\
+0.89 &1.64 &0.75\\
+0.86 &1.64 &0.78\\
+0.90 &1.71 &0.81\\
+0.88 &1.77 &0.89\\
+\end{tabular}
+\end{table}\\
+Dal valor medio $\bar{A}=\unit[0.839\pm0.005]{mm}$, si è quindi ricavato
+\begin{equation*}
+ \nu=\dfrac{f}{A}=62.1\pm0.7
+\end{equation*}
+
+\subsection{Misura del coefficiente di aberrazione sferica}
+Mantenendo il cavaliere portaschermo nella stessa posizione della fase precedente, sono state raccolte le posizioni di messa a fuoco dei raggi marginali $x_m$ e quelle di inizio e fine della zona di messa a fuoco dei raggi parassiali ($x_i$ e $x_f$). Anche qui i valori riportati sono le letture sul micrometro, relative quindi a $P_S$. Come posizione di messa a fuoco dei raggi parassiali $x_p$ si è assunta la media tra $x_i$ e $x_f$. Infine sono state calcolate le differenze $\ell=x_p-x_m$. 
+Inoltre, in corrispondenza di ogni $x_p$, sono state lette sul micrometro trasversale dello schermo le posizioni dei due raggi marginali $x_s$ e $x_d$, per determinare il diametro $t=x_d-x_s$ del fascio marginale all'altezza del fuoco parassiale. Tutte le misure sono in millimetri.
+\begin{table}[!h]
+\centering
+\begin{tabular}{*6c|cc}
+$x_m$& $x_i$& $x_f$& $x_p$& $x_s$& $x_d$& $\ell$& $t$ \\\hline
+1.55 &7.40 &7.78 &7.59 &13.28 &9.54 &6.04 &3.74\\
+1.58 &7.19 &7.80 &7.49 &13.15 &9.56 &5.91 &3.59\\
+1.55 &7.56 &7.66 &7.61 &13.22 &9.46 &6.06 &3.76\\
+1.58 &7.52 &7.85 &7.68 &13.34 &9.42 &6.10 &3.92\\
+1.61 &7.66 &7.87 &7.76 &13.32 &9.51 &6.15 &3.81\\
+1.52 &7.35 &7.87 &7.61 &13.27 &9.55 &6.09 &3.72\\
+1.51 &7.06 &8.10 &7.58 &13.28 &9.61 &6.07 &3.67\\
+\end{tabular}
+\end{table}\\
+Dalle medie di $\ell$ e $t$ sono state così ottenute due determinazioni del coefficiente di aberrazione sferica:
+$$ C_\ell=\dfrac{f\ell}{R^2}=1.606\qquad\qquad
+C_t=\dfrac{tf^2}{R^2(2R+t)}=1.623$$
+Prendiamo come valore finale la media aritmetica con semidispersione: $C = 1.614 \pm 0.009$.
+\subsection{Correzioni per errori sistematici}
+Nelle varie fasi dell'esperienza sono state apportate delle correzioni sui risultati ottenuti per tenere conto di vari errori sistematici commessi nell'elaborazione dei dati. Tali errori sono dovuti principalmente alle approssimazione a lente sottile, alle aberrazioni sferica e cromatica e al posizionamento degli elementi lungo il banco ottico.
+\subsubsection*{Posizionamento degli elementi sulla guida e tolleranze meccaniche degli strumenti}
+In tutte le fasi dell'esperienza la sorgente e i cavalieri su cui venivano montati i vari elementi sono stati posizionati manualmente sulla guida rigida del banco ottico. Le posizioni dei cavalieri sono state misurate con la scala graduata presente sulla guida e di conseguenza sono tutte affette da un errore pari all'errore massimo $\delta=\unit[0.5]{mm}$.
+
+Nella misura di $f$ col metodo dell'autocollimazione gli errori sulla $P_0$ della sorgente e sulla $P_L$ della lente si sommano dando un errore massimo su $f$ di \unit[1.0]{mm}. Lo stesso accade nel metodo di Bessel per la misura di $L=P_S-P_0$, ma non per quella di $s=p_2-p_1$, poichè nella differenza gli errori si elidono. Nella misura col metodo dei punti coniugati, invece, le incertezze sulle posizioni di ciascun elemento si propagano in modo complesso sulle grandezze derivate e attraverso l'interpolazione. Per comodità si è scelto allora di assumere come errore di posizionamento su $f$ l'errore massimo $\delta f_{\text{pos}}= |f_1-f_2|/2$, essendo $f_1$ e $f_2$ i due valori della focale ottenuti dalle intercette con gli assi della curva $x+y=\nicefrac{1}{f}$.
+\subsubsection*{Lente spessa}
+Poiché la lente impiegata nell'esperienza ha spessore non trascurabile è necessario correggere i risultati forniti dall'equazione dei punti coniugati, che è approssimata per lenti sottili. La lente reale, in particolare può essere considerata come un diottro in cui sono definibili i due piani principali $\pi_1$ e $\pi_2$ tra i quali il rapporto di ingrandimento trasversale è 1. La distanza tra tali piani è data da 
+$$\pi_1\pi_2 = VV'\left(1-\dfrac{4f}{4nf+VV'}\right)$$
+dove $n$ è l'indice di rifrazione del materiale di cui è costituita la lente e $VV'$ è la distanza tra i vertici delle superfici sferiche.
+
+Tenendo presente questa correzione, l'equazione dei punti coniugati risulta essere ancora valida se si considerano come valori di $p$ e $q$ rispettivamente la distanza tra la sorgente e $\pi_1$ e tra $\pi_2$ e l'immagine. Le stime migliori dei due parametri saranno dunque $p^*=p+\dfrac{\pi_1\pi_2}{2}$ e $q^*=q-\pi_1\pi_2/2$, da cui $f^*=f-{\pi_1\pi_2}/{2}$.
+
+Questa correzione è stata apportata alla misura di $f$ ottenuta col metodo dell'autocollimazione e al calcolo di $p$ e $q$ nel metodo dei punti coniugati. Nel metodo di Bessel se ne è tenuto conto correggendo la misura della distanza tra sorgente e schermo con $L^*=L-{\pi_1\pi_2}/{2}$.
+\subsubsection*{Aberrazione sferica}
+L'aberrazione principale longitudinale è dovuta al fatto che i raggi che giungono sulla lente a maggior distanza dall'asse ottico convergono in un punto più vicino alla lente rispetto a quanto fanno i raggi parassiali. La distanza focale misurata risulta essere di fatto una media tra la minima e la massima e di conseguenza la stima di $f$, valore definito sui soli raggi parassiali, è sistematicamente in difetto.
+Detta $\ell$ la distanza tra i due fuochi, la relazione tra valor vero $f^*$ e misurato $f$ sarà allora $f^*=f+\nicefrac{\ell}{2}$.
+
+Sussiste inoltre la relazione $$\ell=C{R^2}/{f}$$ dove $R$ è la distanza massima dei raggi dall'asse focale e $C$ un opportuno coefficiente di aberrazione sferica.
+
+Questa correzione è stata apportata ai valori finali della distanza focale determinata coi metodi dell'autocollimazione e dei punti coniugati, considerando $R$ pari al raggio del foro del diaframma ($\unit[5]{mm}$) e prendendo come $C$ quello misurato nella seconda parte dell'esperienza. Nel metodo di Bessel, invece, non è stato necessario in quanto ogni eventuale errore sistematico nella stima delle posizioni si semplifica nel calcolo delle differenze $s$.
+\section{Conclusioni}
+Riassumiamo brevemente i risultati delle varie esperienze.
+\begin{table}[h]
+\centering
+ \begin{tabular}{l@{$\,=\,$}r@{$\,\pm\,$}ll}
+$f_{\text{ac}}$ &52.35 &0.81 &\unit{mm}\\
+$f_{\text{pc}}$ &51.93 &1.16 &\unit{mm}\\
+$f_{\text{bs}}$ &51.86 &0.18 &\unit{mm}\\
+$f$ &51.88 &0.17 &\unit{mm} \\[.5cm]
+$\nu$ &62.1 &0.7 & \\
+$C$ &1.614 &0.009 & \\
+\end{tabular}
+\end{table}
+
+\end{document}
+

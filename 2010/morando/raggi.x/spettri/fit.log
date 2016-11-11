@@ -1,0 +1,45 @@
+
+
+*******************************************************************************
+Sat Feb 13 16:14:13 2010
+
+
+FIT:    data read from "intensity.out"
+        #datapoints = 6
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1002.94           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.59263
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 1.68757e-07
+rel. change during last iteration : -1.59922e-08
+
+degrees of freedom    (FIT_NDF)                        : 4
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0002054
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.21892e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000860894      +/- 1.228e-05    (1.426%)
+b               = 0.0109477        +/- 0.0001487    (1.358%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.826  1.000 

@@ -1,0 +1,118 @@
+
+
+*******************************************************************************
+Mon May 25 21:51:34 2009
+
+
+FIT:    data read from "salita.discesa.dat"
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Mon May 25 21:52:13 2009
+
+
+FIT:    data read from "salita.discesa.dat" using 1:2
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Mon May 25 21:52:15 2009
+
+
+FIT:    data read from "salita.discesa.dat" using 1:2
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Mon May 25 21:52:54 2009
+
+
+FIT:    data read from "salita.discesa.dat"
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Mon May 25 21:52:59 2009
+
+
+FIT:    data read from "salita.discesa.dat"
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Mon May 25 21:54:06 2009
+
+
+FIT:    data read from "salita.discesa.dat"
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3.77302e+262      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.59067e+132
+
+initial set of free parameter values
+
+a               = 10
+b               = 10
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 4.62513e+261
+rel. change during last iteration : -7.15766
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.92646e+130
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.54171e+261
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 9.99986          +/- 2.945e+22    (2.945e+23%)
+b               = 10.0351          +/- 1.145e+20    (1.141e+21%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b               1.000  1.000 

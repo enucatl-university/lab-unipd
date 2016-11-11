@@ -1,0 +1,119 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      3722,        109]
+NotebookOptionsPosition[      3168,         86]
+NotebookOutlinePosition[      3504,        101]
+CellTagsIndexPosition[      3461,         98]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Insiemi frattali: il castello di Menger", "Title",
+ CellChangeTimes->{{3.467542056283822*^9, 3.4675420657728577`*^9}, {
+  3.467543005132399*^9, 3.46754300626398*^9}}],
+
+Cell[TextData[{
+ "I calcoli richiesti per disegnare la spugna di Menger sono molto intensi, \
+ho scritto un apposito programma in c++ che calcola la lista di cubi. ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " disegna il risultato.\nPurtroppo ho sbagliato a togliere i cubi ma ho \
+ottenuto per caso qualcosa che ho ritenuto ugualmente interessante."
+}], "Text",
+ CellChangeTimes->{{3.467542074790139*^9, 3.4675421162520123`*^9}, {
+  3.467542212665359*^9, 3.467542224818893*^9}, {3.467543009090598*^9, 
+  3.467543033996251*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[TextData[{
+ "Bisogna mettere qui la directory di lavoro giusta in cui trovare il file ",
+ StyleBox["menger", "Code"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.467542388017988*^9, 3.467542392978088*^9}, {
+  3.4675495318893967`*^9, 3.46754954351048*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "[", "\"\</home/matteo/lab/mathematica/\>\"", "]"}],
+   ";"}]], "Input",
+ CellChangeTimes->{3.467542707776099*^9},
+ CellID->1736884329],
+
+Cell["Assicuriamoci che il programma sia compilato:", "Text",
+ CellChangeTimes->{3.4675430624165277`*^9},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{"Run", "[", "\"\<make menger\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.467542231895269*^9, 3.467542240232024*^9}, 
+   3.4675427135878057`*^9, {3.467549600187505*^9, 3.467549601360876*^9}, {
+   3.467549860607153*^9, 3.467549861569145*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"menger", " ", "=", " ", 
+   RowBox[{"RunThrough", "[", 
+    RowBox[{"\"\<./menger\>\"", ",", " ", "3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.46754248209267*^9, 3.467542494729271*^9}, {
+   3.467542558214349*^9, 3.4675425794149427`*^9}, {3.467542634356311*^9, 
+   3.467542634470565*^9}, {3.467542728917932*^9, 3.467542738229278*^9}, {
+   3.4675498275098143`*^9, 3.4675498324496717`*^9}, {3.4675498751396217`*^9, 
+   3.4675498949509706`*^9}, 3.467549962808955*^9}],
+
+Cell[BoxData[
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{"menger", ",", 
+   RowBox[{"ImageSize", "\[Rule]", "700"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.46754276504922*^9, 3.4675427983246613`*^9}, {
+   3.467548848435553*^9, 3.467548859737359*^9}, {3.467548930533271*^9, 
+   3.467548938389615*^9}, {3.4675493643479633`*^9, 3.4675493738892803`*^9}, {
+   3.4675496577770977`*^9, 3.467549660271875*^9}, 3.4675499648796787`*^9}]
+}, Open  ]]
+},
+WindowSize->{1440, 886},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"7.0 for Linux x86 (64-bit) (November 11, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 172, 2, 84, "Title"],
+Cell[742, 26, 575, 11, 63, "Text"],
+Cell[1320, 39, 293, 7, 45, "Text"],
+Cell[1616, 48, 185, 5, 31, "Input",
+ CellID->1736884329],
+Cell[1804, 55, 143, 2, 45, "Text"],
+Cell[1950, 59, 264, 4, 31, "Input"],
+Cell[2217, 65, 508, 9, 31, "Input"],
+Cell[2728, 76, 424, 7, 31, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

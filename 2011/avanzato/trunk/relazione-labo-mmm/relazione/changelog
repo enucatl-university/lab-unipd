@@ -1,0 +1,24 @@
+Il campione è un filo di rame, non un cilindro di alluminio (il quale è solo
+un supporto).
+
+Un compressore a elio LIQUIDO?!?!
+
+togliamo frasi misteriose e tutto sommato abbastanza superflua, come:
+"Essendo un capo del termometro già  collegato a terra, il generatore è
+collegato al circuito tramite un trasformatore, cosicch\'e il collegamento a
+terra del generatore stesso non influenzi il comportamento dell'apparato."
+
+tolgo il pacchetto "tensor" perché non mi sembra serva a qualcosa
+
+W = I R^2 -> W = I^2 R (!!)
+
+errori sulla capacità li metterei al 10%, come da istruzioni "di
+fabbrica"
+
+per cambiare il simbolo dell'elenco puntato si deve fare
+\renewcommand{\labelitemi} non specificarlo ogni volta.
+
+Altre questioni di italiano:
+gli elementi degli elenchi puntati incominciano con la lettera minuscola
+testare -> provare
+in ascisse (ordinate) -> in ascissa (ordinata)

@@ -1,0 +1,14 @@
+from __future__ import print_function
+import sys
+from math import sqrt
+
+R = sys.argv[1]
+exp = len(R.split(".")[1])
+err_digit = 4*10**(-exp)
+
+R=float(R)
+err_scala = R*0.01
+
+err = sqrt((err_scala**2 + err_digit**2)/3)
+
+print("{0:.2f} \pm {1:.2f}".format(R, err))

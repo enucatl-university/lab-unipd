@@ -1,0 +1,35 @@
+from style import style
+import sys
+from ROOT import TGraphErrors, TCanvas
+style.cd() 
+
+name_in = sys.argv[1]
+
+can = TCanvas("can", "can")
+gr = TGraphErrors(name_in)
+gr.SetTitle("calibrazione potenziometro;potenziometro;R [#Omega]")
+gr.Draw("AP")
+result = gr.Fit("pol1", "SQ")
+with open("fit.{0}".format(name_in), "w") as out_file:
+    a = result.Parameter(1)
+    sigma_a = result.ParError(1)
+    b = result.Parameter(0)
+    sigma_b = result.ParError(1)
+    line = [a, sigma_a, b, sigma_b]
+    line = [str(x) for x in line]
+    line = " ".join(line)
+    out_file.write(line)
+
+can.SaveAs("relazione/img/{0}.eps".format(name_in)) 
+
+print("\\begin{tabular}{r@{ $\\pm$ }lr@{ $\\pm$ }l}")
+print("\\multicolumn{2}{c}{$R [\\unit[]{\\ohm}]$} &\\multicolumn{2}{c}{potenziometro} \\\\ ")
+print("\\hline")
+with open(name_in) as file:
+    for line in file:
+        if "//" in line:
+            continue
+        line = [float(x) for x in line.split()]
+        print("{0[1]:.2f} & {0[3]:.2f} & {0[0]:.2f} & {0[2]:.2f} \\\\ ".format(line))
+print("\\end{tabular}")
+input()

@@ -1,0 +1,180 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units} %unità di misura
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url,textcomp,gensymb, ctable}
+\graphicspath{{./matteo/}}
+\usepackage[text={5.5in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[small,bf]{caption}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\addto\captionsitalian{\renewcommand{\figurename}{Fgura}}
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelitemi}{\textbf{- }}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%-------------------------ambiente codice
+\usepackage{listings}
+\lstset{language=C++,inputencoding=utf8,breaklines=true,extendedchars=true, basicstyle=\small, columns=flexible, linewidth=\textwidth, lineskip=1pt, breakatwhitespace=true, lastline=99999, showstringspaces=false}
+\lstloadlanguages{C++}
+%-----------------------elenco compatto
+\newenvironment{packed_item}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+\newenvironment{packed_enum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+%------------------------- pacchetto tikz
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,shapes.arrows,decorations.pathmorphing}
+\usetikzlibrary{matrix,chains,scopes,positioning,arrows,fit,shapes.multipart}%, shapes.gates.logic.IEC}
+
+%------------shortcuts
+\newcommand{\g}{\gamma}
+\renewcommand{\a}{$_{\alpha}$}
+\renewcommand{\b}{$_{\beta}$}
+\newcommand{\s}{\sigma}
+\renewcommand{\d}{\delta}
+\newcommand{\D}{\Delta}
+\newcommand{\Na}{$^{22}$Na}
+\newcommand{\Ne}{$^{22}$Ne}
+\newcommand{\Am}{$^{241}$Am}
+\newcommand{\Np}{$^{237}$Np}
+
+%---------
+%
+%---------
+\begin{document}
+\title{Fluorescenza X II (Fisica Ambientale)}
+\author{\normalsize Ilaria Brivio (1014190)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %		%%% Matricola Matteo da modificare
+\normalsize \url{webmaster@latinblog.org}
+}
+\date{\today}
+\date{\today}
+\maketitle
+%------------------
+\section{Obiettivi dell'esperimento}
+\begin{itemize}
+\item Verifica della legge di attenuazione della radiazione elettromagnetica attraverso un materiale
+$$ I = I_{0}e^{-\mu x}$$
+ e stima del coefficiente di attenuazione $\mu$ nel caso dell'assorbimento in alluminio delle emissioni di una sorgente di \Am
+\item Verifica della legge di Mooseley che lega il numero atomico del materiale all'energia delle sue emissioni X 
+$$ E = k (Z - 1)^{2}$$
+attraverso l'analisi dello spettro di emissione di sei campioni mono-elementali
+\item Analisi della composizione di un campione di particolato atmosferico e di altri campioni multi-elementali
+\end{itemize}
+
+\section{Apparato strumentale}
+\subsection*{Descrizione dell'apparato}
+L'apparato sperimentale è costituito da un contenitore al cui interno sono montati:
+\begin{packed_item}
+\item un generatore di raggi X a cristallo piroelettrico COOL X
+\item un rivelatore al silicio XR100-CR
+\item un portacampioni estraibile che permette il corretto posizionamento dei target.
+\end{packed_item}
+Il rivelatore è connesso a un PC, da cui è possibile gestire l'acquisizione degli spettri mediante un apposito software.
+
+% campioni e sorgente Am
+
+\subsection*{Calibrazione dell'apparato e analisi dello spettro di \Am}
+Per la calibrazione in energia del sistema di acquisizione è stata posizionata una sorgente di \Am dinanzi al rivelatore ed è stato acquisito uno spettro di prova per un tempo di \unit[314.28]{s}.
+Sono stati identificati su questo spettro tre righe di riferimento: quelle delle transizioni X nel \Np, di energia 13.95 e \unit[17.74]{keV}, e quella del decadimento $\g$ del \Am, di energia \unit[59.54]{keV}. Sono stati stimati centroide $x$, ampiezza a mezza altezza $\s$ ed integrale $N$ di ciascun picco: % modalità di calcolo (programma o rifatto con fit) 
+\begin{table}[h!]\centering
+\begin{tabular}{*4c}
+$E$ (keV)&		$x$ (canale)&		$\s$(can.)&	$N$\\\hline
+13.95&			199.95&			0.261&		3097\\
+17.74&			255.39&			0.293&		2370\\
+59.54&			863.50&			0.378&		269
+\end{tabular}
+\caption{Centroide, ampiezza a mezza altezza e integrale dei tre picchi di riferimento per la calibrazione del sistema con una sorgente di \Am.}\label{calib}
+\end{table}\\
+A partire da questi valori sono stati deteminati i parametri $a = \unit[0.0685]{keV / can.}$ e $b=\unit[0.2944]{can.}$ per la formula di calibrazione
+\begin{equation}
+E = a x + b
+\end{equation}.
+
+% individuazione altri picchi
+
+\section{Verifica della legge di assorbimento e stima di $\mu$}
+Sono state prese in considerazione le radiazioni di energia 13.95 e \unit[17.74]{keV} emesse dalla sorgente di \Am. Sono stati acquisiti sei diversi spettri, frapponendo tra sorgente e rivelatore un numero crescente di fogli di alluminio.
+
+Per stimare lo spessore $d$ di un singolo foglio è stato pesato un campione di $S = \unit[25]{cm^{2}}$. Nota la densità $\rho = \unit[2.7]{g / cm^{3}}$:
+\begin{equation}
+d = \frac{\rho}{m}\frac{1}{S} = \frac{\unit[2.7]{g / cm^{3}}}{\unit[1.55]{g}} \frac{1}{ \unit[25]{cm^{2}}}= \unit[0.23]{mm}
+\end{equation}
+
+\begin{table}[h!]\centering
+\begin{tabular}{*4c}
+spessore Al (mm)&		tempo (s)&	$N_{13.95}$&		$N_{17.74}$\\\hline
+0&					326.06&		3151&			2367\\
+0.23&				341.95&		1845&			1974\\
+0.46&				589.05&		1972&			2466\\
+0.69&				1088.86&		2026&			3535\\
+0.92&				2013.59&		2021&			4750\\
+1.15&				2027.53&		1317&			3732
+\end{tabular}
+\caption{Tempi di acquisizione e integrali dei due picchi di interesse per i sei spettri acquisiti con spessori crescenti di Al.}\label{assorb}
+\end{table}
+
+\section{Verifica della legge di Mooseley}
+Per la verifica della legge di Mooseley sono stati analizzati dodici campioni mono-elementali, fissati su un apposito supporto in alluminio.
+Per ciascuno di essi sono stati individuati i picchi corrispondenti alle emissioni K\a, K\b, L\a, L\b del materiale considerato.
+
+
+\section{Analisi di campioni multi-elementali}
+\subsection*{Particolato atmosferico}
+Il campione di particolato atmosferico è stato ottenuto con un sistema che preleva l'aria mediante una pompa facendola passare attraverso un filtro antipolvere.
+
+Sono stati analizzati due diversi campioni:
+%campioni part.
+
+
+\subsection*{Altri campioni}
+
+\section{Conclusioni}
+
+\clearpage
+%\section{Appendice}
+%\begin{figure}[h!]\centering
+%\includegraphics[width=.8\textwidth]{prova_coinc23.r4.eps}
+%\caption{Spettro del rivelatore R4 acquisito nella prova per le coincidenze tra R2 ed R3.}\label{gr:prova23.r4}
+%\end{figure}
+\end{document}
+
+ grafici disponibili:
+am calib
+spessori : 0 1 2 3 4 5 x .22mm Al
+monoelemento: fe cu ni y nb in
+multielemento: banconota, particolato
+
+
+

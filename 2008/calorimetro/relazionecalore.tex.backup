@@ -1,0 +1,81 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url,gensymb}
+\usepackage[text={5.5in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\include{pstricks}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Grafico}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\renewcommand{\leq}{\leqslant}
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di laboratorio: il calorimetro}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}}
+\date{\today}
+\maketitle
+%------------------
+\section{Obiettivo dell'esperienza}
+Obiettivo dell'esperienza è misurare il calore specifico di un corpo di materiale sconosciuto.
+\section{Descrizione dell'apparato strumentale}
+Lo strumento impiegato è un calorimetro delle mescolanze di Regnault. Il contenitore esterno isola un cilindro interno in rame stagnato (calore specifico $c_r = \unitfrac[0.093\pm0.001]{cal}{g\celsius}$) che appoggia sul fondo sostenuto da punte di plastica. Nel cilindro si versa poi acqua distillata ($c_a = \unitfrac[1]{cal}{g\celsius}$ per definizione). Attraverso il coperchio si possono introdurre un termometro con sensibilità $\unit[10]{\celsius^{-1}}$ e un agitatore di rame stagnato che permette di mescolare l'acqua all'interno per rendere il più possibile omogenea la temperatura. Nel calorimetro si introduce infine un cilindro di metallo precedentemente riscaldato a una temperatura  di $\unit[100.0\pm0.1]{\celsius}$ con una resistenza. Lo scambio termico avviene tra il sistema campione e l'ambiente, dove per ambiente si intende l'acqua, il contenitore dell'acqua, l'agitatore e il termometro. Il termometro ha capacità termica $k=\unitfrac[2.20\pm0.05]{cal}{\celsius}$. Per pesare il corpo e l'acqua introdotta nel contenitore si usa una bilancia elettronica di sensibilità $\unit[100]{g^{-1}}$, come errore statistico si usa un terzo di questo valore, così come per il termometro.
+\section{Descrizione della metodologia di misura}
+Si stimano innanzitutto le masse degli strumenti impiegati con una pesata semplice di contenitore e agitatore prima ($m_r$), poi del contenitore e agitatore con acqua ($m_t$) e infine del cilindro campione ($m_x$). La massa dell'acqua $m_a$ risulta per differenza e l'errore è associato per propagazione. Dalle misure, in grammi, risultano:
+\begin{table}[h]\centering
+\begin{tabular}{r@{$=$}r@{$\pm$}ll}
+ $m_r$ & 60.490 &0.003\\
+ $m_t$ & 190.350&0.003\\
+ $m_x$ & 81.500&0.003\\
+ $m_a$ & 129.860&0.005
+\end{tabular}
+\end{table}\\
+Il campione è stato riscaldato fino a una temperatura di $\unit[100.0\pm0.1]{\celsius}$ e poi trasferito rapidamente nel calorimetro. Tuttavia si stima che nel tragitto la sua temperatura sia diminuita di $\unit[1.5\pm1.0]{\celsius}$. Come temperatura iniziale si considera perciò $T_{c,i} = \unit[98.5\pm1.0]{\celsius}$. Prima di immergere il cilindro nell'acqua, si è misurata la temperatura del sistema $T_A = \unit[20.40\pm0.03]{\celsius}$.
+Dall'inserimento del campione, è stata registrata la temperatura dell'acqua a intervalli di quindici secondi fino al raggiungimento di un massimo e ogni trenta secondi dopo il massimo fino a una differenza di temperatura di \unit[0.2]{\celsius}.
+\section{Risultati sperimentali ed elaborazione dati}
+Disponendo la temperatura letta dal termometro in funzione del tempo (grafico~\ref{temp}) si vede che questa ha un transiente iniziale di rapida crescita e poi una diminuzione pressoché lineare dovuta alla dispersione di calore verso l'esterno. Interpolando i dati dopo il massimo con una retta si può ricavare un'intercetta che sarà la miglior stima della temperatura di equilibrio $T_f$. Tale intercetta risulta $T_f=\unit[25.564\pm0.009]{\celsius}$.
+\begin{figure}[t]\caption{Temperatura rilevata in ordinata, tempo in ascissa.}\label{temp}
+\centering 
+\include{temp}
+\end{figure}
+Si stima infine il calore specifico, con errore per propagazione, del campione:
+\begin{equation*}
+ c_x =\dfrac{(m_a c_a + m_r c_r +k)(T_f-T_A)}{m_x(T_{c,i}-T_f)} = \unitfrac[0.120\pm0.002]{cal}{g\celsius}
+\end{equation*}
+\section{Discussione dei risultati}
+Come temperatura di equilibrio $T_f$ si è usata la stima fornita dall'interpolazione piuttosto che il massimo valore osservato perché quest'ultimo è affetto da un errore maggiore a causa della dispersione del calore e della disomogeneità nella temperatura del liquido.
+\section{Conclusioni}
+\end{document}

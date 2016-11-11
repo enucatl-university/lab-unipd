@@ -1,0 +1,277 @@
+\documentclass[italian,a4paper]{article}
+\usepackage[tight,nice]{units}
+\usepackage{babel,amsmath,amssymb,amsthm,graphicx,url,wrapfig,multirow}
+\usepackage[text={6in,9in},centering]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage[Euler]{upgreek}
+\usepackage[footnotesize,bf]{caption}
+\usepackage[usenames]{color}
+\frenchspacing
+\pagestyle{plain}
+%------------- eliminare prime e ultime linee isolate
+\clubpenalty=9999%
+\widowpenalty=9999
+%--- definizione numerazioni
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\addto\captionsitalian{%
+  \renewcommand{\figurename}%
+{Grafico}%
+}
+%
+%------------- ridefinizione simbolo per elenchi puntati: en dash
+%\renewcommand{\labelitemi}{\textbf{--}}
+\renewcommand{\labelenumi}{\textbf{(\roman{enumi})}}
+\setlength{\abovecaptionskip}{\baselineskip}   % 0.5cm as an example
+\setlength{\floatsep}{2\baselineskip}
+\setlength{\belowcaptionskip}{\baselineskip}   % 0.5cm as an example
+%------------- nuovi environment senza spazi
+%\newenvironment{packed_item}{
+%\begin{itemize}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{itemize}}
+%\newenvironment{packed_enum}{
+%\begin{enumerate}
+%  \setlength{\itemsep}{1pt}
+%  \setlength{\parskip}{0pt}
+%  \setlength{\parsep}{0pt}
+%}{\end{enumerate}}
+%\newenvironment{packed_description}{
+%\begin{enumerate}
+%   \setlength{\itemsep}{1pt}
+%   \setlength{\parskip}{0pt}
+%   \setlength{\parsep}{0pt}
+% }{\end{enumerate}}
+%--------- comandi insiemi numeri complessi, naturali, reali e altre abbreviazioni
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\ms}{(\unitfrac{m}{s})}
+\newcommand{\epsi}{\varepsilon}
+\newcommand{\eqnum}{\setcounter{equation}{0}}
+\newcommand{\spazio}{\vspace{.5\baselineskip}\\}
+\newcommand{\nessuno}{\emph{n}}
+\newcommand{\sottile}{\emph{s}}
+\newcommand{\grosso}{\emph{g}}
+\newcommand{\ciccione}{\emph{sg}}
+\newcommand{\di}{\mathrm{d}} %simbolo di differenziale
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\pi}{\uppi} % costa
+%--------- porzione dedicata ai float in una pagina:
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+%---------
+%
+%---------
+\begin{document}
+\title{Relazione di Laboratorio: la guidovia}
+\author{\normalsize Ilaria Brivio (582116)\\%
+\normalsize \url{brivio.ilaria@tiscali.it}%
+\and %
+\normalsize Matteo Abis (584206)\\ %
+\normalsize \url{webmaster@latinblog.org}}
+\date{\today}
+\maketitle
+%------------------
+\section{Obiettivo dell'esperienza}
+L'obiettivo dell'esperienza è stimare l'accelerazione di gravità misurando l'accelerazione su un piano inclinato, tenendo anche in considerazione il ruolo dell'attrito.
+\section{Descrizione dell'apparato strumentale}
+Il piano inclinato è costituito da una guidovia di alluminio, la cui inclinazione è regolabile mediante una vite nella misura di $5'$~per ogni giro. Un compressore pompa aria all'interno della guida, che fuoriesce da fori sulla superficie, tenendo sospesa la slitta e riducendo quindi l'attrito. Alla partenza la slitta è tenuta ferma da un elettromagnete, che si disattiva con un pulsante. Il cronometro ha una sensibilità di $\unit[10^4]{s^{-1}}$ e si attiva automaticamente al passaggio della slitta su due traguardi fissati a una scala graduata con sensibilità $\unit[10^3]{m^{-1}}$.
+
+Sono state utilizzate due slitte diverse per le due parti dell'esperimento. La prima ha le due estremità di materiale ferromagnetico, che viene quindi attratto dall'elettromagnete sulla guida. La seconda, invece, ha a un'estremità un magnete permanente, montato in modo da essere respinto, e all'altra estremità un cerchio di velcro. Sulle slitte può essere montato un carico supplementare di ottone. Nella seconda parte dell'esperienza sono stati inoltre impiegati due spessori metallici diversi per modificare l'effetto dell'elettromagnete sulla slitta.
+\section{Descrizione della metodologia di misura}
+Per la prima parte dell'esperienza, ovvero per la stima della costante $g$, è stato fissato il primo traguardo sulla misura di $\unit[40]{cm}$ sulla scala, misurando cinque tempi di percorrenza per ogni posizione del secondo traguardo a $50$, 60, 70, etc. fino a $\unit[130]{cm}$ e per ogni angolo $\alpha = 15', 30',45'$ e $45'$ con slitta carica. Da queste misure sono stati poi calcolati per differenza i tempi di percorrenza di ciascun tratto lungo $\unit[10]{cm}$.
+
+Come errore sull'orizzontalità della guidovia è stata stimata la semidispersione tra le posizioni della vite effettuate con la slitta il più possibile ferma alle estremità e al centro del percorso. Tale errore risulta essere circa $1/9$ di giro della vite, ovvero $\delta_{\alpha} = \unit[1.62 \cdot 10^{-4}]{rad}$.
+
+L'errore sulla posizione dei traguardi è stato determinato nel modo seguente: un componente del gruppo ha spostato per dieci volte in modo casuale un traguardo lungo la guida e lo ha riportato alla misura originaria, e l'altro ha stimato la più piccola sottosuddivisione rispetto alla quale poteva misurare una differenza di posizionamento. Tale errore è risultato quindi essere $\sigma_{s} = \unit[2\cdot 10^{-4}]{m}$.
+
+Per stimare invece l'effetto dell'attrito nel moto, è stata posizionata la guida orizzontalmente con la stessa procedura impiegata nella stima dell'errore sull'angolo $\alpha$. Sono stati misurati cinque tempi di percorrenza di tratti lunghi $\unit[20]{cm}$ (40--60, 50--70, $\dots$, 110--130), ripetendo le misure prima senza spessori, poi con il solo spessore sottile, quindi con quello grosso e infine con entrambi, sia con la slitta carica che con la slitta scarica.
+\section{Risultati sperimentali ed elaborazione dati}
+\subsection{Stima dell'accelerazione di gravità}
+Sono riportati nelle tabelle~\ref{15tab}, \ref{30tab}, \ref{45tab}, \ref{45ctab}, e i tempi misurati, di cui sono stati calcolati le medie, lo scarto quadratico medio, l'errore quadratico medio, l'errore sulla media, i tempi di percorrenza di ciascun tratto di $\unit[10]{cm}$, per differenza, e le relative velocità medie. Gli errori sulle misure indirette sono stati ricavati dalla formula di propagazione degli errori. Per esempio, gli errori sulle velocità medie sono:
+\begin{equation*}
+ \sigma_{f(x,y)}^2 = \left(\dfrac{\partial f}{\partial x}\sigma_x \right)^2 + \left(\dfrac{\partial f}{\partial y}\sigma_y \right)^2 \qquad
+\sigma_{\bar v}^2 = \Big( -\dfrac{s}{t ^2}\sigma_{ t} \Big)^2 + \Big(\dfrac{1}{ t}\sigma_{ s} \Big)^2
+\end{equation*}
+Per ricavare l'accelerazione lungo il piano inclinato sono stati interpolati i dati delle velocità medie (grafici~\ref{15graf}, \ref{30graf}, \ref{45graf}, \ref{45cgraf}) con una relazione lineare ($v=at+b$). Dividendo l'accelerazione per il seno del corrispondente angolo sono stati ricavati i valori di $g$~\footnote{Come errore statistico associato ad $\alpha$, da inserire nella formula di propagazione degli errori relativa a $g$, è stato usato $\nicefrac{\delta_{\alpha}}{3} = \unit[2.02\cdot 10^{-5}]{rad}$.}. I risultati, con i loro errori, sono riassunti nella seguente tabella\footnote{Il pedice $_c$ indica le misure relative alla slitta carica.}:
+\begin{table}[h]
+\centering
+ \begin{tabular}{l  *3{r@{.}l @{ $\pm$ }r@{.}l}}
+  &\multicolumn{4}{c}{$a$ (\nicefrac{m}{s$^2$})}
+  &\multicolumn{4}{c}{$b$ (\nicefrac{m}{s})}
+  &\multicolumn{4}{c}{$g$ (\nicefrac{m}{s$^2$})}\\ \hline
+  $15'$ & 0&038 &0&003 &0&035 &0&007 &8&70 & 0&62\\
+  $30'$ & 0&083 &0&002 &0&197 &0&003 &9&52 & 0&21\\
+  $45'$ & 0&126 &0&002 &0&243 &0&002 &9&62 & 0&12\\
+  $45'_c$&0&125 &0&002 &0&245 &0&002 &9&54 & 0&13\\
+ \end{tabular}
+\end{table}\\
+Queste misure sono state confrontate fra loro e con il valore atteso a Padova\footnote{Non è riportato nessun errore su questa misura perché lo si può ritenere irrilevante.} $g=\unitfrac[9.806]{m}{s^2}$:
+\begin{table}[h]\centering
+\begin{tabular}{r|*4{r}}
+  $\lambda$	& $45'_c$ 	& $45'$ 	& $30'$ 	&$15'$	\\
+ \hline
+ $g$ 		& $2.05$	& $1.55$	&$1.36$		&1.78	\\
+ $15'$  	& $1.33$	& $1.46$	&1.25		& \\
+ $30'$  	& $0.08$	& 0.41		& 	&\\
+ $45'$  	& $0.45$	& 		& 	&
+\end{tabular}
+\end{table}\\
+In particolare la compatibilità è mediocre (tra 1 e 2) se non scarsa (tra 2 e 3) rispetto al valore atteso, anche se è in genere buona (minore di 1) tra le misure sperimentali, escluso il valore per l'inclinazione di $15'$.
+\subsection{Effetti dell'attrito sul moto}
+Come è evidente dai grafici e dalle tabelle in appendice, la seconda parte dell'esperimento si può considerare come non riuscita a causa dell'inadeguata scelta dell'orizzontalità lungo quasi tutta la guidovia. La slitta infatti accelera dopo il traguardo dei \unit[70]{cm} in qualsiasi condizione di carico e di schermatura dell'elettromagnete. A questo si aggiunge il fatto che, completate le misure dei tratti \unit[40--60]{cm} e \unit[50--70]{cm} si è notato che il compressore trasmetteva delle vibrazioni alla slitta, che procedeva quindi urtando contro le pareti laterali della guida. Spostando il compressore su un altro tavolo l'effetto è sparito, cosa che ha ulteriormente accorciato i tempi di percorrenza di $5$--$10$~centesimi di secondo.
+
+Per quanto abbiano scarso valore sperimentale, possiamo accettare \emph{a posteriori} solo i dati elaborati a partire dai tratti~\unit[40--60]{cm} e~\unit[50--70]{cm}. Si vorrebbe correggere la stima di $g$ calcolando il coefficiente di attrito $c$ della slitta con l'aria:
+\begin{equation}\label{g}
+ g = \dfrac{1}{\sin\alpha}\left(a + \dfrac{c}{m}v \right)
+\end{equation}
+Sono stati ricavati i valori di $C : = \nicefrac{c}{m}$, e come approssimazione della velocità $v$ è stata impiegata la velocità \emph{complessiva}, ovvero la media delle velocità sui primi e sugli ultimi dieci centimetri della guida: $v = (v_{130}-v_{50})/2$.
+
+Come spiegato sopra, il valore di $C$ considerato è stato ricavato dal coefficiente angolare della retta passante per i primi due punti dei grafici (vedi appendice). Nella tabella sottostante sono riportati i valori ottenuti, con gli errori calcolati per propagazione. L'unità di misura è $\unit[10^{-3}]{s^{-1}}$.
+\begin{table}[!h]
+\centering
+ \begin{tabular}{*2{r} r@{ $\pm$ }l l @{\hspace{3\tabcolsep}}*2{r} r@{ $\pm$ }l}
+ & & $C$ & $\sigma_C$ & & & &$C$ & $\sigma_C$\\\cline{2-4} \cline{7-9}
+\multirow{4}{*}{scarico} &\nessuno &$-7.573$&$19.910$ & &\multirow{4}{*}{carico} &\nessuno &$-2.059$&$31.457$\\
+&\sottile &$-11.123$&$24.097$ & & &\sottile &$-12.657$&$19.549$\\
+&\grosso &$-8.933$&$16.820$ & & &\grosso &$2.666$&$41.631$\\
+&\ciccione &$11.105$&$36.377$ & & &\ciccione &$-4.258$&$36.169$\\
+ \end{tabular}
+\end{table}\\
+Si nota la presenza di due valori positivi, che quindi sono esclusi dal calcolo della media pesata dei~$C$:
+\begin{equation}\label{mediapesata}
+ \bar{C}=\left(\sum_i \dfrac{C_i}{\sigma_{C_i}^2} \right)\left(\sum_i \dfrac{1}{\sigma_{C_i}^2} \right)^{-1} \qquad \sigma_{\bar{C}} = \left(\sum_i \dfrac{1}{\sigma_{C_i}^2} \right)^{-\frac 1 2}
+\end{equation}
+Le medie così calcolate sono, rispettivamente per la slitta scarica e la slitta carica:
+\begin{align*}
+ \bar{C}_s &= \unit[(-8.977 \pm 0.128)\cdot 10^{-3}]{s^{-1}}\\
+  \bar{C}_c &= \unit[(-8.756 \pm 0.228)\cdot 10^{-3}]{s^{-1}}
+\end{align*}
+Applicando infine questi valori nell'equazione~\eqref{g} si può correggere la stima dell'accelerazione di gravità:
+\begin{table}[h]
+\centering
+ \begin{tabular}{l  r@{.}l @{ $\pm$ }r@{.}l}
+  &\multicolumn{4}{c}{$g$ (\nicefrac{m}{s$^2$})}\\[2 pt]
+  $15'$   &9&143 & 0&902\\
+  $30'$   &9&849 & 0&292\\
+  $45'$   &9&896 & 0&161\\
+  $45'_c$ &9&805 & 0&168
+ \end{tabular}
+\end{table}\\
+La compatibilità delle misure con il valore atteso di $g$ risulta, nonostante la scarsa rigorosità della procedura, molto buona:
+\begin{table}[h]\centering
+\begin{tabular}{r|*4{r}}
+  $\lambda$	& $45'_c$ 	& $45'$ 	& $30'$ 	&$15'$	\\
+ \hline
+ $g$ 		& $0.006$	& $0.559$	&$0.147$	&$0.735$\\
+ $15'$  	& $0.722$	& $0.822$	&$0.559$	& \\
+ $30'$  	& $0.131$	& $0.141$	& 	&\\
+ $45'$  	& $0.391$	& 		& 	&
+\end{tabular}
+\end{table}\\
+\section{Discussione dei risultati}
+I valori di $g$ ottenuti nella prima parte dell'esperienza sono tutti chiaramente in difetto e poco compatibili con il valore atteso. Trascurare l'attrito è quindi evidentemente un'approssimazione molto forte. In particolare, il valore dell'accelerazione con la guidovia inclinata di $15'$ è molto più basso e soffre di un errore molto maggiore rispetto agli altri. Questo può essere dovuto al fatto che la slitta più lenta e leggera subisce maggiormente gli effetti di piccole deformazioni della guida, improvvise vibrazioni trasmesse dal tavolo o bruschi movimenti d'aria. Dei cinque punti finali del grafico~\ref{15graf}, tre sono nettamente sotto la retta interpolante. Escludendo questi il valore di $g$ sarebbe stimato in $\unitfrac[9.72 \pm 0.32]{m}{s^{2}}$. Se tali errori fossero di natura sistematica e dovuti alla forma della guida, lo schema si ripresenterebbe anche nei grafici successivi, cosa che però non è affatto evidente. Un'altra fonte di errore sistematico per un gruppo di misure consecutive può essere dovuto all'elettromagnete. Se, infatti, l'operatore lascia il pulsante che lo disattiva prima che la slitta si sia allontanata a sufficienza, ci può essere un piccolo rallentamento dovuto all'attrazione magnetica. Questo effetto è stato osservato più volte durante l'esperimento e si può quantificare in un ritardo di 2--3 centesimi di secondo. Inoltre, a parità di tempo trascorso dalla partenza, la slitta che percorre la guida meno inclinata si è allontanata meno, e questo spiegherebbe perché tale fenomeno assuma proporzioni sensibili solo con la prima serie di misure. Un'altra ipotesi è il cattivo posizionamento della guida nell'inclinazione voluta di $15'$, ma sembra da escludere poiché un errore di questo tipo si ripercuoterebbe su tutte le misure con la stessa inclinazione.
+
+\section{Conclusioni}
+La prima parte dell'esperienza ha prodotto valori di $g$ sistematicamente in difetto, a causa dell'approssimazione della formula, che trascurava gli attriti. Inoltre, l'errore più grande si è presentato sulle misure relative all'angolo più piccolo, per i motivi indicati sopra. Non è stata rilevata invece nessuna differenza significativa tra le altre misure con slitta scarica e quelle con slitta carica.
+
+La seconda parte, pur essendo scarsamente valida, ha comunque permesso di correggere in modo soddisfacente le stime di $g$. Dei valori di $g$ così ottenuti, risulta più compatibile con l'accelerazione attesa quello relativo alla slitta carica. 
+\newpage
+\section{Appendice}
+\begin{table}[h]\caption{Rilevazioni dei tempi di percorrenza~(s) per l'inclinazione di $15'$,
+con cinque misure e la media sui vari traguardi~(cm). Sono riportati anche i tempi sui singoli tratti di \unit[10]{cm}, ottenuti per differenza, e le velocità medie~(\nicefrac{m}{s}) su tali tratti. Gli errori riportati sono scarto quadratico medio $s$, errore quadratico medio $\sigma$ ed errore sulla media, tutti nella stessa unità di misura del valore cui fanno riferimento.}\label{15tab}
+ \centering \small
+ \include{15tabella}
+\end{table}
+\begin{table}[h]\caption{Rilevazioni dei tempi di percorrenza~(s) per l'inclinazione di $30'$,
+con cinque misure e la media sui vari traguardi~(cm). Sono riportati anche i tempi sui singoli tratti di \unit[10]{cm}, ottenuti per differenza, e le velocità medie~(\nicefrac{m}{s}) su tali tratti. Gli errori riportati sono scarto quadratico medio $s$, errore quadratico medio $\sigma$ ed errore sulla media, tutti nella stessa unità di misura del valore cui fanno riferimento.}\label{30tab}
+ \centering \small
+ \include{30tabella}
+\end{table}
+\begin{table}[p]\caption{Rilevazioni dei tempi di percorrenza~(s) per l'inclinazione di $45'$,
+con cinque misure e la media sui vari traguardi~(cm). Sono riportati anche i tempi sui singoli tratti di \unit[10]{cm}, ottenuti per differenza, e le velocità medie~(\nicefrac{m}{s}) su tali tratti. Gli errori riportati sono scarto quadratico medio $s$, errore quadratico medio $\sigma$ ed errore sulla media, tutti nella stessa unità di misura del valore cui fanno riferimento.}\label{45tab}
+ \centering \small
+ \include{45tabella}
+\end{table}
+\begin{table}[p]\caption{Rilevazioni dei tempi di percorrenza~(s) per l'inclinazione di $45'$ con slitta carica,
+con cinque misure e la media sui vari traguardi~(cm). Sono riportati anche i tempi sui singoli tratti di \unit[10]{cm}, ottenuti per differenza, e le velocità medie~(\nicefrac{m}{s}) su tali tratti. Gli errori riportati sono scarto quadratico medio $s$, errore quadratico medio $\sigma$ ed errore sulla media, tutti nella stessa unità di misura del valore cui fanno riferimento.}\label{45ctab}
+ \centering \small
+ \include{45ctabella}
+\end{table}
+ \begin {figure}[p]\caption{Inclinazione di $15'$,
+velocità in ordinata~(\nicefrac{m}{s}) e tempo in ascissa~(s).
+I punti sperimentali sono raffigurati con le barre di errore su entrambe le misure. La linea continua è la retta interpolante, la linea tratteggiata quella teorica con il valore atteso di $g$, senza considerare gli attriti.}\label{15graf}
+\centering
+        \include{15grafico}
+\end{figure}
+ \begin {figure}[p]\caption{Inclinazione di $30'$,
+velocità in ordinata~(\nicefrac{m}{s}) e tempo in ascissa~(s).
+I punti sperimentali sono raffigurati con le barre di errore su entrambe le misure. La linea continua è la retta interpolante, la linea tratteggiata quella teorica con il valore atteso di $g$, senza considerare gli attriti.}\label{30graf}
+\centering
+        \include{30grafico}
+\end{figure}
+ \begin {figure}[p]\caption{Inclinazione di $45'$,
+velocità in ordinata~(\nicefrac{m}{s}) e tempo in ascissa~(s).
+I punti sperimentali sono raffigurati con le barre di errore su entrambe le misure. La linea continua è la retta interpolante, la linea tratteggiata quella teorica con il valore atteso di $g$, senza considerare gli attriti.}\label{45graf}
+\centering
+        \include{45grafico}
+\end{figure}
+ \begin {figure}[p]\caption{Inclinazione di $45'$ con slitta carica,
+velocità in ordinata~(\nicefrac{m}{s}) e tempo in ascissa~(s).
+I punti sperimentali sono raffigurati con le barre di errore su entrambe le misure. La linea continua è la retta interpolante, la linea tratteggiata quella teorica con il valore atteso di $g$, senza considerare gli attriti.}\label{45cgraf}
+\centering
+        \include{45cgrafico}
+\end{figure}
+\begin{table}[p]\caption{Rilevazioni dei tempi di percorrenza~(s) dei vari segmenti di \unit[20]{cm} per la stima dell'attrito. Slitta carica e scarica e con i vari spessori (nessuno, sottile, grosso ed entrambi) davanti all'elettromagnete.}\label{tabattrito}
+ \centering \small
+ \include{attritotabella}
+\end{table}
+\begin{table}[p]\caption{Slitta scarica. Medie sui tempi con errore sulla media e velocità di percorrenza dei vari segmenti di \unit[20]{cm}, con vari spessori (nessuno, sottile, grosso ed entrambi) davanti all'elettromagnete. Gli errori sulla velocità sono stati ricavati con la formula di propagazione.}\label{tabtvscarica}
+ \centering \small
+ \include{attritotvscarica}
+\end{table}
+\begin{table}[p]\caption{Slitta carica. Medie sui tempi con errore sulla media e velocità di percorrenza dei vari segmenti di \unit[20]{cm}, con vari spessori (nessuno, sottile, grosso ed entrambi) davanti all'elettromagnete. Gli errori sulla velocità sono stati ricavati con la formula di propagazione.}\label{tabtvcarica}
+ \centering \small
+ \include{attritotvcarica}
+\end{table}
+\clearpage
+ \begin {figure}[p]\caption{Slitta scarica, nessuno spessore. Tratteggiata la retta interpolante.}\label{scarico0}
+\centering
+        \include{scarico0}
+\end{figure}
+ \begin {figure}[p]\caption{Slitta scarica, spessore sottile. Tratteggiata la retta interpolante.}\label{scaricos}
+\centering
+        \include{scaricos}
+\end{figure}
+ \begin {figure}[p]\caption{Slitta scarica, spessore grosso. Tratteggiata la retta interpolante.}\label{scaricog}
+\centering
+        \include{scaricog}
+\end{figure}
+ \begin {figure}[p]\caption{Slitta scarica, entrambi gli spessori. Tratteggiata la retta interpolante.}\label{scaricogg}
+\centering
+        \include{scaricogg}
+\end{figure}
+ \begin {figure}[p]\caption{Slitta carica, nessuno spessore. Tratteggiata la retta interpolante.}\label{carico0}
+\centering
+        \include{carico0}
+\end{figure}
+ \begin {figure}[p]\caption{Slitta carica, spessore sottile. Tratteggiata la retta interpolante.}\label{caricos}
+\centering
+        \include{caricos}
+\end{figure}
+ \begin {figure}[p]\caption{Slitta carica, spessore grosso. Tratteggiata la retta interpolante.}\label{caricog}
+\centering
+        \include{caricog}
+\end{figure}
+ \begin {figure}[p]\caption{Slitta carica, entrambi gli spessori. Tratteggiata la retta interpolante.}\label{caricogg}
+\centering
+        \include{caricogg}
+\end{figure}
+\end{document}
